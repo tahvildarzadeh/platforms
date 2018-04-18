@@ -1,5 +1,4 @@
-stdout.lscsky50-intel18up2_avx1.repro.n128d1j1t1:Main loop    22.882206     22.890778     22.888283      0.002215  0.493     0     0   127
 stdout.lscsky50-intel18up2_avx1.repro.n32d1j1t1:Main loop     20.067971     20.068039     20.068031      0.000011  0.520     0     0    31
 stdout.lscsky50-intel18up2_avx1.repro.n64d1j1t1:Main loop     19.472003     19.472090     19.472076      0.000012  0.506     0     0    63
-stdout.lscsky50-intel18up2_avx1.prod.n64d1j1t1:Main loop      19.078422     19.078818     19.078595      0.000107  0.498     0     0    63
-
+stdout.lscsky50-intel18up2_avx1.prod.n64d1j1t1:Main loop      19.007073     19.007326     19.007161      0.000057  0.502     0     0    63
+stdout.lscsky50-intel18up2_avx1.repro.n128d1j1t1:Main loop    22.882206     22.890778     22.888283      0.002215  0.493     0     0   127

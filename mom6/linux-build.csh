@@ -1,7 +1,7 @@
 #!/bin/csh -x                                                                                  
-set machine_name = "lscsky50"
-set platform = "intel18up2_avx1"                                                           
-set target = "prod"                                                                           
+set machine_name = "theta" # "lscsky50"
+set platform = "intel18_avx1" # "intel18up2_avx1"                                                           
+set target = "repro"                                                                           
 
 set rootdir = `dirname $0`
 
@@ -19,6 +19,10 @@ endif
 
 if( $target =~ *"repro"* ) then
    set makeflags = "$makeflags REPRO=1"
+endif
+
+if( $target =~ *"prod"* ) then
+   set makeflags = "$makeflags PROD=1"
 endif
 
 if( $target =~ *"debug"* ) then
@@ -52,4 +56,11 @@ exit 0
 ##theta-intel18_avx1.debug
 #ftn -Duse_libMPI -Duse_netCDF -DSPMD -Duse_LARGEFILE  -fpp -Wp,-w -I/opt/cray/pe/netcdf/4.4.1.1.3/INTEL/16.0/include -I/opt/cray/pe/hdf5/1.10.0/INTEL/15.0//include -I/opt/cray/pe/netcdf/4.4.1.1.3/INTEL/16.0/include -I/opt/cray/pe/hdf5/1.10.0/INTEL/15.0//include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX-I -qno-opt-dynamic-align  -g -O0 -check -check noarg_temp_created -check nopointer -warn -warn noerrors -fp-stack-check -fstack-protector-all -fpe0 -debug -traceback -ftrapuv -I../../shared/debug  -c -I../../../../src/MOM6/config_src/dynamic -I../../../../src/MOM6/src/framework  ../../../../src/MOM6/src/core/MOM.F90
 #ifort: command line warning #10121: overriding '-xmic-avx512' with '-xCORE-AVX-I'
+##theta-intel18_avx1.repro
+#ftn -Duse_libMPI -Duse_netCDF -DSPMD -Duse_LARGEFILE  -fpp -Wp,-w -I/opt/cray/pe/netcdf/4.4.1.1.3/INTEL/16.0/include -I/opt/cray/pe/hdf5/1.10.0/INTEL/15.0//include -I/opt/cray/pe/netcdf/4.4.1.1.3/INTEL/16.0/include -I/opt/cray/pe/hdf5/1.10.0/INTEL/15.0//include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX-I -qno-opt-dynamic-align  -O2 -debug minimal -fp-model source -qoverride-limits -g -traceback  -I../../shared/repro  -c -I../../../../src/MOM6/config_src/dynamic -I../../../../src/MOM6/src/framework  ../../../../src/MOM6/src/core/MOM.F90
+#ifort: command line warning #10121: overriding '-xmic-avx512' with '-xCORE-AVX-I'
+##theta-intel18_avx1.prod
+#ftn -Duse_libMPI -Duse_netCDF -DSPMD -Duse_LARGEFILE  -fpp -Wp,-w -I/opt/cray/pe/netcdf/4.4.1.1.3/INTEL/16.0/include -I/opt/cray/pe/hdf5/1.10.0/INTEL/15.0//include -I/opt/cray/pe/netcdf/4.4.1.1.3/INTEL/16.0/include -I/opt/cray/pe/hdf5/1.10.0/INTEL/15.0//include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX-I -qno-opt-dynamic-align  -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -I../../shared/prod  -c -I../../../../src/MOM6/config_src/dynamic -I../../../../src/MOM6/src/framework ../../../../src/MOM6/src/core/MOM.F90
+#ifort: command line warning #10121: overriding '-xmic-avx512' with '-xCORE-AVX-I'
+
 
