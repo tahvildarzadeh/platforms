@@ -1,7 +1,7 @@
 #!/bin/csh -x                                                                                  
-set machine_name = "theta" # "lscsky50"
-set platform = "intel18_avx1" # "intel18up2_avx1"                                                           
-set target = "repro"                                                                           
+set machine_name = "gfdl-ws" # "theta"        # "lscsky50"
+set platform = "gnu6"        # "intel18_avx1" # "intel18up2_avx1"                                                           
+set target = "prod"                                                                           
 
 set rootdir = `dirname $0`
 

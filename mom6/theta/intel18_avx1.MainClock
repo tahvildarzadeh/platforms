@@ -1,3 +1,5 @@
+stdout.theta-intel18_avx1.prod.n8d1j1:Main loop     286.366161    286.598566    286.569510      0.076859  0.914     0     0     7
+stdout.theta-intel18_avx1.repro.n8d1j1:Main loop    287.039166    287.083405    287.077870      0.014629  0.919     0     0     7
 stdout.theta-intel18_avx1.repro.n16d1j1:Main loop   149.928259    149.969570    149.966982      0.009998  0.867     0     0    15
 stdout.theta-intel18_avx1.repro.n32d1j1:Main loop    79.640793     79.668135     79.667272      0.004756  0.786     0     0    31
 stdout.theta-intel18_avx1.repro.n64d1j1:Main loop    44.806658     44.834639     44.834189      0.003469  0.656     0     0    63
