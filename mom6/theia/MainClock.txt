@@ -1,0 +1,22 @@
+/scratch4/GFDL/gfdlscr/Niki.Zadeh/MOM6-examples_2018.04.11/ocean_only/global_ALE/z/
+
+stdout.theia-intel16.prod-openmp.n16:Main loop                            31.228842     31.233224     31.232899      0.001060  0.756     0     0    15
+stdout.theia-intel16.prod-openmp.n18:Main loop                            57.899364     57.904547     57.903880      0.001707  0.821     0     0     7
+stdout.theia-intel16.prod-openmp.n24:Main loop                            26.332192     26.338145     26.337890      0.001188  0.699     0     0    23
+stdout.theia-intel16.prod-openmp.n36:Main loop                            17.225765     17.229723     17.229595      0.000647  0.651     0     0    35
+stdout.theia-intel16.prod-openmp.n48:Main loop                            13.477016     13.480684     13.480598      0.000522  0.593     0     0    47
+
+stdout.theia-intel17.prod-openmp.n16:Main loop                            31.055428     31.058926     31.058701      0.000845  0.769     0     0    15
+stdout.theia-intel17.prod-openmp.n24:Main loop                            23.424264     23.427843     23.427678      0.000712  0.759     0     0    23
+stdout.theia-intel17.prod-openmp.n32:Main loop                            18.568692     18.576613     18.576356      0.001377  0.699     0     0    31
+stdout.theia-intel17.prod-openmp.n36:Main loop                            16.612690     16.616240     16.616134      0.000582  0.662     0     0    35
+stdout.theia-intel17.prod-openmp.n48:Main loop                            13.314371     13.318269     13.318183      0.000556  0.614     0     0    47
+stdout.theia-intel17.prod-openmp.n8:Main loop                            57.086512     57.090083     57.089621      0.001175  0.862     0     0     7
+
+stdout.theia-intel18_avx1.prod.n16:Main loop                            28.396472     28.400241     28.400003      0.000912  0.796     0     0    15
+stdout.theia-intel18_avx1.prod.n24:Main loop                            20.530721     20.536453     20.536212      0.001145  0.709     0     0    23
+stdout.theia-intel18_avx1.prod.n32:Main loop                            16.207927     16.211546     16.211426      0.000628  0.652     0     0    31
+stdout.theia-intel18_avx1.prod.n48:Main loop                            13.040473     13.044344     13.044259      0.000552  0.561     0     0    47
+stdout.theia-intel18_avx1.prod.n64:Main loop                            16.120300     16.124140     16.124062      0.000474  0.605     0     0    63
+stdout.theia-intel18_avx1.prod.n8:Main loop                            52.481398     52.485126     52.484652      0.001230  0.874     0     0     7
+

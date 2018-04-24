@@ -1,7 +1,7 @@
 #!/bin/csh -x                                                                                  
-set machine_name = "theia"   # "gfdl-ws" # "theta"        # "lscsky50"
-set platform = "intel18_avx1"# "gnu6"    # "intel18_avx1" # "intel18up2_avx1"                                                           
-set target = "prod-openmp"                                                                           
+set machine_name = "theia"   # "theia"   # "theia"        # "gfdl-ws" # "theta"        # "lscsky50"
+set platform = "intel18_avx1"     # "intel16" # "intel18_avx1" # "gnu6"    # "intel18_avx1" # "intel18up2_avx1"                                                           
+set target = "debug-openmp"                                                                           
 
 set rootdir = `dirname $0`
 
