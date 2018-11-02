@@ -1,0 +1,45 @@
+Jacobi relaxation Calculation: 4096 x 4096 mesh
+    0, 0.250000
+  100, 0.002397
+  200, 0.001204
+  300, 0.000804
+  400, 0.000603
+  500, 0.000483
+  600, 0.000403
+  700, 0.000345
+  800, 0.000302
+  900, 0.000269
+ total: 88.826566 s
+
+Accelerator Kernel Timing data
+/net2/nnz/examples/openacc/code-samples/posts/002-openacc-example/step1/../common/timer.h
+  main  NVIDIA  devicenum=0
+    time(us): 53,553,279
+    85: compute region reached 1000 times
+        85: data copyin transfers: 1000
+             device time(us): total=17,176 max=1,157 min=7 avg=17
+        88: kernel launched 1000 times
+            grid: [128x256]  block: [32x4]
+             device time(us): total=6,556,461 max=9,533 min=6,417 avg=6,556
+            elapsed time(us): total=6,585,753 max=9,563 min=6,447 avg=6,585
+        88: reduction kernel launched 1000 times
+            grid: [1]  block: [256]
+             device time(us): total=66,865 max=74 min=66 avg=66
+            elapsed time(us): total=86,640 max=2,575 min=79 avg=86
+        88: data copyout transfers: 1000
+             device time(us): total=11,266 max=25 min=9 avg=11
+    85: data region reached 2000 times
+        85: data copyin transfers: 4000
+             device time(us): total=10,703,167 max=2,881 min=2,667 avg=2,675
+        97: data copyout transfers: 4000
+             device time(us): total=10,100,482 max=2,798 min=2,507 avg=2,525
+    97: compute region reached 1000 times
+        100: kernel launched 1000 times
+            grid: [128x256]  block: [32x4]
+             device time(us): total=5,197,687 max=9,597 min=4,972 avg=5,197
+            elapsed time(us): total=5,246,412 max=9,686 min=5,001 avg=5,246
+    97: data region reached 2000 times
+        97: data copyin transfers: 4000
+             device time(us): total=10,798,157 max=2,953 min=2,685 avg=2,699
+        106: data copyout transfers: 4000
+             device time(us): total=10,102,018 max=2,888 min=2,507 avg=2,525
