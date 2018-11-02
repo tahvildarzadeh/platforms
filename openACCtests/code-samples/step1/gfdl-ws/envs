@@ -1,0 +1,3 @@
+module use /net2/nnz/opt/pgilinux-2018-184-x86-64/modulefiles
+module load PrgEnv-pgi/18.4
+
