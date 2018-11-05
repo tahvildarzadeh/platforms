@@ -1,0 +1,86 @@
+lscgpu50-d: /home/Niki.Zadeh/storage/platforms/openACCtests/code-samples/step1 % make -f Makefile_f90
+pgf90  -fast -o laplace2d_f90 laplace2d.f90
+pgf90  -fast -mp -Minfo -o laplace2d_f90_omp laplace2d.f90
+laplace:
+     41, Loop not vectorized/parallelized: too deeply nested
+     43, Parallel region activated
+     45, Parallel region terminated
+     50, Memory zero idiom, array assignment replaced by call to pgf90_mzero4
+     53, Loop not fused: dependence chain to sibling loop
+         2 loops fused
+         Generated vector simd code for the loop
+         Generated a prefetch instruction for the loop
+     56, Loop not fused: function call before adjacent loop
+         Loop not vectorized: may not be beneficial
+         Unrolled inner loop 8 times
+         Generated 7 prefetches in scalar loop
+     57, Memory copy idiom, loop replaced by call to __c_mcopy4
+     58, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop
+         Generated a prefetch instruction for the loop
+     63, Parallel region activated
+     64, Parallel loop activated with static block schedule
+         Loop not vectorized: may not be beneficial
+         Unrolled inner loop 8 times
+         Generated 8 prefetches in scalar loop
+         Generated 1 prefetches in scalar loop
+     67, Parallel region terminated
+     69, Parallel region activated
+     70, Parallel loop activated with static block schedule
+         Generated vector simd code for the loop
+         Generated a prefetch instruction for the loop
+     73, Parallel region terminated
+     82, Parallel region activated
+     86, Parallel loop activated with static block schedule
+     87, Generated vector simd code for the loop containing reductions
+         Generated 3 prefetch instructions for the loop
+     92, Begin critical section
+         End critical section
+     94, Barrier
+     98, Parallel loop activated with static block schedule
+     99, Memory copy idiom, loop replaced by call to __c_mcopy4
+    104, Barrier
+    107, Parallel region terminated
+    116, sum reduction inlined
+         Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop containing reductions
+         Generated a prefetch instruction for the loop
+pgf90  -acc -ta=nvidia:managed -Minfo=accel -o laplace2d_f90_acc_managed laplace2d.f90
+laplace:
+     85, Generating implicit copyin(a(0:4095,0:4095))
+         Generating implicit copyout(anew(1:4094,1:4094))
+     86, Loop is parallelizable
+     87, Loop is parallelizable
+         Accelerator kernel generated
+         Generating Tesla code
+         86, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         87, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
+         90, Generating implicit reduction(max:error)
+     97, Generating implicit copyin(anew(1:4094,1:4094))
+         Generating implicit copyout(a(1:4094,1:4094))
+     98, Loop is parallelizable
+     99, Loop is parallelizable
+         Accelerator kernel generated
+         Generating Tesla code
+         98, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         99, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
+pgf90  -acc -ta=nvidia -Minfo=accel -o laplace2d_f90_acc laplace2d.f90
+laplace:
+     85, Generating implicit copyin(a(0:4095,0:4095))
+         Generating implicit copyout(anew(1:4094,1:4094))
+     86, Loop is parallelizable
+     87, Loop is parallelizable
+         Accelerator kernel generated
+         Generating Tesla code
+         86, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         87, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
+         90, Generating implicit reduction(max:error)
+     97, Generating implicit copyin(anew(1:4094,1:4094))
+         Generating implicit copyout(a(1:4094,1:4094))
+     98, Loop is parallelizable
+     99, Loop is parallelizable
+         Accelerator kernel generated
+         Generating Tesla code
+         98, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         99, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
+
