@@ -22,3 +22,6 @@
 [submodule "mom6/src/mkmf"]
 	path = mom6/src/mkmf
 	url = https://github.com/NOAA-GFDL/mkmf.git
+[submodule "mom6/src/icebergs"]
+	path = mom6/src/icebergs
+	url = https://github.com/NOAA-GFDL/icebergs.git
