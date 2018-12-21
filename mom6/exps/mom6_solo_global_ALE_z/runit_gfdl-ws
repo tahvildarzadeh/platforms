@@ -1,0 +1,2 @@
+source ../../builds/gfdl-ws/intel15.env
+mpirun -n 8 ../../builds/build/gfdl-ws-intel15/mom6-solo/repro/mom6-solo
