@@ -1,0 +1,37 @@
+"ATM" , "gust"          , "", "", .false. ,  1.0e-6
+#"ATM" , "t_bot"         , "T_10_MOD"    , "./INPUT/t_10.nc"     , .false. ,  1.0    
+#"ATM" , "sphum_bot"     , "Q_10_MOD"    , "./INPUT/q_10.nc"     , .false. ,  1.0    
+#"ICE" , "lw_flux_dn"        , "LWDN_MOD", "./INPUT/ncar_rad.nc", .false. ,  1.0        
+#"ICE" , "sw_flux_vis_dir_dn", "SWDN_MOD", "./INPUT/ncar_rad.nc", .false. , 0.285            
+#"ICE" , "sw_flux_vis_dif_dn", "SWDN_MOD", "./INPUT/ncar_rad.nc", .false. , 0.285            
+#"ICE" , "sw_flux_nir_dir_dn", "SWDN_MOD", "./INPUT/ncar_rad.nc", .false. , 0.215            
+#"ICE" , "sw_flux_nir_dif_dn", "SWDN_MOD", "./INPUT/ncar_rad.nc", .false. , 0.215            
+##Kg/s/m^2
+#"ICE" , "lprec"         , "RAIN"        , "./INPUT/ncar_precip.nc"  , .false. ,  0.9933
+#"ICE" , "fprec"         , "SNOW"        , "./INPUT/ncar_precip.nc"  , .false. ,  0.0         
+##Replacing the above with numbers to make a test independent of forcings dataset 
+"ATM" , "t_bot"             , "", "", .true. , 240.0    
+"ATM" , "sphum_bot"         , "", "", .true. , 0.001    
+"ICE" , "lw_flux_dn"        , "", "", .true. , 200.0       
+"ICE" , "sw_flux_vis_dir_dn", "", "", .true. , 28.5            
+"ICE" , "sw_flux_vis_dif_dn", "", "", .true. , 28.5            
+"ICE" , "sw_flux_nir_dir_dn", "", "", .true. , 21.5            
+"ICE" , "sw_flux_nir_dif_dn", "", "", .true. , 21.5            
+##Kg/s/m^2
+"ICE" , "lprec"             , "", "", .true. ,  0.1
+"ICE" , "fprec"             , "", "", .true. ,  1.0e-5         
+##"ICE" , "coszen",         "", "", .true. , 1.0
+"ICE" , "runoff"            , "", "", .true. , 0.0
+##CICE cannot treat calving
+"ICE" , "calving"           , "", "", .true. , 0.0
+##W/m^2/degK
+"ICE" , "dhdt"              , "", "", .true. , 80.0  
+"ICE" , "dedt"              , "", "", .true. , 2.0e-6
+"ICE" , "drdt"              , "", "", .true. , 10.0
+###Avoid division by zero
+"LND" , "rough_mom"         , "", "", .true.  ,  0.01
+"LND" , "rough_heat"        , "", "", .true.  ,  0.01
+###NTZ CICE hack. No effect on SIS5L
+##"ICE", "t10"  , "T_10_MOD"    , "./INPUT/t_10.nc"     , .false. ,  1.0
+##"ICE", "q10"  , "Q_10_MOD"    , "./INPUT/q_10.nc"     , .false. ,  1.0
+##"ICE", "d10"  , "dn10"        , "./INPUT/dn10.nc"     , .false. ,  1.0

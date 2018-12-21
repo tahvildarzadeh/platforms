@@ -1,0 +1,2 @@
+source ../../builds/gfdl-ws/intel15.env
+run -n 2 ../../builds/build/gfdl-ws-intel15/slab-sis2/repro/slab-sis2 

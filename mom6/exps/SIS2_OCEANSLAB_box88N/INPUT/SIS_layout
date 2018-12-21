@@ -1,0 +1,6 @@
+#override undef NIPROC_IO
+#override undef NJPROC_IO
+#override undef NIPROC
+#override undef NJPROC
+#override IO_LAYOUT = 1,1
+#override LAYOUT    = 1,2
