@@ -19,3 +19,6 @@
 [submodule "mom6/src/ice_param"]
 	path = mom6/src/ice_param
 	url = https://github.com/NOAA-GFDL/ice_param.git
+[submodule "mom6/src/mkmf"]
+	path = mom6/src/mkmf
+	url = https://github.com/NOAA-GFDL/mkmf.git

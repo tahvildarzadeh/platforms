@@ -1,10 +1,9 @@
 #!/bin/csh -x                                                                                  
-set machine_name = "theia"   # "theia"   # "theia"        # "gfdl-ws" # "theta"        # "lscsky50"
-set platform = "intel18_avx1"     # "intel16" # "intel18_avx1" # "gnu6"    # "intel18_avx1" # "intel18up2_avx1"                                                           
-set target = "debug-openmp"                                                                           
+set machine_name = "gfdl-ws" #"gfdl-ws" # "theta"        # "lscsky50"
+set platform = "intel15"        #"intel16" # "gnu6"    # "intel18_avx1" # "intel18up2_avx1"                                                           
+set target = "repro" #"debug-openmp"                                                                           
 
 set rootdir = `dirname $0`
-
 set abs_rootdir = `cd $rootdir && pwd`
 
 
@@ -30,11 +29,13 @@ if( $target =~ *"debug"* ) then
 endif
 
 set root = $cwd
+set srcdir = $root/../src
+
 mkdir -p build/$machine_name-$platform/shared/$target
 pushd build/$machine_name-$platform/shared/$target   
 rm -f path_names                       
-../../../../src/mkmf/bin/list_paths ../../../../src/FMS
-../../../../src/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -p libfms.a -c "-Duse_libMPI -Duse_netCDF -DSPMD" path_names
+$srcdir/mkmf/bin/list_paths $srcdir/FMS
+$srcdir/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -p libfms.a -c "-Duse_libMPI -Duse_netCDF -DSPMD" path_names
 
 make $makeflags libfms.a         
 
@@ -43,8 +44,8 @@ popd
 mkdir -p build/$machine_name-$platform/ocean_only/$target
 pushd build/$machine_name-$platform/ocean_only/$target
 rm -f path_names
-../../../../src/mkmf/bin/list_paths ../../../../src/MOM6/{config_src/dynamic,config_src/solo_driver,src/{*,*/*}}/
-../../../../src/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -o "-I../../shared/$target" -p MOM6 -l "-L../../shared/$target -lfms" -c '-Duse_libMPI -Duse_netCDF -DSPMD' path_names
+$srcdir/mkmf/bin/list_paths $srcdir/MOM6/{config_src/dynamic,config_src/solo_driver,src/{*,*/*}}/
+$srcdir/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -o "-I../../shared/$target" -p MOM6 -l "-L../../shared/$target -lfms" -c '-Duse_libMPI -Duse_netCDF -DSPMD' path_names
 
 make $makeflags MOM6
 exit 0
