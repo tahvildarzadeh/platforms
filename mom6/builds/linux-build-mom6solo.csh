@@ -1,7 +1,18 @@
 #!/bin/csh -x                                                                                  
-set machine_name = "gfdl-ws" #"gfdl-ws" # "theta"        # "lscsky50"
-set platform = "intel15"        #"intel16" # "gnu6"    # "intel18_avx1" # "intel18up2_avx1"                                                           
-set target = "repro" #"debug-openmp"                                                                           
+set machine_name = "ubuntu" 
+set platform     = "pgi18"                                                            
+#set machine_name = "ubuntu" 
+#set platform     = "gnu7"                                                            
+#set machine_name = "gfdl-ws" 
+#set platform     = "intel15"
+#set machine_name = "gfdl-ws"
+#set platform     = "gnu6" 
+#set machine_name = "theta"   
+#set platform     = "intel16"                                                           
+#set machine_name = "lscsky50"
+#set platform     = "intel18_avx1" # "intel18up2_avx1"                                                           
+
+set target = "debug" #"debug-openmp"                                                                           
 
 set rootdir = `dirname $0`
 set abs_rootdir = `cd $rootdir && pwd`
