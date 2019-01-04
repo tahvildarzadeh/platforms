@@ -1,0 +1,15 @@
+
+stdout.ubuntu.Inspiron15i7.gnu7.repro.n4:Main loop  144.168977    144.169030    144.169015      0.000022  0.940     0     0     3
+stdout.ubuntu.Inspiron15i7.gnu7.prod.n4:Main loop   104.994480    104.994538    104.994523      0.000025  0.921     0     0     3 !reproduce
+stdout.ubuntu.Inspiron15i7.gnu7.prod.n6:Main loop   113.068701    113.068782    113.068767      0.000030  0.937     0     0     5
+stdout.ubuntu.Inspiron15i7.gnu7.prod.n8:Main loop   107.944614    107.945010    107.944954      0.000129  0.931     0     0     7
+
+stdout.ubuntu.Inspiron15i7.pgi18.repro.n4:Main loop 116.314495    116.327085    116.323936      0.005451  0.927     0     0     3
+stdout.ubuntu.Inspiron15i7.pgi18.prod.n4:Main loop  110.323739    110.323791    110.323777      0.000022  0.918     0     0     3 !NOT reproduce
+stdout.ubuntu.Inspiron15i7.pgi18.prod.n6:Main loop  119.256887    119.256983    119.256967      0.000036  0.933     0     0     5
+stdout.ubuntu.Inspiron15i7.pgi18.prod.n8:Main loop  115.557685    115.558140    115.558053      0.000140  0.929     0     0     7
+
+stdout.gfdl-ws-gnu6.repro.n8:Main loop              138.242430    138.242595    138.242567      0.000052  0.858     0     0     7
+stdout.gfdl-ws-gnu6.prod-openmp.n8:Main loop        104.704366    104.704609    104.704573      0.000078  0.837     0     0     7  !reproduce
+stdout.gfdl-ws-gnu6.prod.n8:Main loop               112.102097    112.102351    112.102312      0.000081  0.850     0     0     7
+
