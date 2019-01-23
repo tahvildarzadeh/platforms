@@ -1,6 +1,6 @@
 #!/bin/bash -x                                     
 machine_name="googcp" 
-platform="gnu8"
+platform="intel19"
 #machine_name = "ubuntu"
 #platform     = "pgi18"                                             
 #machine_name="ubuntu" 
@@ -14,7 +14,7 @@ platform="gnu8"
 #machine_name = "lscsky50"
 #platform     = "intel18_avx1" # "intel18up2_avx1" 
 
-target="debug" #"debug-openmp"       
+target="prod" #"debug-openmp"       
 
 rootdir=`dirname $0`
 abs_rootdir=`cd $rootdir && pwd`
@@ -26,19 +26,19 @@ source $rootdir/$machine_name/$platform.env
 
 makeflags="NETCDF=3"
 
-if [[ "$target" =~ *"openmp"* ]] ; then 
+if [[ "$target" =~ "openmp" ]] ; then 
    makeflags="$makeflags OPENMP=1" 
 fi
 
-if [[ $target =~ *"repro"* ]] ; then
+if [[ $target =~ "repro" ]] ; then
    makeflags="$makeflags REPRO=1"
 fi
 
-if [[ $target =~ *"prod"* ]] ; then
+if [[ $target =~ "prod" ]] ; then
    makeflags="$makeflags PROD=1"
 fi
 
-if [[ $target =~ *"debug"* ]] ; then
+if [[ $target =~ "debug" ]] ; then
    makeflags="$makeflags DEBUG=1"
 fi
 
