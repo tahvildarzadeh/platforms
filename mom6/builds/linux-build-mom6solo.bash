@@ -1,8 +1,10 @@
 #!/bin/bash -x                                     
+machine_name="googcp" 
+platform="gnu8"
 #machine_name = "ubuntu"
 #platform     = "pgi18"                                             
-machine_name="ubuntu" 
-platform="gnu7"
+#machine_name="ubuntu" 
+#platform="gnu7"
 #machine_name = "gfdl-ws" 
 #platform     = "intel15"
 #machine_name = "gfdl-ws"
@@ -12,7 +14,7 @@ platform="gnu7"
 #machine_name = "lscsky50"
 #platform     = "intel18_avx1" # "intel18up2_avx1" 
 
-target="prod-openmp" #"debug-openmp"       
+target="debug" #"debug-openmp"       
 
 rootdir=`dirname $0`
 abs_rootdir=`cd $rootdir && pwd`
