@@ -1,6 +1,8 @@
 #!/bin/bash -x                                     
-machine_name="googcp" 
-platform="intel19"
+machine_name="tiger" 
+platform="intel18"
+#machine_name="googcp" 
+#platform="intel19"
 #machine_name = "ubuntu"
 #platform     = "pgi18"                                             
 #machine_name="ubuntu" 
