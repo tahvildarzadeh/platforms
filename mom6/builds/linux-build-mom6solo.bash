@@ -1,6 +1,8 @@
 #!/bin/bash -x                                     
-machine_name="tiger" 
+machine_name="gaea" 
 platform="intel18"
+#machine_name="tiger" 
+#platform="intel18"
 #machine_name="googcp" 
 #platform="intel19"
 #machine_name = "ubuntu"

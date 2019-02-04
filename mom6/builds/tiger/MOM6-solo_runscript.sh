@@ -4,7 +4,7 @@
 #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=niki.zadeh@gmail.com    # Where to send mail	
 #SBATCH --ntasks=8
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=40
 #SBATCH --time=1:00:00              # Time limit hrs:min:sec
 #SBATCH --output=mom6-solo_%j.log     # Standard output and error log
@@ -42,7 +42,7 @@ executable=/home/nzadeh/platforms/mom6/builds/build/${platform}/ocean_only/${tar
 ## Run parameters
 #total_npes is the number of cores to run on, omp_threads is the number of
 # openMP threads
-total_npes=32
+total_npes=64
 omp_threads=1
 
 # End of configuration section
