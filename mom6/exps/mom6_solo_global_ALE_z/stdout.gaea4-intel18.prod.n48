@@ -28,16 +28,16 @@ NOTE from PE     0: open_param_file: INPUT/MOM_override has been opened successf
  MOM domain decomposition
 whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
   X-AXIS =   45  45  45  45  45  45  45  45
-  Y-AXIS =   27  26  26  26  26  26  26  27
+  Y-AXIS =   35  35  35  35  35  35
 NOTE from PE     0: diag_manager_mod::diag_manager_init: prepend_date only supported when diag_manager_init is called with time_init present.
  MOM domain decomposition
 whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
   X-AXIS =   45  45  45  45  45  45  45  45
-  Y-AXIS =   27  26  26  26  26  26  26  27
+  Y-AXIS =   35  35  35  35  35  35
  MOM_MOSAIC domain decomposition
 whalo =    9, ehalo =    9, shalo =    9, nhalo =    9
   X-AXIS =   90  90  90  90  90  90  90  90
-  Y-AXIS =   54  52  52  52  52  52  52  54
+  Y-AXIS =   70  70  70  70  70  70
 
 WARNING from PE     0: MOM_file_parser : COORD_FILE over-ridden.  Line: 'COORD_FILE = "Layer_coord50.nc"' in file INPUT/MOM_override.
 
@@ -120,7 +120,7 @@ NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to
  MOM domain decomposition
 whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
   X-AXIS =   45  45  45  45  45  45  45  45
-  Y-AXIS =   27  26  26  26  26  26  26  27
+  Y-AXIS =   35  35  35  35  35  35
 
 WARNING from PE     0: MOM_diag_to_Z get_Z_depths:  Difficulties opening INPUT/analysis_vgrid_lev35.v1.nc - No such file or directory
 
@@ -153,66 +153,66 @@ MOM Date      1/01/01 12:00:00     12: En 8.157200E-04, MaxCFL  0.06093, Mass 1.
     Total Mass:   1.3795292143870023E+21, Change:   1.6915313344002131E+13 Error: -4.29310E+02 (-3.1E-19)
     Total Salt:   4.7897506625402929E+19, Change:   1.2114004687500000E+02 Error:  1.21140E+02 ( 2.5E-18)
     Total Heat:   1.9592856706608559E+25, Change:   2.3724551239616561E+20 Error:  2.41219E+07 ( 1.2E-18)
-      Total age:   1.8814498252912732E+18 yr kg
+      Total age:   1.8814498252912740E+18 yr kg
 MOM Date      1/01/02 00:00:00     24: En 1.035732E-03, MaxCFL  0.09705, Mass 1.379529243922E+21, Salt  34.72018214652, Temp   3.61849676001
     Total Energy: 43B3D431FFF79402  1.4288219572233836E+18
     Total Mass:   1.3795292439215952E+21, Change:   2.9534593283931906E+13 Error: -1.96104E+02 (-1.4E-19)
     Total Salt:   4.7897506625402929E+19, Change:  -1.5429140625000000E+01 Error: -1.54291E+01 (-3.2E-19)
     Total Heat:   1.9592901740406329E+25, Change:   4.5033797769042649E+19 Error:  2.38949E+07 ( 1.2E-18)
-      Total age:   3.7575068055057782E+18 yr kg
+      Total age:   3.7575068055057736E+18 yr kg
 
 WARNING from PE     0: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
 
 
 WARNING from PE     0: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
 
-                              20190205 105930.271: Memuse(MB) at Memory HiWaterMark=  1.512E+02  1.980E+02  5.705E+00  1.532E+02
- MPP_DOMAINS_STACK high water mark=      386650
+                              20190205 105900.907: Memuse(MB) at Memory HiWaterMark=  1.687E+02  2.129E+02  6.052E+00  1.721E+02
+ MPP_DOMAINS_STACK high water mark=      425050
 
-Tabulating mpp_clock statistics across     64 PEs...
+Tabulating mpp_clock statistics across     48 PEs...
 
                                           tmin          tmax          tavg          tstd  tfrac grain pemin pemax
-Total runtime                         9.359820      9.359826      9.359823      0.000002  1.000     0     0    63
-Initialization                        0.747396      0.775897      0.765642      0.006062  0.082     0     0    63
-Main loop                             7.751770      7.755546      7.755483      0.000468  0.829     0     0    63
-Termination                           0.727880      0.784017      0.733044      0.006937  0.078     0     0    63
-Ocean Initialization                  1.391968      1.445368      1.411165      0.009618  0.151    11     0    63
-Ocean                                 6.843876      6.844425      6.844173      0.000101  0.731     1     0    63
-Ocean dynamics                        4.395076      4.545831      4.434133      0.029400  0.474    11     0    63
-Ocean thermodynamics and tracers      1.404641      2.291537      1.987108      0.244593  0.212    11     0    63
-Ocean Other                           0.038112      0.588382      0.133164      0.121704  0.014    11     0    63
-(Ocean tracer advection)              0.385870      1.195137      0.906396      0.237955  0.097    21     0    63
-(Ocean diabatic driver)               0.464401      0.685729      0.637824      0.049643  0.068    21     0    63
-(Ocean continuity equation *)         0.000000      0.000000      0.000000      0.000000  0.000    31     0    63
-(Ocean set BBL viscosity)             0.033247      0.241019      0.131724      0.041115  0.014    31     0    63
-(Ocean message passing *)             0.059517      1.652765      0.590460      0.435469  0.063    31     0    63
-(Ocean MOM_initialize_state)          0.295777      0.297728      0.297033      0.000502  0.032    31     0    63
-(Ocean thickness diffusion *)         0.253191      0.344793      0.306024      0.017244  0.033    31     0    63
-(Ocean mixed layer restrat)           0.100226      0.531194      0.374449      0.124988  0.040    31     0    63
-(Ocean collective diagnostics)        0.002649      0.179642      0.026061      0.036677  0.003    31     0    63
-(Ocean Z-space diagnostics)           0.000143      0.175475      0.023310      0.036499  0.002    31     0    63
-(Ocean ALE)                           0.021214      0.395508      0.267928      0.108003  0.029    31     0    63
-(Ocean diagnostics framework)         0.000000      0.000000      0.000000      0.000000  0.000    31     0    63
-(Ocean tides)                         0.000221      0.000477      0.000340      0.000062  0.000    31     0    63
-(Ocean Coriolis & mom advection)      0.083292      0.112470      0.098198      0.005851  0.010    31     0    63
-(Ocean continuity equation)           0.525880      0.936603      0.784049      0.095847  0.084    31     0    63
-(Ocean pressure force)                0.434651      0.471492      0.455408      0.007574  0.049    31     0    63
-(Ocean vertical viscosity)            0.195673      0.703924      0.530158      0.113515  0.057    31     0    63
-(Ocean horizontal viscosity)          0.136687      0.150969      0.143025      0.002961  0.015    31     0    63
-(Ocean momentum increments)           0.027151      0.076505      0.066246      0.015950  0.007    31     0    63
-(Ocean message passing)               0.126320      0.857990      0.373871      0.163995  0.040    31     0    63
-(Ocean barotropic mode calc)          0.005141      0.009048      0.007517      0.001036  0.001    31     0    63
-(Ocean barotropic mode stepping)      0.716269      0.949125      0.801700      0.054939  0.086    31     0    63
-(Ocean barotropic forcing calc)       0.022736      0.063444      0.047344      0.010123  0.005    31     0    63
-(Ocean kappa_shear)                   0.029361      0.217919      0.114910      0.053766  0.012    31     0    63
-(Ocean diabatic entrain)              0.000000      0.000000      0.000000      0.000000  0.000    31     0    63
-(Ocean vert remap)                    0.082717      0.209341      0.168821      0.033857  0.018    31     0    63
-(Ocean set_diffusivity)               0.141016      0.326243      0.231709      0.054079  0.025    31     0    63
-(Ocean KPP)                           0.000000      0.000000      0.000000      0.000000  0.000    31     0    63
-(Ocean tracer_columns)                0.029371      0.041443      0.036351      0.002781  0.004    26     0    63
-(Ocean advect tracer)                 0.203086      0.209873      0.204843      0.001389  0.022    31     0    63
-(Ocean diffuse tracer)                0.178118      0.989044      0.698560      0.238191  0.075    31     0    63
-(Ocean epipycnal diffuse tracer)      0.000000      0.000000      0.000000      0.000000  0.000    31     0    63
-(Ocean surface forcing)               0.134082      0.140164      0.138016      0.001818  0.015    31     0    63
+Total runtime                        13.368974     13.368978     13.368976      0.000001  1.000     0     0    47
+Initialization                        2.191516      2.235766      2.215068      0.008550  0.166     0     0    47
+Main loop                            10.144091     10.160719     10.160368      0.002374  0.760     0     0    47
+Termination                           0.816492      0.947663      0.823382      0.018315  0.062     0     0    47
+Ocean Initialization                  2.629154      2.684186      2.648094      0.016876  0.198    11     0    47
+Ocean                                 9.186868      9.187407      9.187219      0.000113  0.687     1     0    47
+Ocean dynamics                        5.892866      6.057690      5.962864      0.051975  0.446    11     0    47
+Ocean thermodynamics and tracers      1.839084      3.107664      2.638941      0.340372  0.197    11     0    47
+Ocean Other                           0.051405      0.811041      0.197674      0.160583  0.015    11     0    47
+(Ocean tracer advection)              0.470685      1.619986      1.211818      0.314942  0.091    21     0    47
+(Ocean diabatic driver)               0.639500      0.957613      0.841570      0.064170  0.063    21     0    47
+(Ocean continuity equation *)         0.000000      0.000000      0.000000      0.000000  0.000    31     0    47
+(Ocean set BBL viscosity)             0.051359      0.287612      0.173393      0.051686  0.013    31     0    47
+(Ocean message passing *)             0.102349      2.262083      0.810371      0.560073  0.061    31     0    47
+(Ocean MOM_initialize_state)          0.712781      0.714473      0.713870      0.000460  0.053    31     0    47
+(Ocean thickness diffusion *)         0.348250      0.497592      0.410233      0.035374  0.031    31     0    47
+(Ocean mixed layer restrat)           0.115875      0.738400      0.504292      0.165193  0.038    31     0    47
+(Ocean collective diagnostics)        0.003280      0.216600      0.040550      0.048094  0.003    31     0    47
+(Ocean Z-space diagnostics)           0.000207      0.213265      0.037214      0.048017  0.003    31     0    47
+(Ocean ALE)                           0.041406      0.530060      0.361621      0.138946  0.027    31     0    47
+(Ocean diagnostics framework)         0.000000      0.000000      0.000000      0.000000  0.000    31     0    47
+(Ocean tides)                         0.000282      0.000620      0.000440      0.000082  0.000    31     0    47
+(Ocean Coriolis & mom advection)      0.114103      0.149608      0.131475      0.010219  0.010    31     0    47
+(Ocean continuity equation)           0.647117      1.258555      1.029246      0.133635  0.077    31     0    47
+(Ocean pressure force)                0.554359      0.608756      0.584658      0.011015  0.044    31     0    47
+(Ocean vertical viscosity)            0.289381      0.974786      0.729840      0.149857  0.055    31     0    47
+(Ocean horizontal viscosity)          0.180563      0.196954      0.189288      0.003882  0.014    31     0    47
+(Ocean momentum increments)           0.060498      0.100182      0.089741      0.015728  0.007    31     0    47
+(Ocean message passing)               0.147044      1.326818      0.539056      0.246545  0.040    31     0    47
+(Ocean barotropic mode calc)          0.007012      0.013664      0.010454      0.002090  0.001    31     0    47
+(Ocean barotropic mode stepping)      0.935678      1.302444      1.067848      0.098652  0.080    31     0    47
+(Ocean barotropic forcing calc)       0.033564      0.078581      0.062567      0.013747  0.005    31     0    47
+(Ocean kappa_shear)                   0.043497      0.279863      0.155275      0.065105  0.012    31     0    47
+(Ocean diabatic entrain)              0.000000      0.000000      0.000000      0.000000  0.000    31     0    47
+(Ocean vert remap)                    0.107400      0.279499      0.222270      0.044494  0.017    31     0    47
+(Ocean set_diffusivity)               0.191543      0.448531      0.313990      0.066367  0.023    31     0    47
+(Ocean KPP)                           0.000000      0.000000      0.000000      0.000000  0.000    31     0    47
+(Ocean tracer_columns)                0.038884      0.058237      0.049598      0.004785  0.004    26     0    47
+(Ocean advect tracer)                 0.257374      0.260090      0.257952      0.000508  0.019    31     0    47
+(Ocean diffuse tracer)                0.208336      1.359131      0.950312      0.315209  0.071    31     0    47
+(Ocean epipycnal diffuse tracer)      0.000000      0.000000      0.000000      0.000000  0.000    31     0    47
+(Ocean surface forcing)               0.363787      0.390780      0.383134      0.010964  0.029    31     0    47
  MPP_STACK high water mark=           0
-Application 22818158 resources: utime ~583s, stime ~13s, Rss ~202720, inblocks ~225224, outblocks ~2011160
+Application 22818157 resources: utime ~574s, stime ~12s, Rss ~218308, inblocks ~223176, outblocks ~2011152
