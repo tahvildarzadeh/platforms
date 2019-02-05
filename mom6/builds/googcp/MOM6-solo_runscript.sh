@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=mom6-solo # Job name
 #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=thomas.robinson@noaa.gov    # Where to send mail	
+#SBATCH --mail-user=niki.zadeh@noaa.gov    # Where to send mail	
 #SBATCH --ntasks=8
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=96
@@ -21,7 +21,7 @@ module load intel
 module load hdf5/1.8.16
 module load netcdf/4.6.2
 module load netcdf-fortran/4.4.4
-#module load mpich
+module load mpich
 #module load openmpi
 #module load intel
 #module load hdf5/1.8.16
@@ -38,7 +38,7 @@ ulimit -s unlimited
 
 # Name of the mpiexec program to use
 #Make sure you have --mpi=pmi2 , otherwise n runs start in parallel!!!e
-mpiexec_prog="srun --mpi=pmi2"
+mpiexec_prog="/apps/slurm/current/bin/srun --mpi=pmi2"
 # Option used to specify number of MPI process to run (usually -n or -np)
 mpiexec_nopt=-n
 # Option used to specify number of OpenMP threads to run
@@ -55,7 +55,7 @@ executable=/home/nzadeh/platforms/mom6/builds/build/${platform}/ocean_only/${tar
 ## Run parameters
 #total_npes is the number of cores to run on, omp_threads is the number of
 # openMP threads
-total_npes=16
+total_npes=64
 omp_threads=1
 
 # End of configuration section
