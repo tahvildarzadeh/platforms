@@ -1,6 +1,6 @@
 #!/bin/bash -x                                     
-machine_name="gaea" 
-platform="intel18"
+#machine_name="gaea" 
+#platform="intel18"
 #machine_name="tiger" 
 #platform="intel18"
 #machine_name="googcp" 
@@ -15,8 +15,8 @@ platform="intel18"
 #platform     = "gnu6" 
 #machine_name = "theta"   
 #platform     = "intel16"
-#machine_name = "lscsky50"
-#platform     = "intel18_avx1" # "intel18up2_avx1" 
+machine_name="lscsky50"
+platform="intel19up2_avx1" #"intel18_avx1" # "intel18up2_avx1" 
 
 target="prod" #"debug-openmp"       
 

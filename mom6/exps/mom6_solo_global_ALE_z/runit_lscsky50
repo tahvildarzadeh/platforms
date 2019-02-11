@@ -1,0 +1,8 @@
+#!/bin/bash -x                                     
+source ../../builds/lscsky50/intel19up2_avx1.env
+. ../../builds/lscsky50/intel19up2_avx1.env
+npes=64
+plat=lscsky50.intel19up2_avx1
+targ=prod
+mpirun -n $npes ../../builds/build/lscsky50-intel19up2_avx1/ocean_only/prod/MOM6 |& tee stdout.$plat.$targ.n$npes
+mv ocean.stats ocean.stats.$plat.$targ.n$npes
