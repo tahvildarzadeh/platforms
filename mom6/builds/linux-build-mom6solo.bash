@@ -16,9 +16,9 @@
 #machine_name = "theta"   
 #platform     = "intel16"
 machine_name="lscsky50"
-platform="intel19up2_avx1" #"intel18_avx1" # "intel18up2_avx1" 
+platform="intel19up2" #"intel18_avx1" # "intel18up2_avx1" 
 
-target="prod" #"debug-openmp"       
+target="prod_avx512sky" #"debug-openmp"       
 
 rootdir=`dirname $0`
 abs_rootdir=`cd $rootdir && pwd`
@@ -46,6 +46,9 @@ if [[ $target =~ "debug" ]] ; then
    makeflags="$makeflags DEBUG=1"
 fi
 
+if [[ $target =~ "sky" ]] ; then
+   makeflags="$makeflags AVX=sky"
+fi
 srcdir=$abs_rootdir/../src
 
 mkdir -p build/$machine_name-$platform/shared/$target

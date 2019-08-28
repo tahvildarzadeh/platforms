@@ -1,0 +1,90 @@
+The following numbers were obtained on lscsky50-d by doing :
+module load intel/2019_up2
+ifort -qopt-report=5 -xskylake-avx512 -qopt-zmm-usage=high -align array64byte vector1_matvec.f90 vector1_driver.f90 -o vector1_matvec
+./vector1_matvec
+
+==========================================================
+compiler flags		time(secs)	sum
+==========================================================
+None			20.849		312338.5000000E+01
+
+-xskylake-avx512 
+-qopt-zmm-usage=high	14.105		312338.5250000E+01
+
+When using module constructs in driver and subroutine file we get:
+
+-xskylake-avx512
+-qopt-zmm-usage=high    13.905		312338.5250000E+01
+
+using fortran loop 
+do j=1,size2;c(:) = c(:) + a(:,j) * b(j);enddo
+instead of 
+do j=1,size2;do i=1,size1;c(i) = c(i) + a(i,j) * b(j);enddo;enddo
+we get:
+
+-xskylake-avx512
+-qopt-zmm-usage=high	11.337		312338.5250000E+01
+
+
+===========================================================
+===========================================================
+===========================================================
+When we combine the driver with the subroutine file we get:
+
+ifort -qopt-report=5 -xskylake-avx512 -qopt-zmm-usage=high -align array64byte vector1_combine.f90 -o vector1_combine
+./vector1_combine
+
+==========================================================
+compiler flags		time(secs)	sum
+==========================================================
+None			19.985		312338.5000000E+01
+
+-xskylake-avx512
+-qopt-zmm-usage=high	10.178		312338.5250000E+01
+
+-xskylake-avx512
+-qopt-zmm-usage=high
+-align array64byte      10.212		312338.5250000E+01
+
+-xskylake-avx512
+-qopt-zmm-usage=high
+-qopt-prefetch=3
+-align array64byte      10.193		312338.5250000E+01
+
+-xskylake-avx512
+-qopt-zmm-usage=high
+-align array64byte
+-qopt-prefetch=3
+-O2			10.199		312338.5250000E+01
+
+-xskylake-avx512
+-qopt-zmm-usage=high
+-align array64byte
+-qopt-prefetch=3
+-O3			21.701		312338.5250000E+01	!!!DO NOT USE -O3 with -qopt-prefetch=3
+
+-xskylake-avx512
+-qopt-zmm-usage=high
+-align array64byte
+-O3			10.200		312338.5250000E+01
+
+-xCORE-AVX512 
+-qopt-zmm-usage=high	10.190		312338.5250000E+01
+	
+-xCORE-AVX2 
+-qopt-zmm-usage=high	12.307		312338.5250000E+01
+
+
+using fortran loop 
+do j=1,size2;c(:) = c(:) + a(:,j) * b(j);enddo
+instead of 
+do j=1,size2;do i=1,size1;c(i) = c(i) + a(i,j) * b(j);enddo;enddo
+does not make a difference here (I guess since there are no module variables) and we get:
+
+-xskylake-avx512 
+-qopt-zmm-usage=high 
+-align array64byte	10.175		312338.5250000E+01
+
+
+
+
