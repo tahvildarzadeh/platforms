@@ -1,0 +1,12 @@
+! Blank file in which we can put "overrides" for parameters
+!VERBOSITY = 9
+#override NIGLOBAL = 180                 !
+#override NJGLOBAL = 144                 !
+#override CHANNEL_CONFIG = "none"
+#override TOPO_EDITS_FILE = ""
+#override TIDEAMP_FILE = "tidal_amplitude.nc"
+#override CHL_FILE = "seawifs-clim-1997-2010.nc"
+#override CHL_VARNAME = "CHL_A"
+#override SALT_RESTORE_FILE = "salt_restore.nc"
+# Fix sign error in adjustment of net fresh-water
+USE_NET_FW_ADJUSTMENT_SIGN_BUG = False
