@@ -1,0 +1,343 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.2.187 Build 20190117
+
+Compiler options: -qopt-report=5 -xskylake-avx512 -qopt-zmm-usage=high -align array64byte -o vector1_matvec
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: MAIN
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (MAIN) [1/1=100.0%] vector1_driver.f90(1,9)
+  -> EXTERN: (1,9) for_set_reentrancy
+  -> EXTERN: (37,5) __resetsp_inlined
+  -> EXTERN: (37,5) for_deallocate
+  -> EXTERN: (37,5) _alloca
+  -> EXTERN: (37,5) for_allocate
+  -> EXTERN: (37,5) _alloca
+  -> EXTERN: (37,5) __getsp_inlined
+  -> EXTERN: (39,5) __resetsp_inlined
+  -> EXTERN: (39,5) _alloca
+  -> EXTERN: (39,5) __getsp_inlined
+  -> EXTERN: (44,12) for_cpusec_t
+  -> EXTERN: (48,14) MATVEC
+  -> EXTERN: (56,9) for_cpusec_t
+  -> EXTERN: (57,4) for_write_seq_fmt_xmit
+  -> EXTERN: (57,4) for_write_seq_fmt
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at vector1_driver.f90(37,5)
+   remark #25096: Loop Interchange not done due to: Imperfect Loop Nest (Either at Source or due to other Compiler Transformations)
+   remark #25451: Advice: Loop Interchange, if possible, might help loopnest. Suggested Permutation : ( 1 2 ) --> ( 2 1 ) 
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.268
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 20 
+      remark #15477: vector cost: 5.180 
+      remark #15478: estimated potential speedup: 3.410 
+      remark #15482: vectorized math library calls: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.145
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 20 
+      remark #15477: vector cost: 5.180 
+      remark #15478: estimated potential speedup: 3.410 
+      remark #15482: vectorized math library calls: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.268
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 20 
+      remark #15477: vector cost: 5.180 
+      remark #15478: estimated potential speedup: 3.410 
+      remark #15482: vectorized math library calls: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(37,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 1.261
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 0.370 
+      remark #15478: estimated potential speedup: 10.710 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 2.333
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 0.370 
+      remark #15478: estimated potential speedup: 10.710 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15389: vectorization support: reference at (37:5) has unaligned access
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 1.261
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 0.370 
+      remark #15478: estimated potential speedup: 10.710 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(37,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference a(:,:) has unaligned access
+      remark #15389: vectorization support: reference at (37:9) has unaligned access   [ vector1_driver.f90(37,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.720
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 0.370 
+      remark #15478: estimated potential speedup: 13.290 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+      remark #15388: vectorization support: reference a(:,:) has aligned access
+      remark #15389: vectorization support: reference at (37:9) has unaligned access   [ vector1_driver.f90(37,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 2.167
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 0.370 
+      remark #15478: estimated potential speedup: 13.290 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=25
+   LOOP END
+
+   LOOP BEGIN at vector1_driver.f90(37,5)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference a(:,:) has aligned access
+      remark #15389: vectorization support: reference at (37:9) has unaligned access   [ vector1_driver.f90(37,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.682
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 0.370 
+      remark #15478: estimated potential speedup: 13.290 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(39,5)
+   remark #15388: vectorization support: reference at (39:5) has aligned access
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.013
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 19 
+   remark #15477: vector cost: 4.930 
+   remark #15478: estimated potential speedup: 3.600 
+   remark #15482: vectorized math library calls: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(39,5)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference at (39:5) has aligned access
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.250
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 19 
+   remark #15477: vector cost: 4.930 
+   remark #15478: estimated potential speedup: 3.600 
+   remark #15482: vectorized math library calls: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(39,5)
+   remark #15388: vectorization support: reference b(:) has aligned access
+   remark #15388: vectorization support: reference at (39:5) has aligned access
+   remark #15305: vectorization support: vector length 16
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 0.250 
+   remark #15478: estimated potential speedup: 22.690 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=25
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(39,5)
+<Remainder loop for vectorization>
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 0.250 
+   remark #15478: estimated potential speedup: 22.690 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(58,29)
+   remark #15388: vectorization support: reference c(:) has aligned access
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 6.200
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 0.310 
+   remark #15478: estimated potential speedup: 12.450 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=25
+LOOP END
+
+LOOP BEGIN at vector1_driver.f90(58,29)
+<Remainder loop for vectorization>
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 0.310 
+   remark #15478: estimated potential speedup: 12.450 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 1  
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at vector1_driver.f90(52,7)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+vector1_driver.f90(1,9):remark #34051: REGISTER ALLOCATION : [MAIN__] vector1_driver.f90:1
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   40[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm22 k0-k2 k4]
+        
+    Routine temporaries
+        Total         :     288
+            Global    :     109
+            Local     :     179
+        Regenerable   :      67
+        Spilled       :      15
+        
+    Routine stack
+        Variables     :     100 bytes*
+            Reads     :       4 [3.98e+00 ~ 0.0%]
+            Writes    :       5 [4.98e+00 ~ 0.0%]
+        Spills        :      88 bytes*
+            Reads     :      16 [3.59e+01 ~ 0.0%]
+            Writes    :      16 [2.72e+01 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
