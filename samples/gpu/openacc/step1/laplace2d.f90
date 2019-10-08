@@ -68,7 +68,7 @@ program laplace
     error=0.0_fp_kind
 !$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
 !$omp do reduction( max:error )
-!off$acc kernels
+!$acc kernels
     do j=1,m-2
       do i=1,n-2
         Anew(i,j) = 0.25_fp_kind * ( A(i+1,j  ) + A(i-1,j  ) + &
@@ -76,7 +76,7 @@ program laplace
         error = max( error, abs(Anew(i,j)-A(i,j)) )
       end do
     end do
-!off$acc end kernels
+!$acc end kernels
 !$omp end do
 !$omp do
 !off$acc kernels
