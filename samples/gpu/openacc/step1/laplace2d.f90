@@ -79,13 +79,13 @@ program laplace
 !$acc end kernels
 !$omp end do
 !$omp do
-!off$acc kernels
+!$acc kernels
     do j=1,m-2
       do i=1,n-2
         A(i,j) = Anew(i,j)
       end do
     end do
-!off$acc end kernels
+!$acc end kernels
 !$omp end do
 !$omp end parallel
     iter = iter +1

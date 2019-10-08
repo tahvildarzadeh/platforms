@@ -37,6 +37,13 @@ laplace:
          72, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
          73, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
          76, Generating implicit reduction(max:error)
+     82, Generating implicit copyin(anew(1:4094,1:4094))
+         Generating implicit copyout(a(1:4094,1:4094))
+     83, Loop is parallelizable
+     84, Loop is parallelizable
+         Generating Tesla code
+         83, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         84, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
 pgf90  -acc -ta=nvidia -Minfo=accel -o laplace2d_f90_acc laplace2d.f90
 laplace:
      71, Generating implicit copyout(anew(1:4094,1:4094))
@@ -47,31 +54,38 @@ laplace:
          72, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
          73, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
          76, Generating implicit reduction(max:error)
+     82, Generating implicit copyin(anew(1:4094,1:4094))
+         Generating implicit copyout(a(1:4094,1:4094))
+     83, Loop is parallelizable
+     84, Loop is parallelizable
+         Generating Tesla code
+         83, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         84, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
 ./laplace2d_f90
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     51.280 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.305 seconds, in 2421 iteration, sum(A)= 76859.539
 ./laplace2d_f90_omp
 Jacobi relaxation Calculation: 4096 x 4096 mesh
  Number of OMP threads =             1
- completed in     51.463 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.411 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             2
- completed in     27.957 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     27.824 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             3
- completed in     27.762 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     25.135 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             4
- completed in     25.945 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     26.051 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             5
- completed in     22.645 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     23.002 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             6
- completed in     21.651 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     21.541 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             7
- completed in     20.903 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     20.991 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             8
- completed in     22.114 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     23.348 seconds, in 2421 iteration, sum(A)= 76859.539
 ./laplace2d_f90_acc
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in    115.898 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in    185.496 seconds, in 2421 iteration, sum(A)= 76576.305
 ./laplace2d_f90_acc_managed
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in    140.541 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in     28.872 seconds, in 2421 iteration, sum(A)= 76576.305
 
