@@ -66,7 +66,7 @@ program laplace
   error=1.0_fp_kind
   do while ( error .gt. tol )
     error=0.0_fp_kind
-!off$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
+!$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
 !off$omp do reduction( max:error )
 !off$acc kernels
     do j=1,m-2
@@ -78,7 +78,7 @@ program laplace
     end do
 !off$acc end kernels
 !off$omp end do
-!off$omp do
+!$omp do
 !off$acc kernels
     do j=1,m-2
       do i=1,n-2
@@ -86,8 +86,8 @@ program laplace
       end do
     end do
 !off$acc end kernels
-!off$omp end do
-!off$omp end parallel
+!$omp end do
+!$omp end parallel
     iter = iter +1
     itermax = iter
   end do
