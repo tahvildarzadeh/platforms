@@ -33,33 +33,23 @@ program laplace
   real(fp_kind), dimension (:),   allocatable :: y0
   real(fp_kind) :: pi=2.0_fp_kind*asin(1.0_fp_kind), tol=1.0e-4_fp_kind, error=1.0_fp_kind
   real(fp_kind) :: start_time, stop_time
-  
   integer :: nthread, OMP_GET_NUM_THREADS,OMP_GET_THREAD_NUM
-
   write(*,'(a,i5,a,i5,a)') 'Jacobi relaxation Calculation:', n, ' x', m, ' mesh'
-
 !$ do nthread = 1,8
 !$ call omp_set_num_threads(nthread)
 !$OMP PARALLEL 
 !$  if (OMP_GET_THREAD_NUM() .EQ. 0)  PRINT *, 'Number of OMP threads = ', OMP_GET_NUM_THREADS()
 !$OMP END PARALLEL
-
   allocate ( A(0:n-1,0:m-1), Anew(0:n-1,0:m-1) )
   allocate ( y0(0:m-1) )
-
   A = 0.0_fp_kind
-
   ! Set B.C.
   y0 = sin(pi* (/ (j,j=0,m-1) /) /(m-1))
-
   A(0,:)   = 0.0_fp_kind
   A(n-1,:) = 0.0_fp_kind
   A(:,0)   = y0
   A(:,m-1) = y0*exp(-pi)
-   
- 
   call cpu_time(start_time) 
-
 !$omp parallel do shared(Anew)
   do i=1,m-1
     Anew(0,i)   = 0.0_fp_kind
@@ -72,17 +62,13 @@ program laplace
     Anew(i,m-1) = y0(i)*exp(-pi)
   end do
 !$end omp parallel do
-
   iter=0
   error=1.0_fp_kind
-!  do while ( error .gt. tol .and. iter .lt. iter_max ) !iter is not thread safe
   do while ( error .gt. tol )
     error=0.0_fp_kind
-
-!$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
-
-!$omp do reduction( max:error )
-!$acc kernels
+!off$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
+!off$omp do reduction( max:error )
+!off$acc kernels
     do j=1,m-2
       do i=1,n-2
         Anew(i,j) = 0.25_fp_kind * ( A(i+1,j  ) + A(i-1,j  ) + &
@@ -90,34 +76,24 @@ program laplace
         error = max( error, abs(Anew(i,j)-A(i,j)) )
       end do
     end do
-!$acc end kernels
-!$omp end do
-
-!$omp do
-!$acc kernels
+!off$acc end kernels
+!off$omp end do
+!off$omp do
+!off$acc kernels
     do j=1,m-2
       do i=1,n-2
         A(i,j) = Anew(i,j)
       end do
     end do
-!$acc end kernels
-!$omp end do
-
-
-!$omp end parallel
-
-    !    if(mod(iter,100).eq.0 ) write(*,'(i5,f10.6)'), iter, error
+!off$acc end kernels
+!off$omp end do
+!off$omp end parallel
     iter = iter +1
     itermax = iter
-    
   end do
-
   call cpu_time(stop_time) 
   write(*,'(a,f10.3,a,i4,a,f10.3)')  ' completed in ', stop_time-start_time, ' seconds, in ',&
                                      itermax,' iteration, sum(A)=',sum(A) 
-
   deallocate (A,Anew,y0)
-
 !$ enddo
-
 end program laplace
