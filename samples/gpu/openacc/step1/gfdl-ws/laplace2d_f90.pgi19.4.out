@@ -31,29 +31,29 @@ pgf90  -acc -ta=nvidia:managed -Minfo=accel -o laplace2d_f90_acc_managed laplace
 pgf90  -acc -ta=nvidia -Minfo=accel -o laplace2d_f90_acc laplace2d.f90
 ./laplace2d_f90
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     51.250 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.215 seconds, in 2421 iteration, sum(A)= 76859.539
 ./laplace2d_f90_omp
 Jacobi relaxation Calculation: 4096 x 4096 mesh
  Number of OMP threads =             1
- completed in     50.654 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.124 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             2
- completed in     38.529 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     28.055 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             3
- completed in     40.396 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     24.610 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             4
- completed in     39.486 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     24.986 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             5
- completed in     39.057 seconds, in 2421 iteration, sum(A)= 76859.695
+ completed in     23.096 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             6
- completed in     39.499 seconds, in 2421 iteration, sum(A)= 76859.781
+ completed in     21.572 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             7
- completed in     41.369 seconds, in 2421 iteration, sum(A)= 76867.781
+ completed in     22.847 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             8
- completed in     48.915 seconds, in 2421 iteration, sum(A)= 76862.422
+ completed in     22.690 seconds, in 2421 iteration, sum(A)= 76859.539
 ./laplace2d_f90_acc
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     85.994 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in     85.566 seconds, in 2421 iteration, sum(A)= 76576.305
 ./laplace2d_f90_acc_managed
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     86.259 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in     86.213 seconds, in 2421 iteration, sum(A)= 76576.305
 
