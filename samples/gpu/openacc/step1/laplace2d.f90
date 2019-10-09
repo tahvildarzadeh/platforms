@@ -66,8 +66,9 @@ program laplace
 !$acc end kernels
   iter=0
   error=1.0_fp_kind
+!$acc data copyin(A) create(Anew) !We do need to copy in A to device and allocate Anew on the device.
   do while ( error .gt. tol )
-!$acc kernels copy(A) create(Anew) !We do not need to copy Anew, its whole scope is on the device.
+!$acc kernels present(A,Anew)   !Tell compiler to reuse A,Anew on the device
     error=0.0_fp_kind
 !$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
 !$omp do reduction( max:error )
@@ -91,6 +92,8 @@ program laplace
     iter = iter +1
     itermax = iter
   end do
+!$acc update self(A)
+!$acc end data
   call cpu_time(stop_time) 
   write(*,'(a,f10.3,a,i4,a,f10.3)')  ' completed in ', stop_time-start_time, ' seconds, in ',&
                                      itermax,' iteration, sum(A)=',sum(A) 
