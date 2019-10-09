@@ -1,1 +1,1 @@
-module load PrgEnv-pgi/17.10
+module load PrgEnv-pgi/18.10
