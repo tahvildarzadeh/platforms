@@ -50,6 +50,7 @@ program laplace
   A(:,0)   = y0
   A(:,m-1) = y0*exp(-pi)
   call cpu_time(start_time) 
+!$acc kernels copyin(y0) create(Anew)
 !$omp parallel do shared(Anew)
   do i=1,m-1
     Anew(0,i)   = 0.0_fp_kind
@@ -62,13 +63,14 @@ program laplace
     Anew(i,m-1) = y0(i)*exp(-pi)
   end do
 !$end omp parallel do
+!$acc end kernels
   iter=0
   error=1.0_fp_kind
   do while ( error .gt. tol )
+!$acc kernels copy(A) create(Anew) !We do not need to copy Anew, its whole scope is on the device.
     error=0.0_fp_kind
 !$omp parallel shared(m, n, Anew, A) firstprivate(iter) 
 !$omp do reduction( max:error )
-!$acc kernels
     do j=1,m-2
       do i=1,n-2
         Anew(i,j) = 0.25_fp_kind * ( A(i+1,j  ) + A(i-1,j  ) + &
@@ -76,18 +78,16 @@ program laplace
         error = max( error, abs(Anew(i,j)-A(i,j)) )
       end do
     end do
-!$acc end kernels
 !$omp end do
 !$omp do
-!$acc kernels
     do j=1,m-2
       do i=1,n-2
         A(i,j) = Anew(i,j)
       end do
     end do
-!$acc end kernels
 !$omp end do
 !$omp end parallel
+!$acc end kernels
     iter = iter +1
     itermax = iter
   end do

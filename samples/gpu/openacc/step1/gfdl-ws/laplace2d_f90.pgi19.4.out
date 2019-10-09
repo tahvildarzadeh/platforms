@@ -17,28 +17,34 @@ laplace:
      50, Memory copy idiom, loop replaced by call to __c_mcopy4
      51, Loop not fused: function call before adjacent loop
          Generated vector simd code for the loop
-     53, Parallel region activated
-     57, Parallel region terminated
-     59, Parallel region activated
-     63, Parallel region terminated
-     67, Loop not vectorized/parallelized: contains call
-     69, Parallel region activated
-     90, Parallel region terminated
+     54, Parallel region activated
+     58, Parallel region terminated
+     60, Parallel region activated
+     64, Parallel region terminated
+     69, Loop not vectorized/parallelized: contains call
+     72, Parallel region activated
+     89, Parallel region terminated
      95, sum reduction inlined
          Loop not fused: function call before adjacent loop
          Generated vector simd code for the loop containing reductions
 pgf90  -acc -ta=nvidia:managed -Minfo=accel -o laplace2d_f90_acc_managed laplace2d.f90
 laplace:
-     71, Generating implicit copyout(anew(1:4094,1:4094))
-         Generating implicit copyin(a(0:4095,0:4095))
-     72, Loop is parallelizable
-     73, Loop is parallelizable
+     53, Generating copyin(y0(:))
+         Generating create(anew(:,:))
+     55, Loop is parallelizable
          Generating Tesla code
-         72, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
-         73, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
-         76, Generating implicit reduction(max:error)
-     82, Generating implicit copyin(anew(1:4094,1:4094))
-         Generating implicit copyout(a(1:4094,1:4094))
+         55, !$acc loop gang, vector(128) ! blockidx%x threadidx%x
+     61, Loop is parallelizable
+         Generating Tesla code
+         61, !$acc loop gang, vector(128) ! blockidx%x threadidx%x
+     69, Generating create(anew(:,:))
+         Generating copy(a(:,:))
+     74, Loop is parallelizable
+     75, Loop is parallelizable
+         Generating Tesla code
+         74, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         75, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
+         78, Generating implicit reduction(max:error)
      83, Loop is parallelizable
      84, Loop is parallelizable
          Generating Tesla code
@@ -46,16 +52,22 @@ laplace:
          84, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
 pgf90  -acc -ta=nvidia -Minfo=accel -o laplace2d_f90_acc laplace2d.f90
 laplace:
-     71, Generating implicit copyout(anew(1:4094,1:4094))
-         Generating implicit copyin(a(0:4095,0:4095))
-     72, Loop is parallelizable
-     73, Loop is parallelizable
+     53, Generating copyin(y0(:))
+         Generating create(anew(:,:))
+     55, Loop is parallelizable
          Generating Tesla code
-         72, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
-         73, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
-         76, Generating implicit reduction(max:error)
-     82, Generating implicit copyin(anew(1:4094,1:4094))
-         Generating implicit copyout(a(1:4094,1:4094))
+         55, !$acc loop gang, vector(128) ! blockidx%x threadidx%x
+     61, Loop is parallelizable
+         Generating Tesla code
+         61, !$acc loop gang, vector(128) ! blockidx%x threadidx%x
+     69, Generating create(anew(:,:))
+         Generating copy(a(:,:))
+     74, Loop is parallelizable
+     75, Loop is parallelizable
+         Generating Tesla code
+         74, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
+         75, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
+         78, Generating implicit reduction(max:error)
      83, Loop is parallelizable
      84, Loop is parallelizable
          Generating Tesla code
@@ -63,29 +75,29 @@ laplace:
          84, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
 ./laplace2d_f90
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     51.305 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.174 seconds, in 2421 iteration, sum(A)= 76859.539
 ./laplace2d_f90_omp
 Jacobi relaxation Calculation: 4096 x 4096 mesh
  Number of OMP threads =             1
- completed in     51.411 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.182 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             2
- completed in     27.824 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     28.670 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             3
- completed in     25.135 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     28.160 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             4
- completed in     26.051 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     26.465 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             5
- completed in     23.002 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     22.703 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             6
- completed in     21.541 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     21.611 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             7
- completed in     20.991 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     20.921 seconds, in 2421 iteration, sum(A)= 76859.539
  Number of OMP threads =             8
- completed in     23.348 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     22.343 seconds, in 2421 iteration, sum(A)= 76859.539
 ./laplace2d_f90_acc
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in    185.496 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in     97.017 seconds, in 2421 iteration, sum(A)= 76576.305
 ./laplace2d_f90_acc_managed
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     28.872 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in     28.795 seconds, in 2421 iteration, sum(A)= 76576.305
 
