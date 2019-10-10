@@ -95,7 +95,7 @@ program laplace
 !$acc update self(A)
 !$acc end data
   call cpu_time(stop_time) 
-  write(*,'(a,f10.3,a,i4,a,f10.3)')  ' completed in ', stop_time-start_time, ' seconds, in ',&
+  write(*,'(a,f10.3,a,i4,a,f21.15)')  ' completed in ', stop_time-start_time, ' seconds, in ',&
                                      itermax,' iteration, sum(A)=',sum(A) 
   deallocate (A,Anew,y0)
 !$ enddo

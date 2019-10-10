@@ -27,24 +27,27 @@
 F90       = pgf90
 ACCFLAGS = -acc -ta=nvidia:managed -Minfo=accel
 ACCFLAGSU = -acc -ta=nvidia -Minfo=accel
-OMPFLAGS = -fast -mp -Minfo
-FLAGS = -fast
+OMPFLAGS = -mp -Minfo
+FASTFLAGS = -O2
 
-BIN =  laplace2d_f90 laplace2d_f90_omp laplace2d_f90_acc_managed laplace2d_f90_acc 
+BIN =  laplace2d_f90 laplace2d_f90_omp laplace2d_f90_acc_managed laplace2d_f90_acc laplace2d_f90_noOPT
 
 all: $(BIN)
 
 laplace2d_f90_acc_managed: laplace2d.f90
-	$(F90) $(CCFLAGS) $(ACCFLAGS) -o $@ $<
+	$(F90) $(FASTFLAGS) $(ACCFLAGS) -o $@ $<
 
 laplace2d_f90_acc: laplace2d.f90
-	$(F90) $(CCFLAGS) $(ACCFLAGSU) -o $@ $<
+	$(F90) $(FASTFLAGS) $(ACCFLAGSU) -o $@ $<
 
 laplace2d_f90_omp: laplace2d.f90
-	$(F90) $(CCFLAGS) $(OMPFLAGS) -o $@ $<
+	$(F90) $(FASTFLAGS) $(OMPFLAGS) -o $@ $<
 
 laplace2d_f90: laplace2d.f90
-	$(F90) $(CCFLAGS) $(FLAGS) -o $@ $<
+	$(F90) $(FASTFLAGS) -o $@ $<
+
+laplace2d_f90_noOPT: laplace2d.f90
+	$(F90) -o $@ $<
 
 clean:
 	$(RM) $(BIN)
