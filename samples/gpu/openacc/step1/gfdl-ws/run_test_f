@@ -8,4 +8,6 @@ echo ./laplace2d_f90_acc
 ./laplace2d_f90_acc 
 echo ./laplace2d_f90_acc_managed
 ./laplace2d_f90_acc_managed 
+echo ./laplace2d_f90_noOPT
+./laplace2d_f90_noOPT 
 
