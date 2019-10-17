@@ -22,7 +22,7 @@ flavor="mom6solo" #"mom6solo
 
 usage()
 {
-    echo "usage: linux-build-mom6sis2.bash -m googcp -p intel19 -t prod -f mom6sis2"
+    echo "usage: linux-build.bash -m googcp -p intel19 -t prod -f mom6sis2"
 }
 
 # parse command-line arguments

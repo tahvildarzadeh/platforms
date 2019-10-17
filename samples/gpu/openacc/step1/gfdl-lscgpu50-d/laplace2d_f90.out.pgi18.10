@@ -1,24 +1,19 @@
-pgf90  -fast -o laplace2d_f90 laplace2d.f90
-pgf90  -fast -mp -Minfo -o laplace2d_f90_omp laplace2d.f90
+pgf90 -O2 -o laplace2d_f90 laplace2d.f90
+pgf90 -O2 -mp -Minfo -o laplace2d_f90_omp laplace2d.f90
 laplace:
      38, Loop not vectorized/parallelized: too deeply nested
      40, Parallel region activated
      42, Parallel region terminated
      45, Memory zero idiom, array assignment replaced by call to pgf90_mzero4
      47, Memory copy idiom, loop replaced by call to __c_mcopy4
-         Loop not fused: dependence chain to sibling loop
-         Loop not fused: function call before adjacent loop
          Generated vector simd code for the loop
          Generated a prefetch instruction for the loop
-     48, Loop not fused: dependence chain to sibling loop
-         Loop not vectorized: may not be beneficial
+     48, Loop not vectorized: may not be beneficial
          Loop unrolled 8 times
-     49, Loop not fused: function call before adjacent loop
-         Loop not vectorized: may not be beneficial
+     49, Loop not vectorized: may not be beneficial
          Loop unrolled 8 times
      50, Memory copy idiom, loop replaced by call to __c_mcopy4
-     51, Loop not fused: function call before adjacent loop
-         Generated vector simd code for the loop
+     51, Generated vector simd code for the loop
          Generated a prefetch instruction for the loop
      54, Parallel region activated
      55, Parallel loop activated with static block schedule
@@ -44,10 +39,9 @@ laplace:
      89, Barrier
      90, Parallel region terminated
      98, sum reduction inlined
-         Loop not fused: function call before adjacent loop
          Generated vector simd code for the loop containing reductions
          Generated a prefetch instruction for the loop
-pgf90  -acc -ta=nvidia:managed -Minfo=accel -o laplace2d_f90_acc_managed laplace2d.f90
+pgf90 -O2 -acc -ta=nvidia:managed -Minfo=accel -o laplace2d_f90_acc_managed laplace2d.f90
 laplace:
      53, Generating copyin(y0(:))
          Generating create(anew(:,:))
@@ -77,7 +71,7 @@ laplace:
          84, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
          85, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
      95, Generating update self(a(:,:))
-pgf90  -acc -ta=nvidia -Minfo=accel -o laplace2d_f90_acc laplace2d.f90
+pgf90 -O2 -acc -ta=nvidia -Minfo=accel -o laplace2d_f90_acc laplace2d.f90
 laplace:
      53, Generating copyin(y0(:))
          Generating create(anew(:,:))
@@ -107,32 +101,36 @@ laplace:
          84, !$acc loop gang, vector(4) ! blockidx%y threadidx%y
          85, !$acc loop gang, vector(32) ! blockidx%x threadidx%x
      95, Generating update self(a(:,:))
+pgf90 -o laplace2d_f90_noOPT laplace2d.f90
 ./laplace2d_f90
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in     51.784 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.538 seconds, in 2421 iteration, sum(A)=76859.539062500000000
 ./laplace2d_f90_omp
 Jacobi relaxation Calculation: 4096 x 4096 mesh
  Number of OMP threads =             1
- completed in     53.352 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     51.156 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             2
- completed in     26.920 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     27.282 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             3
- completed in     33.966 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     33.509 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             4
- completed in     44.172 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     17.903 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             5
- completed in     23.836 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     23.299 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             6
- completed in     35.013 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     13.520 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             7
- completed in     18.751 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     19.327 seconds, in 2421 iteration, sum(A)=76859.539062500000000
  Number of OMP threads =             8
- completed in     14.433 seconds, in 2421 iteration, sum(A)= 76859.539
+ completed in     12.621 seconds, in 2421 iteration, sum(A)=76859.539062500000000
 ./laplace2d_f90_acc
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in      1.622 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in      1.626 seconds, in 2421 iteration, sum(A)=76859.539062500000000
 ./laplace2d_f90_acc_managed
 Jacobi relaxation Calculation: 4096 x 4096 mesh
- completed in      1.295 seconds, in 2421 iteration, sum(A)= 76576.305
+ completed in      1.294 seconds, in 2421 iteration, sum(A)=76859.382812500000000
+./laplace2d_f90_noOPT
+Jacobi relaxation Calculation: 4096 x 4096 mesh
+ completed in    264.153 seconds, in 2421 iteration, sum(A)=76576.304687500000000
 
-Note: answers are different with openACC
+Note laplace2d_f90_acc_managed produces different answers on this platform!
