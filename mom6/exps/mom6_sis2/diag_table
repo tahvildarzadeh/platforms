@@ -43,6 +43,11 @@ OM4_SIS2_cgrid_025
  "ocean_model", "SSU",          "ssu",              "ocean_daily", "all", "mean", "none",2
  "ocean_model", "SSV",          "ssv",              "ocean_daily", "all", "mean", "none",2
  "ocean_model", "ePBL_h_ML",    "omldamax",         "ocean_daily", "all", "max",  "none",2
+ "ocean_model", "umo",          "umo",              "ocean_daily",            "all", "mean", "none",2
+ "ocean_model", "vmo",          "vmo",              "ocean_daily",            "all", "mean", "none",2
+ "ocean_model", "uo",          "uo",              "ocean_daily",            "all", "mean", "none",2
+ "ocean_model", "vo",          "vo",              "ocean_daily",            "all", "mean", "none",2
+ "ocean_model", "volcello",          "volcello",              "ocean_daily",            "all", "mean", "none",2
 #
  "ocean_model_d2", "zos",          "zos",              "ocean_daily_d2",            "all", "mean", "none",2
  "ocean_model_d2", "mlotst",       "mlotst",           "ocean_daily_d2",            "all", "mean", "none",2
@@ -51,3 +56,8 @@ OM4_SIS2_cgrid_025
  "ocean_model_d2", "SSU",          "ssu",              "ocean_daily_d2", "all", "mean", "none",2
  "ocean_model_d2", "SSV",          "ssv",              "ocean_daily_d2", "all", "mean", "none",2
  "ocean_model_d2", "ePBL_h_ML",    "omldamax",         "ocean_daily_d2", "all", "max",  "none",2
+ "ocean_model_d2", "umo",          "umo",              "ocean_daily_d2",            "all", "mean", "none",2
+ "ocean_model_d2", "vmo",          "vmo",              "ocean_daily_d2",            "all", "mean", "none",2
+ "ocean_model_d2", "uo",          "uo",              "ocean_daily_d2",            "all", "mean", "none",2
+ "ocean_model_d2", "vo",          "vo",              "ocean_daily_d2",            "all", "mean", "none",2
+ "ocean_model_d2", "volcello",          "volcello",              "ocean_daily_d2",            "all", "mean", "none",2
