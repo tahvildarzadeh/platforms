@@ -52,6 +52,10 @@ if [[ "$target" =~ "openmp" ]] ; then
    makeflags="$makeflags OPENMP=1" 
 fi
 
+if [[ "$target" =~ "openacc" ]] ; then 
+   makeflags="$makeflags OPENACC=1" 
+fi
+
 if [[ $target =~ "repro" ]] ; then
    makeflags="$makeflags REPRO=1"
 fi

@@ -38,6 +38,8 @@ VERBOSE =            # If non-blank, add additional verbosity compiler
 
 OPENMP =             # If non-blank, compile with openmp enabled
 
+OPENACC =            # If non-blank, compile with openacc enabled
+
 NO_OVERRIDE_LIMITS = # If non-blank, do not use the -qoverride-limits
                      # compiler option.  Default behavior is to compile
                      # with -qoverride-limits.
@@ -104,6 +106,7 @@ FFLAGS_DEBUG = -O0 -g -traceback -Ktrap=fp
 FFLAGS_OPENMP = -mp
 FFLAGS_VERBOSE = -v -Minform=inform
 FFLAGS_COVERAGE =
+FFLAGS_OPENACC = -acc -ta=nvidia -Minfo=accel
 
 # Macro for C preprocessor
 CPPFLAGS = $(INCLUDES)
@@ -131,6 +134,7 @@ CFLAGS_TEST = $(CFLAGS_OPT)
 # Linking flags
 LDFLAGS := -byteswapio
 LDFLAGS_OPENMP :=
+LDFLAGS_OPENACC := -acc
 LDFLAGS_VERBOSE := -v
 LDFLAGS_COVERAGE :=
 
@@ -160,6 +164,12 @@ ifdef OPENMP
 CFLAGS += $(CFLAGS_OPENMP)
 FFLAGS += $(FFLAGS_OPENMP)
 LDFLAGS += $(LDFLAGS_OPENMP)
+endif
+
+ifdef OPENACC
+#CFLAGS += $(CFLAGS_OPENMP)
+FFLAGS += $(FFLAGS_OPENACC)
+LDFLAGS += $(LDFLAGS_OPENACC)
 endif
 
 ifdef SSE
