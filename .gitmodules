@@ -1,6 +1,6 @@
 [submodule "mom6/src/MOM6"]
 	path = mom6/src/MOM6
-	url = https://github.com/NOAA-GFDL/MOM6.git
+	url = https://github.com/nikizadehgfdl/MOM6.git
 [submodule "mom6/src/SIS2"]
 	path = mom6/src/SIS2
 	url = https://github.com/NOAA-GFDL/SIS2.git
