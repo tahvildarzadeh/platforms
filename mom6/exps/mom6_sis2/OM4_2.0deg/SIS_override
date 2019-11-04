@@ -2,3 +2,4 @@
 #override NIGLOBAL = 180                 !
 #override NJGLOBAL = 144                 !
 ADD_DIURNAL_SW = True ! This must ONLY be used in the ice-ocean mode, NOT fully coupled mode.
+#override DO_ICEBERGS = False

@@ -1,0 +1,1192 @@
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+ &MPP_IO_NML
+ HEADER_BUFFER_VAL =        16384,
+ GLOBAL_FIELD_ON_ROOT_PE =  T,
+ IO_CLOCKS_ON =  F,
+ SHUFFLE =            0,
+ DEFLATE_LEVEL =           -1,
+ CF_COMPLIANCE =  F
+ /
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  5000000.
+ Entering coupler_init at 20191028 174515.616
+ Starting initializing ensemble_manager at 20191028 174515.616
+ Finished initializing ensemble_manager at 20191028 174515.633
+NOTE from PE     0: coupler_init: Atmos PE range:      0     7 ens_01
+NOTE from PE     0: coupler_init: Ocean PE range:      0     7 ens_01
+NOTE from PE     0: coupler_init: Land PE range:      0     7 ens_01
+NOTE from PE     0: coupler_init: Ice PE range:      0     7 ens_01
+NOTE from PE     0: coupler_init: Running with SERIAL coupling.
+NOTE from PE     0: coupler_init: Sending most recent fluxes to ocean.
+ Starting to initialize diag_manager at 20191028 174515.634
+ Finished initializing diag_manager at 20191028 174515.645
+ Starting to initialize tracer_manager at 20191028 174515.653
+ 
+ Dumping coupler_mod/types tree
+types/
+      air_sea_gas_flux_generic/
+            implementation/
+                  ocmip2/
+                        num_parameters = 2
+                  duce/
+                        num_parameters = 1
+                  johnson/
+                        num_parameters = 2
+            num_flags = 0
+            use_atm_pressure = T
+            use_10m_wind_speed = T
+            pass_through_ice = F
+            atm/
+                  name[1] = 'pcair'
+                  name[2] = 'u10'
+                  name[3] = 'psurf'
+                  long_name[1] = 'Atmospheric concentration'
+                  long_name[2] = 'Wind speed at 10 m'
+                  long_name[3] = 'Surface atmospheric pressure'
+                  units[1] = 'mol/mol'
+                  units[2] = 'm/s'
+                  units[3] = 'Pa'
+            ice/
+                  name[1] = 'alpha'
+                  name[2] = 'csurf'
+                  name[3] = 'sc_no'
+                  long_name[1] = 'Solubility w.r.t. atmosphere'
+                  long_name[2] = 'Ocean concentration'
+                  long_name[3] = 'Schmidt number'
+                  units[1] = 'mol/m^3/atm'
+                  units[2] = 'mol/m^3'
+                  units[3] = 'dimensionless'
+            flux/
+                  name[1] = 'flux'
+                  name[2] = 'deltap'
+                  name[3] = 'kw'
+                  name[4] = 'flux0'
+                  long_name[1] = 'Surface flux'
+                  long_name[2] = 'Ocean-air delta pressure'
+                  long_name[3] = 'Piston velocity'
+                  long_name[4] = 'Surface flux no atm'
+                  units[1] = 'mol/m^2/s'
+                  units[2] = 'uatm'
+                  units[3] = 'm/s'
+                  units[4] = 'mol/m^2/s'
+      air_sea_gas_flux/
+            implementation/
+                  ocmip2/
+                        num_parameters = 2
+                  ocmip2_data/
+                        num_parameters = 2
+                  linear/
+                        num_parameters = 3
+            num_flags = 0
+            use_atm_pressure = T
+            use_10m_wind_speed = T
+            pass_through_ice = F
+            atm/
+                  name[1] = 'pcair'
+                  name[2] = 'u10'
+                  name[3] = 'psurf'
+                  long_name[1] = 'Atmospheric concentration'
+                  long_name[2] = 'Wind speed at 10 m'
+                  long_name[3] = 'Surface atmospheric pressure'
+                  units[1] = 'mol/mol'
+                  units[2] = 'm/s'
+                  units[3] = 'Pa'
+            ice/
+                  name[1] = 'alpha'
+                  name[2] = 'csurf'
+                  long_name[1] = 'Solubility from atmosphere times Schmidt number term'
+                  long_name[2] = 'Ocean concentration times Schmidt number term'
+                  units[1] = 'mol/m^3/atm'
+                  units[2] = 'mol/m^3'
+            flux/
+                  name = 'flux'
+                  long_name = 'Surface flux'
+                  units = 'mol/m^2/s'
+      air_sea_deposition/
+            implementation/
+                  dry/
+                        num_parameters = 1
+                  wet/
+                        num_parameters = 1
+            num_flags = 0
+            use_atm_pressure = F
+            use_10m_wind_speed = F
+            pass_through_ice = T
+            atm/
+                  name = 'deposition'
+                  long_name = 'Atmospheric deposition'
+                  units = 'kg/m^2/s'
+            ice/
+                  name = NULL
+                  long_name = NULL
+                  units = NULL
+            flux/
+                  name = 'flux'
+                  long_name = 'Surface deposition'
+                  units = 'mol/m^2/s'
+      land_sea_runoff/
+            implementation/
+                  river/
+                        num_parameters = 1
+            num_flags = 0
+            use_atm_pressure = F
+            use_10m_wind_speed = F
+            pass_through_ice = T
+            atm/
+                  name = 'runoff'
+                  long_name = 'Concentration in land runoff'
+                  units = 'mol/m^3'
+            ice/
+                  name = NULL
+                  long_name = NULL
+                  units = NULL
+            flux/
+                  name = 'flux'
+                  long_name = 'Concentration in land runoff'
+                  units = 'mol/m^3'
+NOTE from PE     0: open_param_file: MOM_input has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_layout has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_saltrestore has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_override has been opened successfully.
+NOTE from PE     0: close_param_file: MOM_input has been closed successfully.
+NOTE from PE     0: close_param_file: MOM_layout has been closed successfully.
+NOTE from PE     0: close_param_file: MOM_saltrestore has been closed successfully.
+NOTE from PE     0: close_param_file: MOM_override has been closed successfully.
+ ==>Note from atmos_ocean_fluxes_mod(atmos_ocean_fluxes_init): No gas fluxes
+ Finished initializing tracer_manager at 20191028 174515.679
+ Beginning to initialize component models at 20191028 174515.679
+ Starting to initialize atmospheric model at 20191028 174515.689
+ atmos model domain decomposition
+whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+NOTE from PE     0: grid_mod/get_grid_cell_vertices: domain is not present, global data will be read
+NOTE from PE     0: grid_mod/get_grid_cell_centers: domain is not present, global data will be read
+ Finished initializing atmospheric model at 20191028 174515.708
+ Starting to initialize land model at 20191028 174515.713
+ land model domain decomposition
+whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+NOTE from PE     0: grid_mod/get_grid_cell_centers: domain is not present, global data will be read
+ Finished initializing land model at 20191028 174515.720
+ Starting to initialize ice model at 20191028 174515.728
+NOTE from PE     0: open_param_file: SIS_input has been opened successfully.
+NOTE from PE     0: open_param_file: SIS_layout has been opened successfully.
+NOTE from PE     0: open_param_file: SIS_override has been opened successfully.
+NOTE from PE     0: callTree: ---> ice_model_init(), ice_model.F90
+
+WARNING from PE     0: MOM_file_parser : NIGLOBAL over-ridden.  Line: 'NIGLOBAL = 180' in file SIS_override.
+
+
+WARNING from PE     0: MOM_file_parser : NIGLOBAL over-ridden.  Line: 'NIGLOBAL = 180' in file SIS_override.
+
+
+WARNING from PE     0: MOM_file_parser : NJGLOBAL over-ridden.  Line: 'NJGLOBAL = 144' in file SIS_override.
+
+
+WARNING from PE     0: MOM_file_parser : NJGLOBAL over-ridden.  Line: 'NJGLOBAL = 144' in file SIS_override.
+
+ ice model domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+ MOMc domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   45  45
+  Y-AXIS =   18  18  18  18
+NOTE from PE     0: callTree:    o domains initialized (ice_model_init)
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+NOTE from PE     0: callTree:    ---> SIS_initialize_fixed(), SIS_fixed_initialization.F90
+NOTE from PE     0: callTree:       ---> set_grid_metrics(), MOM_grid_initialize.F90
+NOTE from PE     0: callTree:          ---> set_grid_metrics_from_mosaic(), MOM_grid_initialize.F90
+ MOM_MOSAIC domain decomposition
+whalo =    9, ehalo =    9, shalo =    9, nhalo =    9
+  X-AXIS =  180 180
+  Y-AXIS =   72  72  72  72
+NOTE from PE     0: callTree:          <--- set_grid_metrics_from_mosaic()
+NOTE from PE     0: callTree:          ---> set_derived_metrics(), MOM_grid_initialize.F90
+NOTE from PE     0: callTree:          <--- set_derived_metrics()
+NOTE from PE     0: callTree:       <--- set_grid_metrics()
+NOTE from PE     0: callTree:       ---> initialize_topography_from_file(), MOM_shared_initialization.F90
+NOTE from PE     0: callTree:          ---> apply_topography_edits_from_file(), MOM_shared_initialization.F90
+NOTE from PE     0: callTree:          <--- initialize_topography_from_file()
+NOTE from PE     0: callTree:          ---> limit_topography(), MOM_shared_initialization.F90
+NOTE from PE     0: callTree:          <--- limit_topography()
+NOTE from PE     0: callTree:          ---> initialize_masks(), MOM_grid_initialize.F90
+NOTE from PE     0: callTree:          <--- initialize_masks()
+NOTE from PE     0: callTree:          ---> MOM_initialize_rotation(), MOM_shared_initialization.F90
+NOTE from PE     0: callTree:             ---> set_rotation_planetary(), MOM_shared_initialization.F90
+NOTE from PE     0: callTree:             <--- set_rotation_planetary()
+NOTE from PE     0: callTree:          <--- MOM_initialize_rotation()
+NOTE from PE     0: callTree:       <--- SIS_initialize_fixed()
+NOTE from PE     0:   SIS_hor_grid.F90, set_hor_grid: allocating metrics
+ ice model aux domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+ ice_nohalo domain decomposition
+whalo =    0, ehalo =    0, shalo =    0, nhalo =    0
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+ ice_nohalo domain decomposition
+whalo =    0, ehalo =    0, shalo =    0, nhalo =    0
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+
+
+ &ICE_SPEC_NML
+ MCM_ICE =  F,
+ DO_LEADS =  T,
+ MINIMUM_ICE_CONCENTRATION =   0.2000000000000000     ,
+ MINIMUM_ICE_THICKNESS =    1.000000000000000     ,
+ SST_DEGK =  F,
+ SST_PERT =    0.000000000000000     ,
+ REPEAT_DATE =           -1,
+                         -1,
+                         -1
+ /
+NOTE from PE     0: callTree:       ---> SIS_slow_thermo_init(), SIS_slow_thermo.F90
+NOTE from PE     0: callTree:       <--- SIS_slow_thermo_init()
+NOTE from PE     0: callTree:       ---> SIS_dyn_trans_init(), SIS_dyn_trans.F90
+NOTE from PE     0: callTree:       <--- SIS_dyn_trans_init()
+ diamond domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+ Begining Basal Melting Unit Test
+ Two equation model basal_melt =   4.3306318089757683E-006
+ Three equation model basal_melt =   7.0904870556600922E-006
+diamonds, grd_chksum3: read_restart_calvi chksum=           -1174764955 chksum2=            -878773244 min= 0.000000000E+00 max= 7.399858234E+11 mean= 8.946252191E+10 rms= 1.565194623E+11 sd= 1.284320803E+11
+diamonds, grd_chksum2: read_restart_calvi chksum=                     0 chksum2=                     0 min= 0.000000000E+00 max= 0.000000000E+00 mean= 0.000000000E+00 rms= 0.000000000E+00 sd= 0.000000000E+00
+diamonds, grd_chksum2: read_restart_calvi chksum=                     0 chksum2=                     0 min= 0.000000000E+00 max= 0.000000000E+00 mean= 0.000000000E+00 rms= 0.000000000E+00 sd= 0.000000000E+00
+diamonds, grd_chksum2: read_restart_calvi chksum=                     0 chksum2=                     0 min= 0.000000000E+00 max= 0.000000000E+00 mean= 0.000000000E+00 rms= 0.000000000E+00 sd= 0.000000000E+00
+diamonds, bergs_chksum: read_restart bergs chksum=                     0 chksum2=                     0 chksum3=                     0 chksum4=                     0 chksum5=                     0 #=                     0
+diamonds, grd_chksum2:    # of bergs/cell chksum=                     0 chksum2=                     0 min= 0.000000000E+00 max= 0.000000000E+00 mean= 0.000000000E+00 rms= 0.000000000E+00 sd= 0.000000000E+00
+SIS Date   1900/01/01 00:00:00      0: Area 0.000000000000E+00 0.000000000000E+00, Mass  0.00000000000E+00 0.00000000000E+00
+ Total Ice Mass:   0.0000000000000000E+00, Change:  0.00000E+00 Error:  0.00000E+00 ( 0.0E+00)
+ Total Ice Salt:   0.0000000000000000E+00, Change:  0.00000E+00 Error:  0.00000E+00
+ Total Ice Heat:   0.0000000000000000E+00, Change:  0.00000E+00 Error:  0.00000E+00
+NOTE from PE     0: callTree:       ---> SIS_fast_thermo_init(), SIS_fast_thermo.F90
+NOTE from PE     0: callTree:       <--- SIS_fast_thermo_init()
+NOTE from PE     0: close_param_file: SIS_input has been closed successfully.
+NOTE from PE     0: close_param_file: SIS_layout has been closed successfully.
+NOTE from PE     0: close_param_file: SIS_override has been closed successfully.
+NOTE from PE     0: callTree:    <--- ice_model_init()
+ Finished initializing ice model at 20191028 174515.871
+ Starting to initialize ocean model at 20191028 174515.872
+NOTE from PE     0: callTree:    ---> ocean_model_init(), ocean_model_MOM.F90
+NOTE from PE     0: open_param_file: MOM_input has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_layout has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_saltrestore has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_override has been opened successfully.
+
+WARNING from PE     0: MOM_file_parser : NIGLOBAL over-ridden.  Line: 'NIGLOBAL = 180' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : NIGLOBAL over-ridden.  Line: 'NIGLOBAL = 180' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : NJGLOBAL over-ridden.  Line: 'NJGLOBAL = 144' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : NJGLOBAL over-ridden.  Line: 'NJGLOBAL = 144' in file MOM_override.
+
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+ MOMc domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   45  45
+  Y-AXIS =   18  18  18  18
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+ MOM_MOSAIC domain decomposition
+whalo =    9, ehalo =    9, shalo =    9, nhalo =    9
+  X-AXIS =  180 180
+  Y-AXIS =   72  72  72  72
+
+WARNING from PE     0: MOM_file_parser : TOPO_EDITS_FILE over-ridden.  Line: 'TOPO_EDITS_FILE = ""' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : TOPO_EDITS_FILE over-ridden.  Line: 'TOPO_EDITS_FILE = ""' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : CHANNEL_CONFIG over-ridden.  Line: 'CHANNEL_CONFIG = "none"' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : CHANNEL_CONFIG over-ridden.  Line: 'CHANNEL_CONFIG = "none"' in file MOM_override.
+
+NOTE from PE     0: init_from_Z: min= -2.0999E+00 max=  3.0454E+01 Level=  1 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1001E+00 max=  3.0349E+01 Level=  2 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1002E+00 max=  2.9959E+01 Level=  3 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1004E+00 max=  2.9770E+01 Level=  4 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1008E+00 max=  2.9566E+01 Level=  5 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1012E+00 max=  2.9357E+01 Level=  6 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1016E+00 max=  2.9004E+01 Level=  7 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1021E+00 max=  2.8009E+01 Level=  8 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1026E+00 max=  2.6382E+01 Level=  9 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1036E+00 max=  2.2253E+01 Level= 10 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1046E+00 max=  2.1907E+01 Level= 11 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1060E+00 max=  2.1776E+01 Level= 12 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1084E+00 max=  2.1717E+01 Level= 13 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1110E+00 max=  2.1614E+01 Level= 14 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1138E+00 max=  2.1567E+01 Level= 15 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1166E+00 max=  2.1550E+01 Level= 16 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1197E+00 max=  2.1549E+01 Level= 17 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1230E+00 max=  2.1625E+01 Level= 18 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1265E+00 max=  2.1570E+01 Level= 19 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.0512E+00 max=  2.1546E+01 Level= 20 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.9520E-01 max=  2.1534E+01 Level= 21 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.0195E+00 max=  2.1537E+01 Level= 22 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.0378E+00 max=  2.1530E+01 Level= 23 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.0384E+00 max=  2.1515E+01 Level= 24 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.0497E+00 max=  2.1361E+01 Level= 25 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.1330E+00 max=  2.1265E+01 Level= 26 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.1791E+00 max=  1.3353E+01 Level= 27 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.2043E+00 max=  1.3343E+01 Level= 28 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.2288E+00 max=  1.3287E+01 Level= 29 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.6306E-01 max=  1.3265E+01 Level= 30 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.9362E-01 max=  9.8829E+00 Level= 31 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.5554E-01 max=  3.8541E+00 Level= 32 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -8.7392E-01 max=  3.7600E+00 Level= 33 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0363E+01 Level=  1 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.5959E+00 max=  4.0383E+01 Level=  2 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.6172E+00 max=  4.0561E+01 Level=  3 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.6629E+00 max=  4.0657E+01 Level=  4 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.8425E+00 max=  4.0859E+01 Level=  5 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.2768E+00 max=  4.0278E+01 Level=  6 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.4988E+00 max=  4.0307E+01 Level=  7 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  9.0903E+00 max=  4.0330E+01 Level=  8 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  1.1441E+01 max=  4.0387E+01 Level=  9 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.0827E+01 max=  4.0475E+01 Level= 10 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1368E+01 max=  4.0522E+01 Level= 11 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1458E+01 max=  4.0551E+01 Level= 12 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1635E+01 max=  4.0568E+01 Level= 13 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1679E+01 max=  4.0590E+01 Level= 14 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1666E+01 max=  4.0572E+01 Level= 15 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1739E+01 max=  4.0565E+01 Level= 16 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1805E+01 max=  4.0565E+01 Level= 17 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1919E+01 max=  4.0624E+01 Level= 18 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1986E+01 max=  4.0596E+01 Level= 19 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2305E+01 max=  4.0579E+01 Level= 20 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2303E+01 max=  4.0577E+01 Level= 21 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2367E+01 max=  4.0584E+01 Level= 22 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2349E+01 max=  4.0583E+01 Level= 23 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2354E+01 max=  4.0576E+01 Level= 24 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2331E+01 max=  4.0611E+01 Level= 25 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2337E+01 max=  4.0611E+01 Level= 26 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4068E+01 max=  3.8762E+01 Level= 27 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4073E+01 max=  3.8758E+01 Level= 28 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4072E+01 max=  3.8694E+01 Level= 29 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4475E+01 max=  3.8670E+01 Level= 30 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4475E+01 max=  3.4996E+01 Level= 31 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4596E+01 max=  3.5020E+01 Level= 32 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4608E+01 max=  3.4994E+01 Level= 33 field from fill_miss_2d()
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90
+  Y-AXIS =   36  36  36  36
+
+WARNING from PE     0: MOM_file_parser : TIDEAMP_FILE over-ridden.  Line: 'TIDEAMP_FILE = "tidal_amplitude.nc"' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : TIDEAMP_FILE over-ridden.  Line: 'TIDEAMP_FILE = "tidal_amplitude.nc"' in file MOM_override.
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+
+WARNING from PE     0: MOM_file_parser : CHL_FILE over-ridden.  Line: 'CHL_FILE = "seawifs-clim-1997-2010.nc"' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : CHL_FILE over-ridden.  Line: 'CHL_FILE = "seawifs-clim-1997-2010.nc"' in file MOM_override.
+
+
+WARNING from PE     0: Use EPBL_MSTAR_SCHEME = OM4 instead of the archaic MSTAR_MODE = 2.
+
+
+WARNING from PE     0: Use EPBL_MSTAR_SCHEME = OM4 instead of the archaic MSTAR_MODE = 2.
+
+
+WARNING from PE     0: Use EPBL_LANGMUIR_SCHEME = ADDITIVE instead of the archaic LT_ENHANCE = 3.
+
+
+WARNING from PE     0: Use EPBL_LANGMUIR_SCHEME = ADDITIVE instead of the archaic LT_ENHANCE = 3.
+
+
+WARNING from PE     0: MOM_file_parser : SALT_RESTORE_FILE over-ridden.  Line: 'SALT_RESTORE_FILE = "salt_restore.nc"' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : SALT_RESTORE_FILE over-ridden.  Line: 'SALT_RESTORE_FILE = "salt_restore.nc"' in file MOM_override.
+
+NOTE from PE     0: ==== Completed MOM6 Coupled Initialization ====
+ Finished initializing ocean model at 20191028 174516.950
+ Starting to initialize data_override at 20191028 174516.951
+ Finished initializing data_override at 20191028 174516.951
+ Finished initializing component models at 20191028 174516.951
+ Starting to initialize flux_exchange at 20191028 174516.951
+ ==>Note from flux_exchange_mod(flux_exchange_init):
+  Number of exchanged tracers =             1
+ Tracer field name :sphum
+NOTE from PE     0: atm_land_ice_flux_exchange_mod: tracer "co2" not present in the atmosphere
+ NOTE from xgrid_mod: use second_order conservative exchange
+NOTE from PE     0: xgrid_mod: reading exchange grid information from mosaic grid file
+ Checked data is array of constant 1
+ ATM(ATMOCNLND)=   0.9999869605476183        0.9999869605476222      
+   0.9999869605476183     
+ OCN(ATMOCNLND)=   0.7005032684930865        0.7005032684930865      
+   0.7005032684930865     
+ LND(ATMOCNLND)=   0.2994836920545355        0.2994836920545355      
+   0.2994836920545355     
+ Checked data is array of random number between 0 and 1 using second_order
+ ATM(ATMOCNLND)=   0.4998692005096845        0.4998692005096843      
+   0.4998692005096845     
+ OCN(ATMOCNLND)=   0.3511520543304778        0.3511520543304778      
+   0.3511520543304778     
+ LND(ATMOCNLND)=   0.1511185834428681        0.1511185834428681      
+   0.1511185834428681     
+NOTE from PE     0: diag_field_init in atm_land_ice_flux_exchange_mod: diagnostic field "dynamics", "area" is not in the diag_table
+NOTE from PE     0: xgrid_mod: reading exchange grid information from mosaic grid file
+ Checked data is array of constant 1
+ LND(LNDOCN)=   0.7005032684930865        0.7005032684930865      
+   0.7005032684930865     
+ OCN(LNDOCN)=   0.7005032684930865        0.7005032684930865      
+   0.7005032684930865     
+ Finsihed initializing flux_exchange at 20191028 174516.996
+ BEGIN CHECKSUM(Atmos_data_type):: coupler_init+            0
+CHECKSUM::     atm%lon_bnd                 =     F34A9344B29F8F24
+CHECKSUM::     atm%lat_bnd                 =      9C6A96B21303C53
+CHECKSUM::     atm%t_bot                   =     B794000000000000
+CHECKSUM::     atm%tr_bot(:,:,n)           =                    0
+CHECKSUM::     atm%z_bot                   =     3D00000000000000
+CHECKSUM::     atm%p_bot                   =     2734600000000000
+CHECKSUM::     atm%u_bot                   =                    0
+CHECKSUM::     atm%v_bot                   =                    0
+CHECKSUM::     atm%p_surf                  =     3FEC800000000000
+CHECKSUM::     atm%slp                     =     3FEC800000000000
+CHECKSUM::     atm%gust                    =                    0
+CHECKSUM::     atm%coszen                  =                    0
+CHECKSUM::     atm%flux_sw                 =                    0
+CHECKSUM::     atm%flux_sw_dir             =                    0
+CHECKSUM::     atm%flux_sw_dif             =                    0
+CHECKSUM::     atm%flux_sw_down_vis_dir    =                    0
+CHECKSUM::     atm%flux_sw_down_vis_dif    =                    0
+CHECKSUM::     atm%flux_sw_down_total_dir  =                    0
+CHECKSUM::     atm%flux_sw_down_total_dif  =                    0
+CHECKSUM::     atm%flux_sw_vis             =                    0
+CHECKSUM::     atm%flux_sw_vis_dir         =                    0
+CHECKSUM::     atm%flux_sw_vis_dif         =                    0
+CHECKSUM::     atm%flux_lw                 =                    0
+CHECKSUM::     atm%lprec                   =                    0
+CHECKSUM::     atm%fprec                   =                    0
+ BEGIN CHECKSUM(lnd_ice_Atm_bnd_type):: coupler_init+            0
+CHECKSUM::lnd_ice_atm_bnd_type%t           =     B794000000000000
+CHECKSUM::lnd_ice_atm_bnd_type%albedo      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_vis_ =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_nir_ =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_vis_ =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_nir_ =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%land_frac   =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_t        =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%u_flux      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%v_flux      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dtaudu      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dtaudv      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%u_star      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%b_star      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%q_star      =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%rough_mom   =     259999999999A5C0
+ BEGIN CHECKSUM(ice_data_type):: coupler_init+            0
+   CHECKSUM::ice_data_type%part_size          =                    0
+   CHECKSUM::ice_data_type%t_surf             =                    0
+   CHECKSUM::ice_data_type%s_surf             =                    0
+   CHECKSUM::ice_data_type%albedo             =                    0
+   CHECKSUM::ice_data_type%albedo_vis_dir     =                    0
+   CHECKSUM::ice_data_type%albedo_nir_dir     =                    0
+   CHECKSUM::ice_data_type%albedo_vis_dif     =                    0
+   CHECKSUM::ice_data_type%albedo_nir_dif     =                    0
+   CHECKSUM::ice_data_type%rough_mom          =     B53F7CED91694980
+   CHECKSUM::ice_data_type%rough_heat         =     B53F7CED91694980
+   CHECKSUM::ice_data_type%rough_moist        =     B53F7CED91694980
+   CHECKSUM::ice_data_type%u_surf             =                    0
+   CHECKSUM::ice_data_type%v_surf             =                    0
+   CHECKSUM::ice_data_type%flux_u             =                    0
+   CHECKSUM::ice_data_type%flux_v             =                    0
+   CHECKSUM::ice_data_type%flux_t             =                    0
+   CHECKSUM::ice_data_type%flux_q             =                    0
+   CHECKSUM::ice_data_type%flux_lw            =                    0
+   CHECKSUM::ice_data_type%flux_sw_vis_dir    =                    0
+   CHECKSUM::ice_data_type%flux_sw_vis_dif    =                    0
+   CHECKSUM::ice_data_type%flux_sw_nir_dir    =                    0
+   CHECKSUM::ice_data_type%flux_sw_nir_dif    =                    0
+   CHECKSUM::ice_data_type%flux_lh            =                    0
+   CHECKSUM::ice_data_type%lprec              =                    0
+   CHECKSUM::ice_data_type%fprec              =                    0
+   CHECKSUM::ice_data_type%p_surf             =                    0
+   CHECKSUM::ice_data_type%runoff             =                    0
+   CHECKSUM::ice_data_type%calving            =                    0
+   CHECKSUM::ice_data_type%flux_salt          =                    0
+ BEGIN CHECKSUM(atmos_ice_boundary_type):: coupler_init+            0
+CHECKSUM::atm_ice_bnd_type%u_flux          =                    0
+CHECKSUM::atm_ice_bnd_type%v_flux          =                    0
+CHECKSUM::atm_ice_bnd_type%u_star          =                    0
+CHECKSUM::atm_ice_bnd_type%t_flux          =                    0
+CHECKSUM::atm_ice_bnd_type%q_flux          =                    0
+CHECKSUM::atm_ice_bnd_type%lw_flux         =                    0
+CHECKSUM::atm_ice_bnd_type%sw_flux_vis_dir =                    0
+CHECKSUM::atm_ice_bnd_type%sw_flux_vis_dif =                    0
+CHECKSUM::atm_ice_bnd_type%sw_flux_nir_dir =                    0
+CHECKSUM::atm_ice_bnd_type%sw_flux_nir_dif =                    0
+CHECKSUM::atm_ice_bnd_type%sw_down_vis_dir =                    0
+CHECKSUM::atm_ice_bnd_type%sw_down_vis_dif =                    0
+CHECKSUM::atm_ice_bnd_type%sw_down_nir_dir =                    0
+CHECKSUM::atm_ice_bnd_type%sw_down_nir_dif =                    0
+CHECKSUM::atm_ice_bnd_type%lprec           =                    0
+CHECKSUM::atm_ice_bnd_type%fprec           =                    0
+CHECKSUM::atm_ice_bnd_type%dhdt            =                    0
+CHECKSUM::atm_ice_bnd_type%dedt            =                    0
+CHECKSUM::atm_ice_bnd_type%drdt            =                    0
+CHECKSUM::atm_ice_bnd_type%coszen          =                    0
+CHECKSUM::atm_ice_bnd_type%p               =                    0
+ BEGIN CHECKSUM(land_data_type):: coupler_init+            0
+CHECKSUM::         land%tile_size          =     48FFFFFFFC4C0A8B
+CHECKSUM::         land%t_surf             =     E3E0000000000000
+CHECKSUM::         land%t_ca               =     E3E0000000000000
+CHECKSUM::         land%albedo             =                    0
+CHECKSUM::         land%albedo_vis_dir     =                    0
+CHECKSUM::         land%albedo_nir_dir     =                    0
+CHECKSUM::         land%albedo_vis_dif     =                    0
+CHECKSUM::         land%albedo_nir_dif     =                    0
+CHECKSUM::         land%rough_mom          =                    0
+CHECKSUM::         land%rough_heat         =                    0
+CHECKSUM::         land%rough_scale        =     AC00000000000000
+CHECKSUM::         land%tr                 =                    0
+CHECKSUM::         land%discharge          =                    0
+CHECKSUM::         land%discharge_snow     =                    0
+CHECKSUM::         land%discharge_heat     =                    0
+ BEGIN CHECKSUM(atmos_land_boundary_type):: coupler_init+            0
+CHECKSUM::     albt%t_flux                 =                    0
+CHECKSUM::     albt%lw_flux                =                    0
+CHECKSUM::     albt%lwdn_flux              =                    0
+CHECKSUM::     albt%sw_flux                =                    0
+CHECKSUM::   albt%swdn_flux                =                    0
+CHECKSUM::     albt%lprec                  =                    0
+CHECKSUM::     albt%fprec                  =                    0
+CHECKSUM::     albt%tprec                  =                    0
+CHECKSUM::     albt%sw_flux_down_vis_dir   =                    0
+CHECKSUM::     albt%sw_flux_down_total_dir =                    0
+CHECKSUM::     albt%sw_flux_down_vis_dif   =                    0
+CHECKSUM::     albt%sw_flux_down_total_dif =                    0
+CHECKSUM::     albt%dhdt                   =                    0
+CHECKSUM::     albt%dhdq                   =                    0
+CHECKSUM::     albt%drdt                   =                    0
+CHECKSUM::     albt%cd_m                   =                    0
+CHECKSUM::     albt%cd_t                   =                    0
+CHECKSUM::     albt%ustar                  =                    0
+CHECKSUM::     albt%bstar                  =                    0
+CHECKSUM::     albt%wind                   =                    0
+CHECKSUM::     albt%z_bot                  =                    0
+CHECKSUM::     albt%drag_q                 =                    0
+CHECKSUM::     albt%p_surf                 =     3FEC800000000000
+CHECKSUM::     albt%tr_flux                =                    0
+CHECKSUM::     albt%dfdtr                  =                    0
+ BEGIN CHECKSUM(ice_data_type):: coupler_init+            0
+   CHECKSUM::ice_data_type%part_size          =                    0
+   CHECKSUM::ice_data_type%t_surf             =                    0
+   CHECKSUM::ice_data_type%s_surf             =                    0
+   CHECKSUM::ice_data_type%albedo             =                    0
+   CHECKSUM::ice_data_type%albedo_vis_dir     =                    0
+   CHECKSUM::ice_data_type%albedo_nir_dir     =                    0
+   CHECKSUM::ice_data_type%albedo_vis_dif     =                    0
+   CHECKSUM::ice_data_type%albedo_nir_dif     =                    0
+   CHECKSUM::ice_data_type%rough_mom          =     B53F7CED91694980
+   CHECKSUM::ice_data_type%rough_heat         =     B53F7CED91694980
+   CHECKSUM::ice_data_type%rough_moist        =     B53F7CED91694980
+   CHECKSUM::ice_data_type%u_surf             =                    0
+   CHECKSUM::ice_data_type%v_surf             =                    0
+   CHECKSUM::ice_data_type%flux_u             =                    0
+   CHECKSUM::ice_data_type%flux_v             =                    0
+   CHECKSUM::ice_data_type%flux_t             =                    0
+   CHECKSUM::ice_data_type%flux_q             =                    0
+   CHECKSUM::ice_data_type%flux_lw            =                    0
+   CHECKSUM::ice_data_type%flux_sw_vis_dir    =                    0
+   CHECKSUM::ice_data_type%flux_sw_vis_dif    =                    0
+   CHECKSUM::ice_data_type%flux_sw_nir_dir    =                    0
+   CHECKSUM::ice_data_type%flux_sw_nir_dif    =                    0
+   CHECKSUM::ice_data_type%flux_lh            =                    0
+   CHECKSUM::ice_data_type%lprec              =                    0
+   CHECKSUM::ice_data_type%fprec              =                    0
+   CHECKSUM::ice_data_type%p_surf             =                    0
+   CHECKSUM::ice_data_type%runoff             =                    0
+   CHECKSUM::ice_data_type%calving            =                    0
+   CHECKSUM::ice_data_type%flux_salt          =                    0
+ BEGIN CHECKSUM(ocean_ice_boundary_type):: coupler_init+            0
+CHECKSUM::      ocn_ice_bnd_type%u         =                    0
+CHECKSUM::      ocn_ice_bnd_type%v         =                    0
+CHECKSUM::      ocn_ice_bnd_type%t         =     B794000000000000
+CHECKSUM::      ocn_ice_bnd_type%s         =                    0
+CHECKSUM::      ocn_ice_bnd_type%frazil    =                    0
+CHECKSUM::      ocn_ice_bnd_type%sea_level =                    0
+ BEGIN CHECKSUM(ocean_type):: coupler_init+            0
+   CHECKSUM::     ocean%t_surf    =     E1011B0024ED90AE
+   CHECKSUM::     ocean%s_surf    =     A14EA22F33EB54C1
+   CHECKSUM::     ocean%u_surf    =                    0
+   CHECKSUM::     ocean%v_surf    =                    0
+   CHECKSUM::     ocean%sea_lev   =     28E5662B8000A510
+   CHECKSUM::     ocean%frazil    =                    0
+ BEGIN CHECKSUM(ice_ocean_boundary_type):: coupler_init+            0
+   CHECKSUM::iobt%u_flux          =                    0
+   CHECKSUM::iobt%v_flux          =                    0
+   CHECKSUM::iobt%t_flux          =                    0
+   CHECKSUM::iobt%q_flux          =                    0
+   CHECKSUM::iobt%salt_flux       =                    0
+   CHECKSUM::iobt%lw_flux         =                    0
+   CHECKSUM::iobt%sw_flux_vis_dir =                    0
+   CHECKSUM::iobt%sw_flux_vis_dif =                    0
+   CHECKSUM::iobt%sw_flux_nir_dir =                    0
+   CHECKSUM::iobt%sw_flux_nir_dif =                    0
+   CHECKSUM::iobt%lprec           =                    0
+   CHECKSUM::iobt%fprec           =                    0
+   CHECKSUM::iobt%runoff          =                    0
+   CHECKSUM::iobt%calving         =                    0
+   CHECKSUM::iobt%p               =                    0
+ Exiting coupler_init at 20191028 174517.029
+diamonds, accumulate_calving: initial stored mass= 2.318869E+16 kg
+diamonds, accumulate_calving: initial stored heat= 0.000000E+00 J
+MOM Date   1900/01/01 00:00:00      0: En 2.876913E-01, MaxCFL  0.00000, Mass 1.378814773582E+21, Salt  34.71380227400, Temp   3.59305479110
+    Total Energy: 443580F1B19CCED0  3.9667302834118538E+20
+    Total Mass:   1.3788147735815806E+21, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Salt:   4.7863903422578942E+19, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Heat:   1.9776994856801953E+25, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+      Total age:   0.0000000000000000E+00 yr kg
+SIS Date   1900/01/01 06:00:00     12: Area 8.964394206614E+12 6.716668805212E+10, Mass  6.56659958396E+14 3.48079629726E+12
+ Total Ice Mass:   6.6014075469317700E+14, Change:  6.60141E+14 Error: -1.75676E-02 (-2.7E-17)
+ Total Ice Salt:   2.0271830843347800E+09, Change:  2.02718E+09 Error:  2.11280E-07 ( 1.0E-16)
+ Total Ice Heat:  -2.1845480897036275E+20, Change: -2.18455E+20 Error: -4.57239E+04 ( 2.1E-16)
+MOM Date   1900/01/01 06:00:00     12: En 2.895552E-01, MaxCFL  0.01092, Mass 1.378814368145E+21, Salt  34.71381101126, Temp   3.59311385388
+    Total Energy: 4435A49B7DC65F17  3.9924283788246326E+20
+    Total Mass:   1.3788143681449634E+21, Change:  -4.0543661686594256E+14 Error:  1.01337E+03 ( 7.3E-19)
+    Total Salt:   4.7863901395395854E+19, Change:  -2.0271830847439570E+12 Error: -4.09177E+02 (-8.5E-18)
+    Total Heat:   1.9777314136360827E+25, Change:   3.1927955887471185E+20 Error: -8.30901E+07 (-4.2E-18)
+      Total age:   9.4313762582029645E+17 yr kg
+SIS Date   1900/01/01 12:00:00     24: Area 9.473296484266E+12 6.390508690397E+10, Mass  8.03810049093E+14 3.40095510580E+12
+ Total Ice Mass:   8.0721100419929788E+14, Change:  1.47070E+14 Error:  2.53497E-02 ( 3.1E-17)
+ Total Ice Salt:   2.4701567070387688E+09, Change:  4.42974E+08 Error:  1.42480E-07 ( 5.8E-17)
+ Total Ice Heat:  -2.7310160867039802E+20, Change: -5.46468E+19 Error: -7.91912E+04 ( 2.9E-16)
+MOM Date   1900/01/01 12:00:00     24: En 2.895834E-01, MaxCFL  0.00684, Mass 1.378814279550E+21, Salt  34.71381292050, Temp   3.59310332486
+    Total Energy: 4435A525A0309292  3.9928171926877490E+20
+    Total Mass:   1.3788142795502382E+21, Change:  -8.8594724541453094E+13 Error: -6.55409E+02 (-4.8E-19)
+    Total Salt:   4.7863900952422236E+19, Change:  -4.4297362249632141E+11 Error:  2.07667E+02 ( 4.3E-18)
+    Total Heat:   1.9777254911471359E+25, Change:  -5.9224889468744401E+19 Error: -1.61750E+08 (-8.2E-18)
+      Total age:   1.8848577491703304E+18 yr kg
+SIS Date   1900/01/01 18:00:00     36: Area 9.657608993603E+12 5.480524229829E+10, Mass  9.43964953784E+14 3.10439867920E+12
+ Total Ice Mass:   9.4706935246279125E+14, Change:  1.39858E+14 Error:  4.56329E-03 ( 4.8E-18)
+ Total Ice Salt:   2.8934976109273424E+09, Change:  4.23341E+08 Error:  6.32044E-08 ( 2.2E-17)
+ Total Ice Heat:  -3.2284672749925643E+20, Change: -4.97451E+19 Error: -9.10823E+04 ( 2.8E-16)
+MOM Date   1900/01/01 18:00:00     36: En 2.896031E-01, MaxCFL  0.00713, Mass 1.378814194882E+21, Salt  34.71381474512, Temp   3.59311431819
+    Total Energy: 4435A586429C04BE  3.9930891944889981E+20
+    Total Mass:   1.3788141948820579E+21, Change:  -8.4668180776265219E+13 Error:  1.44959E+03 ( 1.1E-18)
+    Total Salt:   4.7863900529081328E+19, Change:  -4.2334090357899878E+11 Error:  3.09575E+02 ( 6.5E-18)
+    Total Heat:   1.9777314206813559E+25, Change:   5.9295342200984543E+19 Error:  3.12030E+07 ( 1.6E-18)
+      Total age:   2.8254658532315218E+18 yr kg
+diamonds:   stored ice state:             start= 2.3188686E+16 kg,               end= 2.3188686E+16 kg,             Delta= 0.0000000E+00 kg
+diamonds:     floating state:             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,            Delta = 0.0000000E+00 kg,  # of bergs       0
+diamonds:     icebergs state:             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,             Delta= 0.0000000E+00 kg
+diamonds:         bits state:             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,             Delta= 0.0000000E+00 kg
+diamonds: spread icebergs sta             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,             Delta= 0.0000000E+00 kg
+diamonds: spread icebergs sta             start= 0.0000000E+00 m^,               end= 0.0000000E+00 m^,             Delta= 0.0000000E+00 m^
+diamonds:       berg # state:             start=             0 ,               end=             0 ,             Delta=             0
+diamonds:      berg # budget:         calved in=             0 ,        melted out=             0 ,           Delta #=             0 ,             error=             0
+diamonds: stored mass budget:   calving used in= 0.0000000E+00 kg,         bergs out= 0.0000000E+00 kg, Delta stored mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds: floating mass budge   calving used in= 0.0000000E+00 kg,         bergs out= 0.0000000E+00 kg, Delta stored mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds:   berg mass budget:        calving in= 0.0000000E+00 kg,     melt+eros out= 0.0000000E+00 kg,   Delta berg mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds:   bits mass budget:      eros used in= 0.0000000E+00 kg,         bergs out= 0.0000000E+00 kg, Delta stored mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds:    net mass budget:          recvd in= 0.0000000E+00 kg,         rtrnd out= 0.0000000E+00 kg,    Delta net mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds: iceberg mass check:           gridded= 0.0000000E+00 kg,             bergs= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:  spread mass check:           gridded= 0.0000000E+00 kg,             bergs= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:  spread area check:           gridded= 0.0000000E+00 kg,             bergs= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:    bits mass check:           gridded= 0.0000000E+00 kg,              bits= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:       wieght check:          returned= 0.0000000E+00 kg,          floating= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:     net heat state:             start= 0.0000000E+00  J,               end= 0.0000000E+00  J,             Delta= 0.0000000E+00  J
+diamonds:  stored heat state:             start= 0.0000000E+00  J,               end= 0.0000000E+00  J,             Delta= 0.0000000E+00  J
+diamonds: floating heat state             start= 0.0000000E+00  J,               end= 0.0000000E+00  J,             Delta= 0.0000000E+00  J
+diamonds:    net heat budget:       net heat in= 0.0000000E+00  J,      net heat out= 0.0000000E+00  J,    Delta net heat= 0.0000000E+00  J,   error= 0.000E+00 nd
+diamonds: stored heat budget:   calving used in= 0.0000000E+00  J,         bergs out= 0.0000000E+00  J,    Delta net heat= 0.0000000E+00  J,   error= 0.000E+00 nd
+diamonds: flting heat budget:         calved in= 0.0000000E+00  J,          melt out= 0.0000000E+00  J,    Delta net heat= 0.0000000E+00  J,   error= 0.000E+00 nd
+diamonds: calved by class =    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+SIS Date   1900/01/02 00:00:00     48: Area 9.806368034058E+12 4.999270167997E+10, Mass  1.07710430018E+15 2.62490730799E+12
+ Total Ice Mass:   1.0797292074835103E+15, Change:  1.32660E+14 Error:  2.77335E-02 ( 2.6E-17)
+ Total Ice Salt:   3.2967999339063478E+09, Change:  4.03302E+08 Error:  8.27673E-08 ( 2.5E-17)
+ Total Ice Heat:  -3.6944528945192449E+20, Change: -4.65986E+19 Error: -1.66224E+05 ( 4.5E-16)
+MOM Date   1900/01/02 00:00:00     48: En 2.896500E-01, MaxCFL  0.00640, Mass 1.378814114222E+21, Salt  34.71381648338, Temp   3.59317152370
+    Total Energy: 4435A66BD186D4A4  3.9937353435772800E+20
+    Total Mass:   1.3788141142215932E+21, Change:  -8.0660464595862578E+13 Error: -6.16136E+01 (-4.5E-20)
+    Total Salt:   4.7863900125779010E+19, Change:  -4.0330232266326251E+11 Error:  3.15742E+02 ( 6.6E-18)
+    Total Heat:   1.9777627921869415E+25, Change:   3.1371505585860366E+20 Error:  6.50685E+07 ( 3.3E-18)
+      Total age:   3.7651626089081508E+18 yr kg
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to    1944000.
+SIS Date   1900/01/02 06:00:00     60: Area 9.905027714278E+12 4.649823190545E+10, Mass  1.20086122123E+15 2.29365788377E+12
+ Total Ice Mass:   1.2031548791182033E+15, Change:  1.23426E+14 Error:  3.83450E-02 ( 3.2E-17)
+ Total Ice Salt:   3.6731952396925702E+09, Change:  3.76395E+08 Error:  1.67752E-07 ( 4.6E-17)
+ Total Ice Heat:  -4.1265722697727928E+20, Change: -4.32119E+19 Error: -1.43279E+05 ( 3.5E-16)
+MOM Date   1900/01/02 06:00:00     60: En 2.896647E-01, MaxCFL  0.01027, Mass 1.378814038943E+21, Salt  34.71381810566, Temp   3.59320568750
+    Total Energy: 4435A6B3D31BD2F9  3.9939380229548494E+20
+    Total Mass:   1.3788140389425317E+21, Change:  -7.5279061159315266E+13 Error: -2.07079E+03 (-1.5E-18)
+    Total Salt:   4.7863899749383700E+19, Change:  -3.7639530655476526E+11 Error: -7.68543E+02 (-1.6E-17)
+    Total Heat:   1.9777814887332345E+25, Change:   1.8696546292771127E+20 Error: -9.60678E+07 (-4.9E-18)
+      Total age:   4.7041420360592906E+18 yr kg
+SIS Date   1900/01/02 12:00:00     72: Area 1.003512625572E+13 4.456611417645E+10, Mass  1.31918646291E+15 2.14525622261E+12
+ Total Ice Mass:   1.3213317191322550E+15, Change:  1.18177E+14 Error:  4.94548E-02 ( 3.7E-17)
+ Total Ice Salt:   4.0343634447320466E+09, Change:  3.61168E+08 Error:  1.92574E-07 ( 4.8E-17)
+ Total Ice Heat:  -4.5428832431662190E+20, Change: -4.16311E+19 Error: -1.04677E+05 ( 2.3E-16)
+MOM Date   1900/01/02 12:00:00     72: En 2.897085E-01, MaxCFL  0.01453, Mass 1.378813966709E+21, Salt  34.71381966232, Temp   3.59319489059
+    Total Energy: 4435A78A007382D2  3.9945408779513666E+20
+    Total Mass:   1.3788139667088917E+21, Change:  -7.2233641008427969E+13 Error: -5.32732E+02 (-3.9E-19)
+    Total Salt:   4.7863899388215501E+19, Change:  -3.6116820515560303E+11 Error: -1.16127E+02 (-2.4E-18)
+    Total Heat:   1.9777754422634151E+25, Change:  -6.0464698192218472E+19 Error:  4.22861E+07 ( 2.1E-18)
+      Total age:   5.6424811000480993E+18 yr kg
+SIS Date   1900/01/02 18:00:00     84: Area 1.013210826175E+13 4.234337040440E+10, Mass  1.43211778553E+15 1.87126661164E+12
+ Total Ice Mass:   1.4339890521398420E+15, Change:  1.12657E+14 Error:  4.40105E-02 ( 3.1E-17)
+ Total Ice Salt:   4.3787203024773045E+09, Change:  3.44357E+08 Error:  8.66125E-08 ( 2.0E-17)
+ Total Ice Heat:  -4.9397682301005772E+20, Change: -3.96885E+19 Error: -9.53843E+04 ( 1.9E-16)
+MOM Date   1900/01/02 18:00:00     84: En 2.897203E-01, MaxCFL  0.00997, Mass 1.378813897838E+21, Salt  34.71382114651, Temp   3.59320534649
+    Total Energy: 4435A7C3F0D2D6EA  3.9947039616103259E+20
+    Total Mass:   1.3788138978375190E+21, Change:  -6.8871371550399047E+13 Error: -1.34757E+03 (-9.8E-19)
+    Total Salt:   4.7863899043858637E+19, Change:  -3.4435685707416913E+11 Error:  6.71088E+02 ( 1.4E-17)
+    Total Heat:   1.9777810986349701E+25, Change:   5.6563715547613389E+19 Error:  2.69790E+07 ( 1.4E-18)
+      Total age:   6.5801303746544415E+18 yr kg
+diamonds:   stored ice state:             start= 2.3188686E+16 kg,               end= 2.3188686E+16 kg,             Delta= 0.0000000E+00 kg
+diamonds:     floating state:             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,            Delta = 0.0000000E+00 kg,  # of bergs       0
+diamonds:     icebergs state:             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,             Delta= 0.0000000E+00 kg
+diamonds:         bits state:             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,             Delta= 0.0000000E+00 kg
+diamonds: spread icebergs sta             start= 0.0000000E+00 kg,               end= 0.0000000E+00 kg,             Delta= 0.0000000E+00 kg
+diamonds: spread icebergs sta             start= 0.0000000E+00 m^,               end= 0.0000000E+00 m^,             Delta= 0.0000000E+00 m^
+diamonds:       berg # state:             start=             0 ,               end=             0 ,             Delta=             0
+diamonds:      berg # budget:         calved in=             0 ,        melted out=             0 ,           Delta #=             0 ,             error=             0
+diamonds: stored mass budget:   calving used in= 0.0000000E+00 kg,         bergs out= 0.0000000E+00 kg, Delta stored mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds: floating mass budge   calving used in= 0.0000000E+00 kg,         bergs out= 0.0000000E+00 kg, Delta stored mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds:   berg mass budget:        calving in= 0.0000000E+00 kg,     melt+eros out= 0.0000000E+00 kg,   Delta berg mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds:   bits mass budget:      eros used in= 0.0000000E+00 kg,         bergs out= 0.0000000E+00 kg, Delta stored mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds:    net mass budget:          recvd in= 0.0000000E+00 kg,         rtrnd out= 0.0000000E+00 kg,    Delta net mass= 0.0000000E+00 kg,   error= 0.000E+00 nd
+diamonds: iceberg mass check:           gridded= 0.0000000E+00 kg,             bergs= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:  spread mass check:           gridded= 0.0000000E+00 kg,             bergs= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:  spread area check:           gridded= 0.0000000E+00 kg,             bergs= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:    bits mass check:           gridded= 0.0000000E+00 kg,              bits= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:       wieght check:          returned= 0.0000000E+00 kg,          floating= 0.0000000E+00 kg,             error= 0.0000000E+00 nd
+diamonds:     net heat state:             start= 0.0000000E+00  J,               end= 0.0000000E+00  J,             Delta= 0.0000000E+00  J
+diamonds:  stored heat state:             start= 0.0000000E+00  J,               end= 0.0000000E+00  J,             Delta= 0.0000000E+00  J
+diamonds: floating heat state             start= 0.0000000E+00  J,               end= 0.0000000E+00  J,             Delta= 0.0000000E+00  J
+diamonds:    net heat budget:       net heat in= 0.0000000E+00  J,      net heat out= 0.0000000E+00  J,    Delta net heat= 0.0000000E+00  J,   error= 0.000E+00 nd
+diamonds: stored heat budget:   calving used in= 0.0000000E+00  J,         bergs out= 0.0000000E+00  J,    Delta net heat= 0.0000000E+00  J,   error= 0.000E+00 nd
+diamonds: flting heat budget:         calved in= 0.0000000E+00  J,          melt out= 0.0000000E+00  J,    Delta net heat= 0.0000000E+00  J,   error= 0.000E+00 nd
+diamonds: calved by class =    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+SIS Date   1900/01/03 00:00:00     96: Area 1.026162359817E+13 3.315320081088E+10, Mass  1.54211828023E+15 1.48880011131E+12
+ Total Ice Mass:   1.5436070803405860E+15, Change:  1.09618E+14 Error:  4.15465E-02 ( 2.7E-17)
+ Total Ice Salt:   4.7139213575961714E+09, Change:  3.35201E+08 Error:  1.96243E-07 ( 4.2E-17)
+ Total Ice Heat:  -5.3286205143463454E+20, Change: -3.88852E+19 Error: -9.93417E+04 ( 1.9E-16)
+MOM Date   1900/01/03 00:00:00     96: En 2.897342E-01, MaxCFL  0.01038, Mass 1.378813830797E+21, Salt  34.71382259125, Temp   3.59326310240
+    Total Energy: 4435A807BA5C365B  3.9948947657632114E+20
+    Total Mass:   1.3788138307973082E+21, Change:  -6.7040211023755742E+13 Error:  1.74938E+01 ( 1.3E-20)
+    Total Salt:   4.7863898708657586E+19, Change:  -3.3520105526788586E+11 Error: -1.49020E+02 (-3.1E-18)
+    Total Heat:   1.9778127926209227E+25, Change:   3.1693985952779574E+20 Error: -1.34993E+08 (-6.8E-18)
+      Total age:   7.5172188483846441E+18 yr kg
+ BEGIN CHECKSUM(Atmos_data_type):: coupler_end            0
+CHECKSUM::     atm%lon_bnd                 =     F34A9344B29F8F24
+CHECKSUM::     atm%lat_bnd                 =      9C6A96B21303C53
+CHECKSUM::     atm%t_bot                   =     AE391F275A9C25CA
+CHECKSUM::     atm%tr_bot(:,:,n)           =     54A6C028D14164E6
+CHECKSUM::     atm%z_bot                   =     3D00000000000000
+CHECKSUM::     atm%p_bot                   =     57A9CBA88873C5A9
+CHECKSUM::     atm%u_bot                   =     2ED503B08FFBDA50
+CHECKSUM::     atm%v_bot                   =     A7B76EBF9FF49219
+CHECKSUM::     atm%p_surf                  =     57A9CBA88873C5A9
+CHECKSUM::     atm%slp                     =     3FEC800000000000
+CHECKSUM::     atm%gust                    =     1E353F7CED918C40
+CHECKSUM::     atm%coszen                  =                    0
+CHECKSUM::     atm%flux_sw                 =                    0
+CHECKSUM::     atm%flux_sw_dir             =                    0
+CHECKSUM::     atm%flux_sw_dif             =                    0
+CHECKSUM::     atm%flux_sw_down_vis_dir    =                    0
+CHECKSUM::     atm%flux_sw_down_vis_dif    =                    0
+CHECKSUM::     atm%flux_sw_down_total_dir  =                    0
+CHECKSUM::     atm%flux_sw_down_total_dif  =                    0
+CHECKSUM::     atm%flux_sw_vis             =                    0
+CHECKSUM::     atm%flux_sw_vis_dir         =                    0
+CHECKSUM::     atm%flux_sw_vis_dif         =                    0
+CHECKSUM::     atm%flux_lw                 =                    0
+CHECKSUM::     atm%lprec                   =                    0
+CHECKSUM::     atm%fprec                   =                    0
+ BEGIN CHECKSUM(lnd_ice_Atm_bnd_type):: coupler_end            0
+CHECKSUM::lnd_ice_atm_bnd_type%t           =     DA1289C13FA867A6
+CHECKSUM::lnd_ice_atm_bnd_type%albedo      =     DAE5BFD0DB0F9962
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_vis_ =     743F8454A62FBF4A
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_nir_ =     537AAD0657F73E1E
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_vis_ =      F97240A7B3F39AA
+CHECKSUM::lnd_ice_atm_bnd_type%albedo_nir_ =     D598B95EF50112CA
+CHECKSUM::lnd_ice_atm_bnd_type%land_frac   =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_t        =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
+CHECKSUM::lnd_ice_atm_bnd_type%u_flux      =     DCDB9CEF2A8064B2
+CHECKSUM::lnd_ice_atm_bnd_type%v_flux      =     E46E9037B094A832
+CHECKSUM::lnd_ice_atm_bnd_type%dtaudu      =     43DCFC41F221194E
+CHECKSUM::lnd_ice_atm_bnd_type%dtaudv      =     BDE820168D7278EA
+CHECKSUM::lnd_ice_atm_bnd_type%u_star      =     9AF094E81045E18E
+CHECKSUM::lnd_ice_atm_bnd_type%b_star      =     A4C914DCC6C78F13
+CHECKSUM::lnd_ice_atm_bnd_type%q_star      =     15DB5F9529D56E33
+CHECKSUM::lnd_ice_atm_bnd_type%rough_mom   =     D5CB37CB52B47139
+ BEGIN CHECKSUM(ice_data_type):: coupler_end            0
+   CHECKSUM::ice_data_type%part_size          =     29BE7CA718ACAAAB
+   CHECKSUM::ice_data_type%t_surf             =     369A5367CB7DA988
+   CHECKSUM::ice_data_type%s_surf             =     A5F5C859E7C3F26A
+   CHECKSUM::ice_data_type%albedo             =     F272C91C356AFDB2
+   CHECKSUM::ice_data_type%albedo_vis_dir     =     3F9AE738D16A1B87
+   CHECKSUM::ice_data_type%albedo_nir_dir     =     E9F6363DBE156993
+   CHECKSUM::ice_data_type%albedo_vis_dif     =     8B50B98314DAAAD2
+   CHECKSUM::ice_data_type%albedo_nir_dif     =     FAE1AE19708A8650
+   CHECKSUM::ice_data_type%rough_mom          =     464C8D9E43EBAE79
+   CHECKSUM::ice_data_type%rough_heat         =     69CA575C11D9602B
+   CHECKSUM::ice_data_type%rough_moist        =     B2E2E070D7D23D4C
+   CHECKSUM::ice_data_type%u_surf             =     72D4DEEA049EF64C
+   CHECKSUM::ice_data_type%v_surf             =     F32DBAC37848F601
+   CHECKSUM::ice_data_type%flux_u             =     D95FEAF1076ECADC
+   CHECKSUM::ice_data_type%flux_v             =     5F84AD49608BAF0B
+   CHECKSUM::ice_data_type%flux_t             =     58EED45936581B37
+   CHECKSUM::ice_data_type%flux_q             =     97A9EA3871791692
+   CHECKSUM::ice_data_type%flux_lw            =      1E9EF1FDA521EC2
+   CHECKSUM::ice_data_type%flux_sw_vis_dir    =     2F55E799CA9C4E5A
+   CHECKSUM::ice_data_type%flux_sw_vis_dif    =      4C39E2B86D432EE
+   CHECKSUM::ice_data_type%flux_sw_nir_dir    =     D0838882F583447C
+   CHECKSUM::ice_data_type%flux_sw_nir_dif    =     D0838882F583447C
+   CHECKSUM::ice_data_type%flux_lh            =     89E187A8E279F6D2
+   CHECKSUM::ice_data_type%lprec              =     845E738E2CE680B5
+   CHECKSUM::ice_data_type%fprec              =     9033806606B2E7BC
+   CHECKSUM::ice_data_type%p_surf             =     2789D9074AE246E6
+   CHECKSUM::ice_data_type%runoff             =     A12D24AC57C38E33
+   CHECKSUM::ice_data_type%calving            =                    0
+   CHECKSUM::ice_data_type%flux_salt          =     D493EE29A7AA2CD9
+ BEGIN CHECKSUM(atmos_ice_boundary_type):: coupler_end            0
+CHECKSUM::atm_ice_bnd_type%u_flux          =     467CF2B02DAA58BC
+CHECKSUM::atm_ice_bnd_type%v_flux          =     C41406B06F8D5BED
+CHECKSUM::atm_ice_bnd_type%u_star          =     2B11897622A19871
+CHECKSUM::atm_ice_bnd_type%t_flux          =     B7FD6367B7342695
+CHECKSUM::atm_ice_bnd_type%q_flux          =     CF3A026362CD206E
+CHECKSUM::atm_ice_bnd_type%lw_flux         =     B6B70AC9CE450A61
+CHECKSUM::atm_ice_bnd_type%sw_flux_vis_dir =     30FB0304819C3D00
+CHECKSUM::atm_ice_bnd_type%sw_flux_vis_dif =     70644FB0CA707E68
+CHECKSUM::atm_ice_bnd_type%sw_flux_nir_dir =      6B4D665945A7D96
+CHECKSUM::atm_ice_bnd_type%sw_flux_nir_dif =     3A01743C51B75B59
+CHECKSUM::atm_ice_bnd_type%sw_down_vis_dir =     C2B2A9D1ECBCD8E8
+CHECKSUM::atm_ice_bnd_type%sw_down_vis_dif =     C2B2A9D1ECBCD8E8
+CHECKSUM::atm_ice_bnd_type%sw_down_nir_dir =     88050D6A777D641E
+CHECKSUM::atm_ice_bnd_type%sw_down_nir_dif =     88050D6A777D641E
+CHECKSUM::atm_ice_bnd_type%lprec           =     8A6E0B451869CF76
+CHECKSUM::atm_ice_bnd_type%fprec           =     E0A91CDBA02DAF9A
+CHECKSUM::atm_ice_bnd_type%dhdt            =     5600000000000000
+CHECKSUM::atm_ice_bnd_type%dedt            =     7828A1DFB9381980
+CHECKSUM::atm_ice_bnd_type%drdt            =     6E00000000000000
+CHECKSUM::atm_ice_bnd_type%coszen          =                    0
+CHECKSUM::atm_ice_bnd_type%p               =                    0
+ BEGIN CHECKSUM(land_data_type):: coupler_end            0
+CHECKSUM::         land%tile_size          =     48FFFFFFFC4C0A8B
+CHECKSUM::         land%t_surf             =     B794000000000000
+CHECKSUM::         land%t_ca               =     B794000000000000
+CHECKSUM::         land%albedo             =     2800000000002880
+CHECKSUM::         land%albedo_vis_dir     =                    0
+CHECKSUM::         land%albedo_nir_dir     =                    0
+CHECKSUM::         land%albedo_vis_dif     =                    0
+CHECKSUM::         land%albedo_nir_dif     =                    0
+CHECKSUM::         land%rough_mom          =     259999999999A5C0
+CHECKSUM::         land%rough_heat         =     2800000000002880
+CHECKSUM::         land%rough_scale        =     AC00000000000000
+CHECKSUM::         land%tr                 =                    0
+CHECKSUM::         land%discharge          =                    0
+CHECKSUM::         land%discharge_snow     =                    0
+CHECKSUM::         land%discharge_heat     =                    0
+ BEGIN CHECKSUM(atmos_land_boundary_type):: coupler_end            0
+CHECKSUM::     albt%t_flux                 =                    0
+CHECKSUM::     albt%lw_flux                =                    0
+CHECKSUM::     albt%lwdn_flux              =                    0
+CHECKSUM::     albt%sw_flux                =                    0
+CHECKSUM::   albt%swdn_flux                =                    0
+CHECKSUM::     albt%lprec                  =                    0
+CHECKSUM::     albt%fprec                  =                    0
+CHECKSUM::     albt%tprec                  =     121978593ECAA299
+CHECKSUM::     albt%sw_flux_down_vis_dir   =                    0
+CHECKSUM::     albt%sw_flux_down_total_dir =                    0
+CHECKSUM::     albt%sw_flux_down_vis_dif   =                    0
+CHECKSUM::     albt%sw_flux_down_total_dif =                    0
+CHECKSUM::     albt%dhdt                   =     E900000000000000
+CHECKSUM::     albt%dhdq                   =                    0
+CHECKSUM::     albt%drdt                   =     E900000000000000
+CHECKSUM::     albt%cd_m                   =     1E156DA315CD092A
+CHECKSUM::     albt%cd_t                   =     58DFDE270A611CBF
+CHECKSUM::     albt%ustar                  =     A73928F093577D92
+CHECKSUM::     albt%bstar                  =     6841CC92AE6D3A12
+CHECKSUM::     albt%wind                   =     CFCB8B71D8974CFD
+CHECKSUM::     albt%z_bot                  =     1BC0000000000173
+CHECKSUM::     albt%drag_q                 =                    0
+CHECKSUM::     albt%p_surf                 =     3FEC800000000000
+CHECKSUM::     albt%tr_flux                =                    0
+CHECKSUM::     albt%dfdtr                  =     364CC4223D161BF1
+ BEGIN CHECKSUM(ice_data_type):: coupler_end            0
+   CHECKSUM::ice_data_type%part_size          =     29BE7CA718ACAAAB
+   CHECKSUM::ice_data_type%t_surf             =     369A5367CB7DA988
+   CHECKSUM::ice_data_type%s_surf             =     A5F5C859E7C3F26A
+   CHECKSUM::ice_data_type%albedo             =     F272C91C356AFDB2
+   CHECKSUM::ice_data_type%albedo_vis_dir     =     3F9AE738D16A1B87
+   CHECKSUM::ice_data_type%albedo_nir_dir     =     E9F6363DBE156993
+   CHECKSUM::ice_data_type%albedo_vis_dif     =     8B50B98314DAAAD2
+   CHECKSUM::ice_data_type%albedo_nir_dif     =     FAE1AE19708A8650
+   CHECKSUM::ice_data_type%rough_mom          =     464C8D9E43EBAE79
+   CHECKSUM::ice_data_type%rough_heat         =     69CA575C11D9602B
+   CHECKSUM::ice_data_type%rough_moist        =     B2E2E070D7D23D4C
+   CHECKSUM::ice_data_type%u_surf             =     72D4DEEA049EF64C
+   CHECKSUM::ice_data_type%v_surf             =     F32DBAC37848F601
+   CHECKSUM::ice_data_type%flux_u             =     D95FEAF1076ECADC
+   CHECKSUM::ice_data_type%flux_v             =     5F84AD49608BAF0B
+   CHECKSUM::ice_data_type%flux_t             =     58EED45936581B37
+   CHECKSUM::ice_data_type%flux_q             =     97A9EA3871791692
+   CHECKSUM::ice_data_type%flux_lw            =      1E9EF1FDA521EC2
+   CHECKSUM::ice_data_type%flux_sw_vis_dir    =     2F55E799CA9C4E5A
+   CHECKSUM::ice_data_type%flux_sw_vis_dif    =      4C39E2B86D432EE
+   CHECKSUM::ice_data_type%flux_sw_nir_dir    =     D0838882F583447C
+   CHECKSUM::ice_data_type%flux_sw_nir_dif    =     D0838882F583447C
+   CHECKSUM::ice_data_type%flux_lh            =     89E187A8E279F6D2
+   CHECKSUM::ice_data_type%lprec              =     845E738E2CE680B5
+   CHECKSUM::ice_data_type%fprec              =     9033806606B2E7BC
+   CHECKSUM::ice_data_type%p_surf             =     2789D9074AE246E6
+   CHECKSUM::ice_data_type%runoff             =     A12D24AC57C38E33
+   CHECKSUM::ice_data_type%calving            =                    0
+   CHECKSUM::ice_data_type%flux_salt          =     D493EE29A7AA2CD9
+ BEGIN CHECKSUM(ocean_ice_boundary_type):: coupler_end            0
+CHECKSUM::      ocn_ice_bnd_type%u         =      1B7FA7C0AFA6F82
+CHECKSUM::      ocn_ice_bnd_type%v         =     9EFFABC9246F5339
+CHECKSUM::      ocn_ice_bnd_type%t         =     E0D9AC38D831880A
+CHECKSUM::      ocn_ice_bnd_type%s         =     A5F5C859E7C3F26A
+CHECKSUM::      ocn_ice_bnd_type%frazil    =                    0
+CHECKSUM::      ocn_ice_bnd_type%sea_level =     F5A4EF086CAAB206
+ BEGIN CHECKSUM(ocean_type):: coupler_end            0
+   CHECKSUM::     ocean%t_surf    =     E0D9FA38E08B2878
+   CHECKSUM::     ocean%s_surf    =     A60057D115E13B0B
+   CHECKSUM::     ocean%u_surf    =     825DED4496322D28
+   CHECKSUM::     ocean%v_surf    =     9AEE2A1E7DF73FE3
+   CHECKSUM::     ocean%sea_lev   =     F00DA08DA2C7BFE0
+   CHECKSUM::     ocean%frazil    =     FB9CFB1C6E9043CF
+ BEGIN CHECKSUM(ice_ocean_boundary_type):: coupler_end            0
+   CHECKSUM::iobt%u_flux          =     D95FEAF1076ECADC
+   CHECKSUM::iobt%v_flux          =     5F84AD49608BAF0B
+   CHECKSUM::iobt%t_flux          =     58EED45936581B37
+   CHECKSUM::iobt%q_flux          =     97A9EA3871791692
+   CHECKSUM::iobt%salt_flux       =     D493EE29A7AA2CD9
+   CHECKSUM::iobt%lw_flux         =      1E9EF1FDA521EC2
+   CHECKSUM::iobt%sw_flux_vis_dir =     2F55E799CA9C4E5A
+   CHECKSUM::iobt%sw_flux_vis_dif =      4C39E2B86D432EE
+   CHECKSUM::iobt%sw_flux_nir_dir =     D0838882F583447C
+   CHECKSUM::iobt%sw_flux_nir_dif =     D0838882F583447C
+   CHECKSUM::iobt%lprec           =     845E738E2CE680B5
+   CHECKSUM::iobt%fprec           =     9033806606B2E7BC
+   CHECKSUM::iobt%runoff          =     A12D24AC57C38E33
+   CHECKSUM::iobt%calving         =                    0
+   CHECKSUM::iobt%p               =     2789D9074AE246E6
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to    1969920.
+diamonds, bergs_chksum: write_restart berg chksum=                     0 chksum2=                     0 chksum3=                     0 chksum4=                     0 chksum5=                     0 #=                     0
+diamonds, grd_chksum2:    # of bergs/cell chksum=                     0 chksum2=                     0 min= 0.000000000E+00 max= 0.000000000E+00 mean= 0.000000000E+00 rms= 0.000000000E+00 sd= 0.000000000E+00
+diamonds, grd_chksum3:   write stored_ice chksum=           -1174764955 chksum2=            -878773244 min= 0.000000000E+00 max= 7.399858234E+11 mean= 8.946252191E+10 rms= 1.565194623E+11 sd= 1.284320803E+11
+diamonds, grd_chksum2:  write stored_heat chksum=                     0 chksum2=                     0 min= 0.000000000E+00 max= 0.000000000E+00 mean= 0.000000000E+00 rms= 0.000000000E+00 sd= 0.000000000E+00
+diamonds: icebergs_end complete       0
+
+WARNING from PE     0: diag_util_mod::opening_file: module/field_name (ocean_model/hfgeou) NOT registered
+
+
+WARNING from PE     0: diag_util_mod::opening_file: module/field_name (ocean_model/hfgeou) NOT registered
+
+
+WARNING from PE     0: diag_util_mod::opening_file: module/field_name (ocean_model/empty_vol) NOT registered
+
+
+WARNING from PE     0: diag_util_mod::opening_file: module/field_name (ocean_model/empty_vol) NOT registered
+
+                              20191028 174754.702: Memuse(MB) at Memory HiWaterMark=  3.443E+02  3.530E+02  2.926E+00  3.494E+02
+ MPP_DOMAINS_STACK high water mark=       972150
+
+Tabulating mpp_clock statistics across      8 PEs...
+
+                                          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+Total runtime                       159.128525    159.128536    159.128530      0.000005  1.000     0     0     7
+Initialization                        1.454768      1.454784      1.454776      0.000006  0.009     0     0     7
+  Init: atmos_model_init              0.018898      0.018918      0.018914      0.000006  0.000     0     0     7
+  Init: land_model_init               0.006741      0.013744      0.009459      0.002693  0.000     0     0     7
+  Init: ice_model_init                0.139507      0.142112      0.140066      0.000800  0.001     0     0     7
+  Init: ocean_model_init              1.076790      1.078741      1.077044      0.000641  0.007     0     0     7
+  Init: flux_exchange_init            0.045330      0.045339      0.045337      0.000003  0.000     0     0     7
+Main loop                           157.076081    157.076084    157.076083      0.000001  0.987     0     0     7
+Termination                           0.596189      0.596190      0.596190      0.000000  0.004     0     0     7
+(Ocean continuity update)             5.223172      7.869588      6.980355      0.843699  0.044    41     0     7
+(Ocean continuity correction)        13.871623     20.087813     16.851137      2.137991  0.106    41     0     7
+(Ocean advect tracer)                 3.283460      3.297872      3.295159      0.004728  0.021    31     0     7
+(Ocean tracer halo updates)           0.480959      0.622732      0.544522      0.038013  0.003    41     0     7
+(Ocean tracer global synch)           0.394843      1.596534      0.846833      0.435250  0.005    41     0     7
+Icebergs                              0.255078      3.991462      1.622465      1.399240  0.010     1     0     7
+Icebergs-momentum                     0.001854      0.001913      0.001874      0.000016  0.000    11     0     7
+Icebergs-thermodyn                    0.013596      0.013950      0.013777      0.000113  0.000    11     0     7
+Icebergs-interface                    0.142839      3.889429      1.510289      1.403166  0.009    11     0     7
+Icebergs-calving                      0.016901      0.017113      0.016984      0.000069  0.000    11     0     7
+Icebergs-communication                0.002812      0.013509      0.006513      0.003906  0.000    11     0     7
+Icebergs-initialization               0.004375      0.010692      0.008760      0.001875  0.000    11     0     7
+Icebergs-I/O read                     0.021355      0.021366      0.021361      0.000004  0.000    11     0     7
+Icebergs-I/O write                    0.007433      0.008255      0.008094      0.000254  0.000    11     0     7
+Icebergs-diagnostics                  0.004780      0.005258      0.004953      0.000150  0.000    11     0     7
+Icebergs-traj write                   0.000000      0.000000      0.000000      0.000000  0.000    11     0     7
+Icebergs-traj prepare                 0.000002      0.000008      0.000003      0.000002  0.000    11     0     7
+Ice                                   4.711928      8.423255      5.676983      1.450984  0.036     1     0     7
+Ice Fast                              0.958983      4.631272      1.898422      1.442973  0.012    11     0     7
+Ice Slow                              3.751688      3.791768      3.778342      0.015377  0.024    11     0     7
+Ice Fast/Slow Exchange                0.000033      0.000055      0.000045      0.000007  0.000    11     0     7
+Ocean Initialization                  1.064184      1.065323      1.064474      0.000332  0.007    11     0     7
+Ocean                               146.169343    146.179228    146.172583      0.002942  0.919     1     0     7
+Ocean dynamics                      103.552572    103.783663    103.622262      0.093014  0.651    11     0     7
+Ocean thermodynamics and tracers     37.460887     39.909458     39.281956      1.045305  0.247    11     0     7
+Ocean Other                           2.657028      4.908469      3.240786      0.956428  0.020    11     0     7
+(Ocean tracer advection)              3.186680      3.210188      3.200684      0.008863  0.020    21     0     7
+(Ocean diabatic driver)              34.252370     36.722728     36.081226      1.050343  0.227    21     0     7
+(Ocean continuity equation *)         0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean set BBL viscosity)             1.140119      2.551989      1.847680      0.467378  0.012    31     0     7
+(Ocean message passing *)             0.378951      9.039793      4.747798      2.850591  0.030    31     0     7
+(Ocean MOM_initialize_state)          0.245875      0.248333      0.246861      0.000853  0.002    31     0     7
+(Ocean init message passing *)        0.029181      0.139848      0.090131      0.035726  0.001    41     0     7
+(Ocean thickness diffusion *)         4.358164      4.899392      4.755585      0.157512  0.030    31     0     7
+(Ocean mixed layer restrat)           2.355933      5.093774      3.484594      0.898841  0.022    31     0     7
+(Ocean collective diagnostics)        1.074502      1.219466      1.152108      0.047965  0.007    31     0     7
+(Ocean Z-space diagnostics)           0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean ALE)                           3.724235      9.256753      5.682720      2.027597  0.036    31     0     7
+(Initialize from Z)                   0.218296      0.218893      0.218682      0.000196  0.001    41     0     7
+(Ocean diagnostics framework)         0.933725      1.286158      1.139760      0.127532  0.007    31     0     7
+(Ocean diagnostics remapping)         0.000000      0.000000      0.000000      0.000000  0.000    41     0     7
+(Ocean diagnostics grid updates)      0.003739      0.005118      0.004429      0.000545  0.000    41     0     7
+(Ocean continuity halo updates)       0.010691      1.008861      0.277716      0.404846  0.002    41     0     7
+(Ocean BT pre-calcs only)             5.426752      6.227221      5.945445      0.233217  0.037    41     0     7
+(Ocean BT pre-step halo updates)      0.435432      3.827051      1.790965      1.202715  0.011    41     0     7
+(Ocean BT stepping calcs only)        0.429669      0.534152      0.484075      0.033612  0.003    41     0     7
+(Ocean BT stepping halo updates)      0.025621      0.092849      0.049416      0.021927  0.000    41     0     7
+(Ocean BT post-calcs only)            0.536352      0.552823      0.545813      0.005286  0.003    41     0     7
+(Ocean BT post-step halo updates      0.023862      0.071132      0.051009      0.017286  0.000    41     0     7
+(Ocean BT global synch)               0.020863      0.789107      0.361760      0.267405  0.002    41     0     7
+(Ocean Coriolis & mom advection)      2.946870      3.440304      3.166729      0.165175  0.020    31     0     7
+(Ocean continuity equation)          20.161965     29.211135     25.227070      3.052074  0.159    31     0     7
+(Ocean pressure force)               22.495032     22.993125     22.749111      0.166861  0.143    31     0     7
+(Ocean vertical viscosity)           10.122578     15.264552     12.247865      1.778895  0.077    31     0     7
+(Ocean horizontal viscosity)          5.476465      5.888666      5.776189      0.128865  0.036    31     0     7
+(Ocean momentum increments)           0.645296      0.676119      0.661188      0.012984  0.004    31     0     7
+(Ocean message passing)               2.101619     15.727480      8.692342      4.399951  0.055    31     0     7
+(Ocean init message passing)          0.000000      0.000000      0.000000      0.000000  0.000    41     0     7
+(Ocean barotropic mode calc)          0.211307      0.277215      0.241544      0.022661  0.002    31     0     7
+(Ocean barotropic mode stepping)      7.800140     11.388399      9.538202      1.351807  0.060    31     0     7
+(Ocean barotropic forcing calc)       0.798397      0.998266      0.925815      0.063623  0.006    31     0     7
+(Ocean kappa_shear)                   2.340774      7.733017      4.469516      1.998712  0.028    31     0     7
+(Ocean diabatic entrain)              0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean vert remap)                   14.927431     20.422304     17.358538      2.162518  0.109    31     0     7
+(Ocean set_diffusivity)               4.358715      9.802057      6.486104      2.032720  0.041    31     0     7
+(Ocean KPP)                           0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean tracer_columns)                0.393618      0.516541      0.442940      0.045061  0.003    26     0     7
+(Ocean diabatic tridiag)              0.154857      0.193482      0.177251      0.013688  0.001    41     0     7
+(Ocean diabatic message passing)      0.021432      4.622709      1.209559      1.950221  0.008    41     0     7
+(Ocean find_uv_at_h)                  0.254578      0.294775      0.283555      0.012108  0.002    41     0     7
+(Ocean frazil)                        0.140484      0.222189      0.172083      0.029411  0.001    41     0     7
+(Ocean regularize_layers EOS)         0.000000      0.000000      0.000000      0.000000  0.000    41     0     7
+(Ocean regularize_layers halo up      0.000000      0.000000      0.000000      0.000000  0.000    41     0     7
+(Ocean diffuse tracer)                0.522061      0.540267      0.533711      0.006011  0.003    31     0     7
+(Ocean epipycnal diffuse tracer)      0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+Ocean surface forcing                 0.155310      0.159839      0.158397      0.001314  0.001    11     0     7
+(Ocean forcing diagnostics)           0.000490      0.000579      0.000537      0.000024  0.000    41     0     7
+Land-ice-atm coupler                  1.536027      4.286729      2.962792      1.294579  0.019     1     0     7
+SFC boundary layer                    0.824878      3.610387      1.689694      1.104191  0.011    11     0     7
+Flux DN from atm                      0.440096      3.040105      1.152703      1.086451  0.007    41     0     7
+XGrid generation                      0.041400      0.051426      0.046626      0.003671  0.000    41     0     7
+Flux UP to atm                        0.038489      0.045298      0.041184      0.002293  0.000    41     0     7
+Flux land to ice                      0.027923      0.037293      0.032024      0.002944  0.000    41     0     7
+Ice-ocean coupler                     0.155192      0.158521      0.156635      0.001076  0.001     1     0     7
+Flux ice to ocean                     0.018616      0.021785      0.019954      0.000989  0.000    41     0     7
+Flux ocean to ice                     0.136410      0.137056      0.136652      0.000176  0.001    41     0     7
+generate_sfc_xgrid                    0.041468      0.051494      0.046692      0.003672  0.000     0     0     7
+flux_ocean_to_ice                     0.136476      0.137123      0.136714      0.000177  0.001     0     0     7
+flux_ice_to_ocean                     0.018674      0.021833      0.020006      0.000988  0.000     0     0     7
+ATM                                   7.627056     10.402971      9.709596      1.093139  0.061     0     0     7
+ ATM: atmos loop                      2.302566      5.197305      4.034886      1.217524  0.025     0     0     7
+  A-L: atmos_tracer_driver_gathe      0.000000      0.000000      0.000000      0.000000  0.000     0     0     7
+  A-L: sfc_boundary_layer             0.826059      3.630237      1.697129      1.107642  0.011     0     0     7
+  A-L: update_atmos_model_dynami      0.000000      0.000000      0.000000      0.000000  0.000     0     0     7
+  A-L: serial radiation               0.000005      0.000015      0.000009      0.000003  0.000     0     0     7
+  A-L: update_atmos_model_down        0.000000      0.000000      0.000000      0.000000  0.000     0     0     7
+  A-L: flux_down_from_atmos           0.440686      3.040763      1.153297      1.086480  0.007     0     0     7
+  A-L: update_land_model_fast         0.000008      0.000016      0.000012      0.000002  0.000     0     0     7
+  A-L: update_ice_model_fast          0.794780      1.760722      1.110800      0.355591  0.007     0     0     7
+  A-L: flux_up_to_atmos               0.038770      0.045640      0.041495      0.002309  0.000     0     0     7
+  A-L: update_atmos_model_up          0.000004      0.000012      0.000006      0.000002  0.000     0     0     7
+  A-L: update_atmos_model_state       0.000009      0.000017      0.000012      0.000003  0.000     0     0     7
+ ATM: update_land_model_slow          0.000005      0.000006      0.000006      0.000000  0.000     0     0     7
+ ATM: flux_land_to_ice                0.028108      0.037478      0.032214      0.002938  0.000     0     0     7
+ Ice: set_ice_surface fast            0.094403      2.870739      0.787789      1.093298  0.005     0     0     7
+ Ice: update_ice_model_slow fast      0.167450      0.201500      0.188902      0.012560  0.001     0     0     7
+ Ice: set_ice_surface slow            0.020388      0.021173      0.020814      0.000244  0.000     0     0     7
+ Ice: update_ice_model_slow slow      4.035806      7.739176      5.391758      1.384977  0.034     0     0     7
+ Ice: flux_ice_to_ocean_stocks        0.004294      0.004632      0.004478      0.000105  0.000     0     0     7
+ Ice: set_ice_surface exchange        0.000056      0.000078      0.000070      0.000007  0.000     0     0     7
+ Ice: update_ice_model_slow exch      0.000040      0.000075      0.000053      0.000011  0.000     0     0     7
+OCN                                 146.370724    146.385261    146.380527      0.005742  0.920     0     0     7
+flux_check_stocks                     0.000000      0.000000      0.000000      0.000000  0.000     0     0     7
+intermediate restart                  0.000000      0.000000      0.000000      0.000000  0.000     0     0     7
+final flux_check_stocks               0.004706      0.004887      0.004729      0.000060  0.000     0     0     7
+ MPP_STACK high water mark=            0
