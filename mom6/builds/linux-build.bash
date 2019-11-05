@@ -73,7 +73,7 @@ srcdir=$abs_rootdir/../src
 mkdir -p build/$machine_name-$platform/shared/$target
 pushd build/$machine_name-$platform/shared/$target   
 rm -f path_names                       
-$srcdir/mkmf/bin/list_paths $srcdir/FMS
+$srcdir/mkmf/bin/list_paths $srcdir/FMS/{affinity,diag_integral,horiz_interp,memutils,oda_tools,sat_vapor_pres,topography,astronomy,constants,diag_manager,field_manager,include,monin_obukhov,platform,station_data,tracer_manager,axis_utils,coupler,drifters,fms,interpolator,mosaic,random_numbers,time_interp,tridiagonal,block_control,data_override,exchange,mpp,time_manager}/
 $srcdir/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -p libfms.a -c "-Duse_libMPI -Duse_netCDF -DSPMD" path_names
 
 make $makeflags libfms.a         
