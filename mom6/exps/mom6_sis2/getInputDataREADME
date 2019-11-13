@@ -1,24 +1,18 @@
 #To get the required input files:
-
-mkdir INPUT; cd INPUT
+mkdir datasets; cd datasets
 #Get forcing files
 wget ftp://ftp.gfdl.noaa.gov/perm/Alistair.Adcroft/MOM6-testing/CORE.tgz
 tar xzvf CORE.tgz
-ln -s CORE/NYF_v2.0/* .
-\rm CORE.tgz
+#Gets OBS datasets
 wget ftp://ftp.gfdl.noaa.gov/perm/Alistair.Adcroft/MOM6-testing/obs.tgz
 tar zxvf obs.tgz
-ln -s obs/WOA05_pottemp_salt.nc .
-\rm obs.tgz
-
-#Generate or Get the Grid file
-ln -s /work/Niki.Zadeh/MOM6-examples_myfork/ice_ocean_SIS2/OM4_2/preprocessing/mosaic_ocean/* .
-ln -s ocean_topog.nc topog.nc
 
 cp /work/Niki.Zadeh/MOM6-examples_myfork/ice_ocean_SIS2/OM4_025/INPUT/layer_coord.nc layer_coord.nc
 cp /work/Niki.Zadeh/MOM6-examples_myfork/ice_ocean_SIS2/OM4_025/INPUT/hycom1_75_800m.nc hycom1_75_800m.nc
 
-mkdir RESTART
+#Generate or Get the Grid file
+mkdir grids; cd grids
+ln -s /work/Niki.Zadeh/MOM6-examples_myfork/ice_ocean_SIS2/OM4_2/preprocessing/mosaic_ocean OM4_2_gridgen
+#ln -s ocean_topog.nc topog.nc
 
-mpirun -n 8 /net2/nnz/platforms/mom6/builds/build/gfdl-ws-intel15/ocean_ice/prod/MOM6SIS2
 
