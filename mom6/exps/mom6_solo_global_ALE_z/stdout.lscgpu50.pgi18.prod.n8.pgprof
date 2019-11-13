@@ -1,0 +1,3472 @@
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+ &MPP_IO_NML
+ HEADER_BUFFER_VAL =        16384,
+ GLOBAL_FIELD_ON_ROOT_PE =  T,
+ IO_CLOCKS_ON =  F,
+ SHUFFLE =            0,
+ DEFLATE_LEVEL =           -1,
+ CF_COMPLIANCE =  F
+ /
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  8100000.
+NOTE from PE     0: ======== Model being driven by MOM_driver ========
+NOTE from PE     0: callTree: o Program MOM_main, MOM_driver.F90
+ &OCEAN_SOLO_NML
+ DATE_INIT =            1,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+ CALENDAR = julian          ,
+ MONTHS =            0,
+ DAYS =            1,
+ HOURS =            0,
+ MINUTES =            0,
+ SECONDS =            0,
+ OCEAN_NTHREADS =            1,
+ NCORES_PER_NODE =           36,
+ USE_HYPER_THREAD =  F
+ /
+NOTE from PE     0: open_param_file: INPUT/MOM_input has been opened successfully.
+NOTE from PE     0: open_param_file: INPUT/MOM_override has been opened successfully.
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90  90  90
+  Y-AXIS =  105 105
+NOTE from PE     0: diag_manager_mod::diag_manager_init: prepend_date only supported when diag_manager_init is called with time_init present.
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90  90  90
+  Y-AXIS =  105 105
+ MOM_MOSAIC domain decomposition
+whalo =    9, ehalo =    9, shalo =    9, nhalo =    9
+  X-AXIS =  180 180 180 180
+  Y-AXIS =  210 210
+
+WARNING from PE     0: MOM_file_parser : COORD_FILE over-ridden.  Line: 'COORD_FILE = "Layer_coord50.nc"' in file INPUT/MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : COORD_FILE over-ridden.  Line: 'COORD_FILE = "Layer_coord50.nc"' in file INPUT/MOM_override.
+
+NOTE from PE     0: init_from_Z: min= -2.0999E+00 max=  3.0543E+01 Level=  1 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1001E+00 max=  3.0419E+01 Level=  2 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1002E+00 max=  3.0062E+01 Level=  3 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1004E+00 max=  2.9837E+01 Level=  4 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1008E+00 max=  2.9853E+01 Level=  5 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1012E+00 max=  2.9371E+01 Level=  6 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1016E+00 max=  2.9215E+01 Level=  7 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1021E+00 max=  2.8034E+01 Level=  8 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1026E+00 max=  2.6594E+01 Level=  9 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1036E+00 max=  2.2757E+01 Level= 10 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1048E+00 max=  2.1933E+01 Level= 11 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1060E+00 max=  2.1794E+01 Level= 12 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1084E+00 max=  2.1727E+01 Level= 13 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1110E+00 max=  2.1616E+01 Level= 14 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1138E+00 max=  2.1572E+01 Level= 15 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1166E+00 max=  2.1556E+01 Level= 16 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1197E+00 max=  2.1591E+01 Level= 17 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.0438E+00 max=  2.1650E+01 Level= 18 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1138E+00 max=  2.1610E+01 Level= 19 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.5379E+00 max=  2.1548E+01 Level= 20 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.5099E+00 max=  2.1535E+01 Level= 21 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.3690E+00 max=  2.1540E+01 Level= 22 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.3985E+00 max=  2.1532E+01 Level= 23 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.4988E+00 max=  2.1521E+01 Level= 24 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.5594E+00 max=  2.1361E+01 Level= 25 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.1467E+00 max=  2.1265E+01 Level= 26 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.1917E+00 max=  1.3372E+01 Level= 27 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.2744E+00 max=  1.3345E+01 Level= 28 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.2318E+00 max=  1.3291E+01 Level= 29 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.7011E-01 max=  1.3265E+01 Level= 30 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.9362E-01 max=  9.8849E+00 Level= 31 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.5099E-01 max=  9.8020E+00 Level= 32 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -8.8077E-01 max=  3.8353E+00 Level= 33 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0715E+01 Level=  1 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0752E+01 Level=  2 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0793E+01 Level=  3 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0774E+01 Level=  4 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0948E+01 Level=  5 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0736E+01 Level=  6 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0401E+01 Level=  7 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0398E+01 Level=  8 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0398E+01 Level=  9 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.5130E+00 max=  4.0559E+01 Level= 10 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.5130E+00 max=  4.0549E+01 Level= 11 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.5130E+00 max=  4.0557E+01 Level= 12 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1573E+01 max=  4.0573E+01 Level= 13 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1607E+01 max=  4.0592E+01 Level= 14 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1591E+01 max=  4.0616E+01 Level= 15 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1660E+01 max=  4.0649E+01 Level= 16 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1713E+01 max=  4.0645E+01 Level= 17 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1892E+01 max=  4.0638E+01 Level= 18 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1970E+01 max=  4.0656E+01 Level= 19 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2292E+01 max=  4.0631E+01 Level= 20 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2293E+01 max=  4.0579E+01 Level= 21 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2317E+01 max=  4.0588E+01 Level= 22 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2315E+01 max=  4.0584E+01 Level= 23 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2318E+01 max=  4.0580E+01 Level= 24 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2321E+01 max=  4.0611E+01 Level= 25 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2331E+01 max=  4.0611E+01 Level= 26 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4067E+01 max=  3.8767E+01 Level= 27 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4069E+01 max=  3.8763E+01 Level= 28 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4070E+01 max=  3.8953E+01 Level= 29 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4471E+01 max=  3.8943E+01 Level= 30 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4465E+01 max=  3.4998E+01 Level= 31 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4461E+01 max=  3.5020E+01 Level= 32 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4595E+01 max=  3.4996E+01 Level= 33 field from fill_miss_2d()
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    0.000E+00
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90  90  90
+  Y-AXIS =  105 105
+
+WARNING from PE     0: MOM_diag_to_Z get_Z_depths:  Difficulties opening INPUT/analysis_vgrid_lev35.v1.nc - No such file or directory
+
+
+WARNING from PE     0: MOM_diag_to_Z get_Z_depths:  Difficulties opening INPUT/analysis_vgrid_lev35.v1.nc - No such file or directory
+
+NOTE from PE     0: Segment run length determined from ocean_solo_nml.
+
+WARNING from PE     0: MPP_OPEN: File ./CPU_stats opened WRONLY already exists!
+
+
+WARNING from PE     0: MPP_OPEN: File ./CPU_stats opened WRONLY already exists!
+
+
+WARNING from PE     0: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
+
+
+WARNING from PE     0: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
+
+MOM Date      1/01/01 00:00:00      0: En 1.345953E-05, MaxCFL  0.00000, Mass 1.379529197472E+21, Salt  34.72018331557, Temp   3.61844474935
+    Total Energy: 43507DD4D6200B20  1.8567810825333888E+16
+    Total Mass:   1.3795291974716886E+21, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Salt:   4.7897506625402929E+19, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Heat:   1.9592619461096163E+25, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+      Total age:   0.0000000000000000E+00 yr kg
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    3.750E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    5.000E-01
+MOM Date      1/01/01 12:00:00     12: En 8.157200E-04, MaxCFL  0.06093, Mass 1.379529214387E+21, Salt  34.72018288985, Temp   3.61848852045
+    Total Energy: 43AF3BCE3EEF2EF4  1.1253096042489103E+18
+    Total Mass:   1.3795292143870015E+21, Change:   1.6915313108617572E+13 Error: -2.36846E+02 (-1.7E-19)
+    Total Salt:   4.7897506625402929E+19, Change:   1.1810056250000001E+02 Error:  1.18101E+02 ( 2.5E-18)
+    Total Heat:   1.9592856706608803E+25, Change:   2.3724551264116248E+20 Error: -7.48707E+06 (-3.8E-19)
+      Total age:   1.8814498252912901E+18 yr kg
+MOM Date      1/01/02 00:00:00     24: En 1.035732E-03, MaxCFL  0.09705, Mass 1.379529243922E+21, Salt  34.72018214652, Temp   3.61849676001
+    Total Energy: 43B3D4320031667A  1.4288219581934781E+18
+    Total Mass:   1.3795292439215955E+21, Change:   2.9534593605119465E+13 Error:  3.02206E+02 ( 2.2E-19)
+    Total Salt:   4.7897506625402929E+19, Change:  -7.4007671875000000E+01 Error: -7.40077E+01 (-1.5E-18)
+    Total Heat:   1.9592901740405938E+25, Change:   4.5033797132106121E+19 Error:  2.64093E+07 ( 1.3E-18)
+      Total age:   3.7575068055073126E+18 yr kg
+
+WARNING from PE     0: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
+
+
+WARNING from PE     0: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
+
+                              20191015 120206.977: Memuse(MB) at Memory HiWaterMark=  6.231E+02  6.285E+02  1.945E+00  6.263E+02
+ MPP_DOMAINS_STACK high water mark=       979300
+
+Tabulating mpp_clock statistics across      8 PEs...
+
+                                          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+Total runtime                        50.925671     50.925674     50.925672      0.000001  1.000     0     0     7
+Initialization                        1.635005      1.635538      1.635417      0.000158  0.032     0     0     7
+Main loop                            48.467532     48.467662     48.467641      0.000041  0.952     0     0     7
+Termination                           0.701955      0.816542      0.720938      0.036288  0.014     0     0     7
+Ocean Initialization                  2.307080      2.429093      2.327396      0.038593  0.046    11     0     7
+Ocean                                47.410253     47.410929     47.410574      0.000243  0.931     1     0     7
+Ocean dynamics                       24.583891     25.527647     24.822027      0.406893  0.487    11     0     7
+Ocean thermodynamics and tracers     14.038594     21.912159     18.117650      2.131694  0.356    11     0     7
+Ocean Other                           0.374575      3.337633      1.784695      1.412140  0.035    11     0     7
+(Ocean tracer advection)              6.041395     12.972329      9.414586      1.936808  0.185    21     0     7
+(Ocean diabatic driver)               4.120033      4.782032      4.504044      0.282862  0.088    21     0     7
+(Ocean continuity equation *)         0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean set BBL viscosity)             0.826683      1.030023      0.955214      0.062635  0.019    31     0     7
+(Ocean message passing *)             0.149913      7.705985      3.844209      2.120332  0.075    31     0     7
+(Ocean MOM_initialize_state)          0.613700      0.623238      0.618738      0.003032  0.012    31     0     7
+(Ocean thickness diffusion *)         1.912669      2.163656      2.064213      0.074392  0.041    31     0     7
+(Ocean mixed layer restrat)           1.008533      1.457454      1.251687      0.130482  0.025    31     0     7
+(Ocean collective diagnostics)        0.043446      1.164936      0.549825      0.510461  0.011    31     0     7
+(Ocean Z-space diagnostics)           0.000377      1.121914      0.506711      0.510554  0.010    31     0     7
+(Ocean ALE)                           1.739494      4.075031      2.895068      0.649347  0.057    31     0     7
+(Ocean diagnostics framework)         0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean tides)                         0.001648      0.002105      0.001969      0.000149  0.000    31     0     7
+(Ocean Coriolis & mom advection)      0.734314      0.797548      0.773950      0.020511  0.015    31     0     7
+(Ocean continuity equation)           4.764179      5.949760      5.421775      0.356163  0.106    31     0     7
+(Ocean pressure force)                4.261382      4.353953      4.301930      0.031512  0.084    31     0     7
+(Ocean vertical viscosity)            2.693122      3.759426      3.223775      0.296178  0.063    31     0     7
+(Ocean horizontal viscosity)          1.287517      1.356234      1.331039      0.024634  0.026    31     0     7
+(Ocean momentum increments)           0.154385      0.159076      0.157152      0.001418  0.003    31     0     7
+(Ocean message passing)               0.404575      2.309738      1.300642      0.549196  0.026    31     0     7
+(Ocean barotropic mode calc)          0.068574      0.075474      0.070929      0.002080  0.001    31     0     7
+(Ocean barotropic mode stepping)      2.817091      3.411919      3.036900      0.189036  0.060    31     0     7
+(Ocean barotropic forcing calc)       0.151173      0.206941      0.163587      0.016589  0.003    31     0     7
+(Ocean kappa_shear)                   0.595595      1.427008      0.970520      0.227868  0.019    31     0     7
+(Ocean diabatic entrain)              0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean vert remap)                    0.977629      1.344394      1.164215      0.104512  0.023    31     0     7
+(Ocean set_diffusivity)               1.457273      2.260391      1.821628      0.222919  0.036    31     0     7
+(Ocean KPP)                           0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean tracer_columns)                0.215026      0.256336      0.238949      0.011759  0.005    26     0     7
+(Ocean advect tracer)                 0.924090      0.924341      0.924223      0.000089  0.018    31     0     7
+(Ocean diffuse tracer)                5.103741     12.033723      8.475920      1.936529  0.166    31     0     7
+(Ocean epipycnal diffuse tracer)      0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean surface forcing)               0.059328      0.071355      0.061286      0.003851  0.001    31     0     7
+ MPP_STACK high water mark=            0
+
+======== CPU profiling result (top down):
+Time(%)      Time  Name
+ 33.34%    50.99s  poll_dispatch
+ 33.34%    50.98s  | __poll
+ 33.32%    50.96s  epoll_dispatch
+ 33.32%    50.96s  | epoll_wait
+  2.75%      4.2s  ompi_coll_libnbc_progress
+  2.73%     4.18s  mca_btl_smcuda_component_progress
+  2.00%     3.06s  opal_timer_linux_get_cycles_sys_timer
+  1.39%     2.13s  mom_barotropic_btstep_
+  1.22%     1.86s  opal_progress
+  1.01%     1.55s  mom_eos_wright_calculate_density_array_wright_
+  0.99%     1.51s  mom_neutral_diffusion_neutral_diffusion_
+  0.07%     100ms  | pgf90_alloc04a
+  0.05%      70ms  | | __alloc04
+  0.04%      60ms  | |   __fort_gmalloc_without_abort
+
+======== CPU profiling result (top down):
+Time(%)      Time  Name
+  0.04%      60ms  | |     __fort_malloc_without_abort
+  0.04%      60ms  | |       __libc_malloc
+  0.03%      40ms  | |         _int_malloc
+ 33.34%  50.9798s  epoll_dispatch
+  0.05%      80ms  | pgf90_dealloc03a
+ 33.34%  50.9798s  | epoll_wait
+  0.04%      60ms  | | __fort_dealloc03
+ 33.34%  50.9798s  poll_dispatch
+  0.02%      30ms  | |   __fort_gfree 33.34%  50.9798s  | __poll
+
+  1.94%  2.96999s  mom_neutral_diffusion_neutral_diffusion_
+  0.01%    0.17%     260ms  | pgf90_alloc04a
+    20ms  | |     __fort_free
+  0.14%     210ms  | | __alloc04
+  0.01%    0.12%     180ms  | | | __fort_gmalloc_without_abort
+    20ms  | |     | _int_free
+  0.12%     180ms  | | |   __fort_malloc_without_abort
+  0.01%    0.12%     180ms  | | |       10ms  | |     ???
+  __libc_malloc
+  0.06%      90ms  | | |       _int_malloc
+  0.01%      10ms  | use_alloc
+  0.02%      30ms  | | save_alloc
+  0.97%     1.48s  mom_eos_int_density_dz_generic_plm_
+  0.10%     160ms  | pgf90_dealloc03a
+  0.10%     150ms  | | __fort_dealloc03
+  0.89%     1.36s  mom_hor_visc_horizontal_viscosity_
+  0.08%     120ms  | | | __fort_gfree
+  0.70%    0.08%     120ms  | | |   __fort_free
+   1.07s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.07%     100ms  | pgf90_alloc04a
+  0.07%     110ms  | | |     _int_free
+  0.05%      70ms  | | __alloc04
+  0.01%      10ms  | | |     0.04%      60ms  | | | __fort_gmalloc_without_abort
+  free
+  0.03%      50ms  | | |   __fort_malloc_without_abort
+  0.01%      10ms  | | reuse_alloc
+  0.03%      40ms  | | |   | __libc_malloc
+  0.01%      10ms  | ???
+  0.02%      30ms  | | |   |   _int_malloc
+  0.01%      10ms  | | |   ???
+  1.46%  2.23999s  mom_barotropic_btstep_
+  0.01%      10ms  | | save_alloc
+  1.22%    0.05%      70ms  | pgf90_dealloc03a
+1.86999s  ompi_coll_libnbc_progress
+  0.05%      70ms  |   __fort_dealloc03
+  1.21%  1.84999s  mca_btl_smcuda_component_progress
+  0.05%      70ms  |     __fort_gfree
+  1.12%  1.70999s  opal_timer_linux_get_cycles_sys_timer
+  0.05%      70ms  |       __fort_free
+  0.03%      40ms  |         _int_free
+  1.01%  1.54999s  mom_eos_wright_calculate_density_array_wright_
+  0.63%     960ms  mom_continuity_ppm_merid_flux_layer_
+  0.92%  1.40999s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.59%     900ms  mom_continuity_ppm_zonal_flux_layer_
+  0.57%     870ms  mca_pml_ob1_progress
+  0.10%     160ms  | pgf90_alloc04a
+  0.56%     860ms  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.08%     120ms  | | __alloc04  0.03%      40ms  | __fsd_pow_fma3
+
+  0.02%      30ms  | pgf90_sect3
+  0.07%     100ms  | | | __fort_gmalloc_without_abort
+  0.01%      10ms  |   ???
+  0.07%     100ms  | | |     0.54%     820ms  mom_thickness_diffuse_thickness_diffuse_full_
+__fort_malloc_without_abort
+  0.01%      20ms  | pgf90_dealloc03a
+  0.07%    0.01%      20ms  | | __fort_dealloc03
+   100ms  | | |     __libc_malloc
+  0.01%      20ms  | |   __fort_gfree  0.03%      40ms  | | |       _int_malloc
+
+  0.01%      10ms  | | use_alloc  0.01%      20ms  | |   
+  __fort_free
+  0.05%      70ms  | pgf90_dealloc03a
+  0.01%      20ms  | |       _int_free
+  0.04%      60ms  | | __fort_dealloc03
+  0.01%      20ms  | pgf90_alloc04a
+  0.03%      40ms  | |   __fort_gfree
+  0.01%      10ms  | | __alloc04
+  0.03%      40ms  | |     __fort_free
+  0.01%      10ms  | |   __fort_gmalloc_without_abort
+  0.03%      40ms  | |       _int_free
+  0.01%      10ms  | |     __fort_malloc_without_abort
+  0.01%      10ms  | ???
+  0.01%      10ms  | __alloc04
+  0.01%      10ms  | |       __libc_malloc
+  0.90%     1.37s  mom_hor_visc_horizontal_viscosity_
+  0.01%      10ms  | |       0.87%     1.33s  mom_eos_int_density_dz_generic_plm_
+    _int_malloc
+  0.80%     1.22s  mom_continuity_ppm_zonal_flux_layer_
+  0.01%    0.77%     1.17s  mom_continuity_ppm_merid_flux_layer_
+    10ms  | pgf90_auto_alloc04
+  0.75%     1.15s  mom_vert_friction_vertvisc_coef_
+  0.01%    0.74%     1.13s  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+    10ms  |   __auto_alloc
+  0.03%      50ms  | __fsd_pow_fma3
+  0.48%    0.02%      30ms  | __gsd_pow
+   730ms  mom_vert_friction_vertvisc_coef_
+  0.01%      20ms  | pgf90_sect3
+  0.41%     630ms  mom_vert_friction_find_coupling_coef_
+  0.01%      10ms  | | __fort_set_single
+  0.40%     610ms  mom_vert_friction_vertvisc_remnant_
+  0.01%      10ms  | ???
+  0.40%     610ms  mom_set_visc_set_viscous_bbl_
+  0.60%     920ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.07%     100ms  | __fsd_pow_fma3
+  0.03%      40ms  | pgf90_alloc04a
+  0.39%     590ms  mom_coriolisadv_coradcalc_
+
+======== CPU profiling result (top down):
+Time(%)      Time  Name
+  0.03%    0.36%     550ms  mca_pml_ob1_process_pending_cuda_async_copies
+    40ms  | | __alloc04
+  0.03%      40ms  | |   __fort_gmalloc_without_abort  0.01%      10ms  | ???
+
+  0.03%      40ms  | |     0.35%     530ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  __fort_malloc_without_abort
+  0.03%      40ms  | |     0.35%     530ms  mpp_domains_mod_mpp_do_group_update_r8_
+ 33.34%    50.97s  epoll_dispatch
+    __libc_malloc
+ 33.34%    50.97s  | epoll_wait
+  0.01%      20ms  | |     0.35%     530ms  mom_remapping_remap_via_sub_cells_
+      _int_malloc
+ 33.34%    50.97s  poll_dispatch
+  0.01%      10ms  |   0.07%     100ms  pgf90_dealloc03a
+| pgf90_auto_alloc04
+ 33.34%    50.97s  | __poll
+  0.06%      90ms  | | __auto_alloc
+  0.01%      10ms  |   __fort_dealloc03
+  1.73%     2.64s  mom_neutral_diffusion_neutral_diffusion_
+  0.01%      10ms  |     __fort_gfree
+  0.27%     420ms  | pgf90_alloc04a
+  0.06%      90ms  | |   __libc_malloc
+  0.23%     350ms  | | __alloc04
+  0.01%      10ms  0.03%      40ms  | |     _int_malloc
+  |       __fort_free
+  0.18%     270ms  | | | __fort_gmalloc_without_abort
+  0.05%      70ms  | pgf90_auto_dealloc
+  0.01%      10ms  |         0.16%     240ms  |   _int_free
+  0.03%      50ms  |   _int_free
+| |   __fort_malloc_without_abort
+  0.01%      10ms  |   ???
+  0.14%     220ms  | | |   | __libc_malloc
+  0.60%     920ms  mom_remapping_remap_via_sub_cells_
+  0.06%      90ms  | | |   |     0.32%     490ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+_int_malloc
+  0.10%     150ms  | pgf90_auto_alloc04
+  0.31%     480ms  mom_neutral_diffusion_neutral_surface_flux_
+  0.01%      10ms  | | |   ???
+  0.10%     150ms  | pgf90_auto_alloc04
+  0.02%      30ms  | | save_alloc
+  0.10%    0.09%     140ms  | | __auto_alloc
+   150ms  | | __auto_alloc
+  0.06%      90ms  | pgf90_dealloc03a
+  0.09%     140ms  | |   __libc_malloc
+  0.06%      90ms  |   __fort_dealloc03
+  0.09%    0.04%      60ms  | |     _int_malloc
+   130ms  | |   __libc_malloc
+  0.05%      80ms  |     __fort_gfree
+  0.05%      80ms  | pgf90_auto_dealloc
+  0.05%      80ms  |       __fort_free
+  0.05%    0.05%      80ms  | | _int_free
+    80ms  | |     _int_malloc
+  0.05%      70ms  |         _int_free
+  0.01%      20ms  | pgf90_set_intrin_type
+  0.01%      10ms  |         free
+  0.04%    0.31%     480ms  __c_mzero8
+    60ms    1.43%     2.18s  mom_barotropic_btstep_
+| pgf90_auto_dealloc
+  0.30%     460ms  plm_functions_plm_reconstruction_
+  0.01%      20ms  | __fsd_pow_fma3
+  0.04%      60ms  0.04%      60ms  | pgf90_auto_alloc04
+  |   _int_free
+  1.38%     2.11s  mca_btl_smcuda_component_progress
+  0.03%      50ms  | | __auto_alloc
+  1.26%     1.92s  ompi_coll_libnbc_progress
+  0.58%     890ms  mom_neutral_diffusion_neutral_surface_flux_
+  1.18%     1.81s  opal_timer_linux_get_cycles_sys_timer
+  0.03%      50ms  | |   __libc_malloc
+  0.02%      30ms  | |     _int_malloc
+  1.00%     1.53s  mom_eos_int_density_dz_generic_plm_
+  0.18%     280ms  | pgf90_auto_alloc04
+  0.04%      60ms  | pgf90_auto_dealloc  0.97%     1.49s  mom_eos_wright_calculate_density_array_wright_
+
+  0.17%     260ms  | | __auto_alloc
+  0.04%      60ms  |   _int_free
+  0.90%     1.37s  mom_hor_visc_horizontal_viscosity_
+  0.29%     440ms  mom_vert_friction_vertvisc_
+  0.88%     1.35s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.16%     240ms  | |   __libc_malloc
+  0.27%     420ms  mom_ale_pressure_gradient_plm_
+  0.12%     190ms  | pgf90_alloc04a
+  0.07%     110ms  |   0.03%      40ms  | __c_mzero8
+  0.12%     190ms  | | __alloc04
+|     _int_malloc
+  0.01%      10ms  | pgf90_mzero8  0.09%     140ms  | |   __fort_gmalloc_without_abort
+
+  0.05%      80ms  | pgf90_auto_dealloc
+  0.27%     410ms  mca_btl_sm_component_progress
+  0.09%     140ms  | |     __fort_malloc_without_abort
+  0.26%     400ms  mom_neutral_diffusion_ppm_edge_
+  0.05%      70ms  0.09%     130ms  | |         |   _int_free
+__libc_malloc
+  0.26%     390ms  mom_energetic_pbl_energetic_pbl_
+  0.05%      70ms  | |         _int_malloc
+  0.01%      10ms  |   free
+  0.03%      50ms  | __fsd_exp_fma3
+  0.07%     100ms  | pgf90_dealloc03a
+  0.03%      40ms  | __fsd_pow_fma3
+  0.58%     890ms  opal_progress
+  0.05%      70ms  | | __fort_dealloc03
+  0.25%     380ms  progress_one_cuda_ipc_event
+  0.04%      60ms  | | | __fort_gfree
+  0.24%     370ms  mom_diag_mediator_diag_update_remap_grids_
+  0.52%     800ms  mom_kappa_shear_find_kappa_tke_
+  0.04%      60ms  | | |   __fort_free
+  0.24%     370ms  progress_one_cuda_htod_event
+  0.05%      80ms  |   0.04%      60ms  | pgf90_auto_alloc04
+| |     _int_free
+  0.23%     350ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.01%      20ms  | | reuse_alloc
+  0.23%     350ms  mom_tracer_advect_advect_y_
+  0.05%      80ms  | | __auto_alloc
+  0.01%      10ms  | __fort_dealloc03
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.05%      70ms    0.80%     1.22s  mom_continuity_ppm_merid_flux_layer_
+| |   __libc_malloc
+  0.01%      10ms  |   _int_free
+  0.78%      1.2s  mom_continuity_ppm_zonal_flux_layer_
+  0.22%     340ms  mom_diabatic_driver_diabatic_
+  0.02%      30ms  | |     _int_malloc
+  0.75%     1.14s  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.04%      60ms  | __fsd_pow_fma3  0.03%      50ms  
+  0.01%      20ms  |   __auto_alloc
+| pgf90_auto_dealloc
+  0.01%      20ms  | __gsd_pow
+  0.01%      10ms  |     __libc_malloc
+  0.03%      50ms  |   _int_free
+  0.01%      10ms  | ???
+  0.01%      10ms  |       _int_malloc
+  0.70%     1.07s  mom_neutral_diffusion_neutral_surface_flux_
+  0.01%      10ms  |     0.49%     750ms  mom_set_visc_set_viscous_bbl_
+      sysmalloc
+  0.22%     330ms  | pgf90_auto_alloc04
+  0.22%     340ms  mom_continuity_ppm_zonal_mass_flux_
+  0.05%      80ms  | __fsd_pow_fma3
+  0.20%     310ms  | |   0.22%     340ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+__auto_alloc
+  0.18%     270ms  | |   __libc_malloc
+  0.22%     330ms  mom_neutral_diffusion_fv_diff_
+  0.01%      20ms  | __fsd_acos_fma3
+  0.10%     160ms  | |   0.21%     320ms      _int_malloc
+mom_continuity_ppm_meridional_mass_flux_
+  0.49%     750ms  mom_vert_friction_find_coupling_coef_
+  0.07%     100ms  | pgf90_auto_dealloc
+  0.21%     320ms  mom_kappa_shear_find_kappa_tke_
+  0.05%      80ms  | |   0.02%      30ms  | pgf90_auto_dealloc
+_int_free
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   0.02%      30ms  | | _int_free| ???
+
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  | | free
+  0.01%      10ms  |     0.01%      10ms  | pgf90_set_intrin_type
+__auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       0.69%     1.06s  mom_remapping_remap_via_sub_cells_
+__libc_malloc
+  0.48%     740ms  mom_neutral_diffusion_ppm_edge_
+  0.11%     170ms  | pgf90_auto_alloc04
+  0.01%      10ms  |       _int_malloc
+  0.09%     140ms  | | __auto_alloc
+  0.21%     320ms  mom_tracer_advect_advect_x_
+  0.46%     710ms  mom_vert_friction_vertvisc_remnant_
+  0.09%     130ms  | |   __libc_malloc
+  0.21%     320ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.46%     700ms  mom_coriolisadv_coradcalc_  0.05%      70ms  
+| |     _int_malloc
+  0.03%      40ms  | __fsd_exp_fma3
+  0.10%     160ms  | pgf90_auto_dealloc
+  0.01%      10ms  | __fd_exp_1
+  0.43%     650ms  mom_neutral_diffusion_fv_diff_
+  0.10%     150ms  | | _int_free
+  0.20%     300ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.37%     570ms  mom_ale_pressure_gradient_plm_
+  0.01%      10ms    0.19%     290ms  mom_continuity_ppm_ppm_reconstruction_x_| __auto_alloc
+
+  0.69%     1.05s  mom_vert_friction_vertvisc_coef_
+  0.18%     270ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.05%      80ms  | __c_mzero8
+  0.01%      10ms  | pgf90_allocated
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.37%     570ms  regrid_edge_values_edge_values_explicit_h4_
+  0.67%     1.03s  opal_progress
+  0.01%      10ms  |   __auto_alloc
+  0.54%     830ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.01%      10ms  |       0.01%      10ms  | ???__libc_malloc
+
+  0.01%      20ms  | pgf90_alloc04a
+  0.01%      10ms  |       _int_malloc
+  0.35%     530ms    0.01%      10ms  | mom_energetic_pbl_energetic_pbl_
+| __alloc04
+  0.16%     250ms  regrid_edge_values_edge_values_explicit_h4_
+  0.01%      10ms  | |   __fort_gmalloc_without_abort
+  0.16%     240ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_  0.06%      90ms  
+| __fsd_exp_fma3
+  0.01%      10ms  | |     __fort_malloc_without_abort
+  0.16%     240ms  mom_continuity_ppm_ppm_limit_pos_
+  0.05%      70ms    0.01%      10ms  | __fsd_pow_fma3
+| |       __libc_malloc
+  0.15%     230ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.01%      20ms  | pgf90_dealloc03a
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.01%      10ms  | __fd_exp_1
+  0.01%      20ms  | |   0.01%      20ms  | | __fort_dealloc03
+_int_free
+  0.34%     520ms    0.01%      20ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.01%      10ms  | pgf90_auto_alloc04| |   __fort_gfree
+
+  0.01%      10ms  | |   0.01%      10ms  |       __fort_free
+__auto_alloc
+  0.01%      20ms  | ???
+  0.01%      10ms  |   0.01%      10ms  | |         __libc_malloc
+  _int_free
+  0.32%     490ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.15%     230ms  ompi_request_default_wait
+  0.01%      10ms  |   0.09%     130ms  | ???
+  __auto_alloc
+  0.31%     480ms  mom_vert_friction_vertvisc_
+  0.15%     230ms  mom_opacity_opacity_from_chl_
+  0.52%     800ms  mom_vert_friction_find_coupling_coef_
+  0.10%     150ms  | __fsd_pow_fma3  0.01%      10ms  | pgf90_auto_dealloc
+  0.31%     480ms  mom_remapping_average_value_ppoly_
+
+  0.14%     220ms  mom_barotropic_btcalc_
+  0.01%      10ms  |   _int_free
+  0.31%     480ms  mca_pml_ob1_progress
+  0.14%     220ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.47%     720ms  mom_coriolisadv_coradcalc_
+  0.14%     210ms  mom_kappa_shear_calculate_kappa_shear_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.31%     470ms  mpp_domains_mod_mpp_do_group_update_r8_
+  0.13%     200ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.01%      10ms  |   __auto_alloc
+  0.29%     450ms  mom_tracer_advect_advect_x_
+  0.13%     200ms    0.01%      10ms  |     __libc_malloc
+mom_vert_friction_vertvisc_limit_vel_
+  0.12%     190ms  mom_neutral_diffusion_interface_scalar_
+  0.01%      10ms  |       _int_malloc
+  0.28%     430ms  mom_neutral_diffusion_signum_
+  0.03%      50ms  | pgf90_auto_alloc04  0.46%     710ms  mom_neutral_diffusion_ppm_edge_
+
+  0.27%     420ms  __c_mzero8
+  0.46%     700ms  mom_neutral_diffusion_fv_diff_  0.03%      50ms  | | __auto_alloc
+
+  0.03%      50ms  | |   0.44%     670ms  mpp_domains_mod_mpp_do_group_update_r8_
+  __libc_malloc
+  0.27%     410ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.01%      10ms  | |   0.41%     630ms  mom_set_visc_set_viscous_bbl_
+    _int_malloc
+  0.27%     410ms    0.01%      10ms  | __fd_acos_1
+  0.03%      40ms  | pgf90_auto_dealloc
+plm_functions_plm_reconstruction_
+  0.01%      10ms  | __fsd_acos_fma3  0.01%      20ms  |   free
+
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  | __fsd_pow_fma3  0.01%      10ms  |   _int_free
+
+  0.12%     190ms    0.41%     620ms  mom_eos_wright_calculate_density_derivs_array_wright_
+mom_neutral_diffusion_plm_diff_
+  0.01%      10ms  |   __auto_alloc
+  0.12%     190ms  mom_ale_remap_all_state_vars_
+  0.38%     580ms  mom_vert_friction_vertvisc_remnant_
+  0.01%      10ms  |     __libc_malloc
+  0.36%     550ms  regrid_edge_values_edge_values_explicit_h4_
+  0.03%      50ms  | pgf90_alloc04a
+  0.03%      50ms  | | __alloc04
+  0.01%      10ms    0.26%     400ms| pgf90_set_intrin_type
+  mom_continuity_ppm_zonal_mass_flux_
+  0.03%      40ms  | |   __fort_gmalloc_without_abort
+  0.35%     540ms  mom_ale_pressure_gradient_plm_
+  0.01%      10ms    0.03%      40ms  | pgf90_auto_dealloc
+| |     __fort_malloc_without_abort
+  0.04%      60ms  | __c_mzero8
+  0.02%      30ms  | |       __libc_malloc
+  0.33%     510ms  mom_neutral_diffusion_ppm_ave_
+  0.01%      10ms  |   _int_free
+  0.01%      20ms  |   0.32%     490ms  mom_kappa_shear_find_kappa_tke_
+|         _int_malloc
+  0.26%     400ms    0.05%      70ms  | pgf90_auto_alloc04
+  0.01%      20ms  | mom_continuity_ppm_ppm_reconstruction_x_
+pgf90_dealloc03a
+  0.04%      60ms  | |   0.01%      20ms  |   __auto_alloc
+__fort_dealloc03
+  0.26%     390ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.01%      10ms  |     0.03%      40ms  | |     __fort_gfree
+__libc_malloc
+  0.01%      10ms    0.01%      10ms  |       0.01%      20ms  | |       __fort_free
+| __fsd_exp_fma3
+_int_malloc
+  0.11%     170ms  __c_mcopy8  0.03%      40ms  | pgf90_auto_dealloc
+
+  0.26%     390ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  0.11%     170ms  mom_file_parser_get_variable_line_
+  0.01%      20ms  |   _int_free
+  0.04%      60ms  |   0.32%     490ms  mca_pml_ob1_progress
+  0.24%     370ms  pgf90_str_copy_klen
+mom_continuity_ppm_ppm_reconstruction_y_
+  0.32%     490ms  plm_functions_plm_reconstruction_
+  0.01%      10ms  | | __builtin_va_gparg1
+  0.24%     360ms  0.04%      60ms  | pgf90_auto_alloc04
+  0.03%      50ms  | pgf90_lentrima
+  mom_continuity_ppm_ppm_limit_pos_
+  0.04%      60ms  | |   0.02%      30ms  | pgf90_str_index_klen
+__auto_alloc
+  0.23%     350ms  mom_opacity_opacity_from_chl_
+  0.04%      60ms  |   0.01%      20ms  | pgf90_trima
+|   __libc_malloc
+  0.01%      10ms  | pgf90_ptr_alloc04a  0.03%      40ms  | |     _int_malloc
+  0.19%     290ms  | __fsd_pow_fma3
+
+  0.01%      10ms  |     0.02%      30ms  | pgf90_auto_dealloc__alloc04
+
+  0.23%     350ms  mom_neutral_diffusion_ppm_ave_
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.02%      30ms  |   _int_free
+  0.11%     170ms  mom_barotropic_find_uhbt_
+  0.31%     480ms  mom_vert_friction_vertvisc_
+  0.22%     330ms  mom_continuity_ppm_meridional_mass_flux_
+  0.11%     170ms  mom_diabatic_aux_find_uv_at_h_
+  0.31%     470ms  mom_neutral_diffusion_signum_
+  0.21%     320ms  mom_tracer_advect_advect_y_
+  0.10%     160ms  opal_cuda_memcpy
+  0.29%     450ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+  0.10%     160ms  | __memmove_ssse3_back
+  0.29%     450ms  __c_mzero8
+  0.20%     310ms  regrid_edge_values_bound_edge_values_
+  0.29%     450ms  mom_energetic_pbl_energetic_pbl_
+  0.10%     160ms  mom_continuity_ppm_continuity_ppm_
+  0.20%     310ms    0.03%      50ms  | __fsd_exp_fma3  0.10%     160ms  mom_remapping_average_value_ppoly_
+
+mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.10%     160ms  mom_neutral_diffusion_ppm_ave_
+  0.03%      40ms  | __fsd_pow_fma3
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.28%     430ms  mom_continuity_ppm_ppm_reconstruction_x_  0.10%     150ms  regrid_edge_values_bound_edge_values_
+
+  0.10%     150ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.27%     410ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.01%      10ms  |   __auto_alloc
+  0.26%     400ms  mom_ale_remap_all_state_vars_  0.10%     150ms  mom_neutral_diffusion_signum_
+
+  0.01%      10ms  |     __libc_malloc
+  0.09%     140ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.05%      80ms  | pgf90_alloc04a
+  0.04%      60ms  | __fsd_exp_fma3
+  0.04%      60ms  | | __alloc04
+  0.01%      10ms  |       _int_malloc
+  0.01%      20ms  | __fd_exp_1
+  0.04%      60ms  | | | __fort_gmalloc_without_abort
+  0.01%      10ms    0.09%     140ms  mom_thickness_diffuse_vert_fill_ts_
+|         sysmalloc
+  0.03%      50ms  | | |   __fort_malloc_without_abort
+  0.09%     140ms  mom_set_visc_set_u_at_v_
+  0.02%      30ms  | | |     __libc_malloc
+  0.20%     310ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.09%     140ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.02%      30ms  | | |       _int_malloc
+  0.09%     140ms  mca_btl_vader_component_progress
+  0.18%     280ms  mom_diag_mediator_diag_update_remap_grids_
+  0.01%      20ms  | | use_alloc
+  0.09%     130ms  mom_barotropic_find_vhbt_
+  0.01%      20ms  | pgf90_dealloc03a  0.18%     280ms
+  mom_kappa_shear_calculate_kappa_shear_
+  0.09%     130ms  mom_continuity_ppm_set_merid_bt_cont_
+  0.01%      20ms  |   __fort_dealloc03
+  0.08%     120ms  regrid_solvers_solve_linear_system_
+  0.17%     260ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.01%      20ms  |     __fort_gfree
+  0.08%     120ms  mom_set_visc_set_v_at_u_
+  0.16%     250ms  __c_mcopy8  0.01%      20ms  |   
+    __fort_free
+  0.08%     120ms  mom_continuity_ppm_zonal_face_thickness_
+  0.01%      20ms  |     0.08%     120ms  mom_horizontal_regridding_fill_miss_2d_      _int_free
+
+  0.16%     250ms  mom_diabatic_driver_diabatic_
+  0.25%     380ms  mom_tracer_advect_advect_y_
+  0.08%     120ms  mom_coms_increment_ints_faster_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.07%     110ms    0.25%     380ms  mom_remapping_average_value_ppoly_mom_set_diffusivity_find_n2_
+
+  0.01%      10ms  | pgf90_auto_alloc04  0.24%     360ms  mom_diag_mediator_diag_update_remap_grids_
+  0.01%      10ms  
+|   __auto_alloc
+  0.24%     360ms  mom_kappa_shear_calculate_kappa_shear_
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |     0.23%     350ms  mom_opacity_opacity_from_chl_
+  __libc_malloc
+  0.01%      10ms    0.18%     270ms  | __fsd_pow_fma3
+  0.01%      10ms  |     |         _int_malloc
+_int_malloc
+  0.23%     350ms  mom_continuity_ppm_ppm_limit_pos_
+  0.07%     110ms  mom_continuity_ppm_merid_face_thickness_
+  0.01%      10ms  |         sysmalloc
+  0.22%     340ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.07%     110ms  mom_regridding_calc_h_new_by_dz_
+  0.20%     310ms  mom_tracer_advect_advect_x_
+  0.07%     100ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.16%     240ms  mom_barotropic_btcalc_
+  0.20%     310ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.07%     100ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.15%     230ms  mom_ale_remap_all_state_vars_
+  0.06%      90ms  mom_coriolisadv_gradke_
+  0.20%     300ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.01%      10ms    0.06%      90ms  mom_wave_speed_wave_speed_
+  0.01%      10ms  | ???
+| pgf90_alloc04a
+  0.06%      90ms  mom_calculate_surface_state_
+  0.20%     300ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.01%      10ms  | | __alloc04
+  0.20%     300ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.05%      80ms  mom_remapping_remapping_core_h_
+  0.04%      60ms  | __fsd_exp_fma3  0.03%      40ms  | pgf90_auto_alloc04
+
+  0.01%      10ms  | |   __fort_gmalloc_without_abort
+  0.19%     290ms  mom_neutral_diffusion_plm_diff_
+  0.02%      30ms  | | __auto_alloc
+  0.01%      10ms  | |     __fort_malloc_without_abort  0.02%      30ms  | |     0.18%     280ms  mom_continuity_ppm_zonal_flux_adjust_
+
+__libc_malloc
+  0.01%      10ms  | pgf90_auto_dealloc  0.01%      10ms  | |   
+  _int_malloc
+  0.01%      10ms  | |       __libc_malloc
+  0.01%      10ms  |   0.01%      10ms  | __auto_alloc| _int_free
+
+  0.01%      10ms  | pgf90_auto_alloc04  0.01%      10ms  | pgf90_auto_dealloc
+
+  0.01%      10ms  | |         _int_malloc
+  0.01%      10ms  |     0.01%      10ms  | | _int_free
+__auto_alloc
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |     __libc_malloc  0.01%      10ms  | pgf90_set_intrin_type
+
+  0.05%      80ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+  0.18%     270ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.01%      10ms  |   __fort_dealloc03
+  0.18%     270ms  mom_continuity_ppm_meridional_mass_flux_
+  0.05%      80ms  mca_btl_vader_progress_endpoints
+  0.01%      10ms    0.05%      70ms  mom_isopycnal_slopes_vert_fill_ts_
+|     __fort_gfree  0.18%     270ms  progress_one_cuda_htod_event
+
+  0.05%      70ms  mom_set_diffusivity_set_diffusivity_
+  0.17%     260ms  mom_continuity_ppm_zonal_mass_flux_
+  0.01%      10ms  |       __fort_free
+  0.17%     260ms  mom_diabatic_driver_diabatic_
+  0.05%      70ms  ppm_functions_ppm_limiter_standard_
+  0.17%     260ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.05%      70ms  mom_barotropic_bt_mass_source_
+  0.01%      10ms  | pgf90_sect3  0.05%      70ms  mom_barotropic_set_dtbt_
+
+  0.01%      10ms  |         _int_free
+  0.16%     250ms  mom_barotropic_find_vhbt_
+  0.04%      60ms  mom_shortwave_abs_absorbremainingsw_
+  0.15%     230ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.04%      60ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.16%     240ms  mom_barotropic_btcalc_
+  0.04%      60ms  mom_kappa_shear_calculate_projected_state_
+  0.16%     240ms  mom_vert_friction_vertvisc_limit_vel_
+  0.15%     230ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.15%     230ms  mom_continuity_ppm_set_merid_bt_cont_
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.15%     230ms    0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      20ms  | | _int_freemom_vert_friction_vertvisc_limit_vel_
+
+  0.01%      10ms  |     0.01%      10ms  | pgf90_auto_alloc04free
+
+  0.14%     210ms  mom_neutral_diffusion_interface_scalar_
+  0.13%     200ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.01%      10ms  |   __auto_alloc
+  0.13%     200ms  mom_neutral_diffusion_interface_scalar_
+  0.01%      10ms  |     0.02%      30ms  |   __libc_malloc
+pgf90_auto_dealloc
+  0.03%      50ms  | pgf90_auto_dealloc  0.03%      50ms  ompi_request_default_wait_all
+
+  0.01%      20ms  | | _int_free
+  0.03%      40ms  |   0.03%      40ms  | ???
+| _int_free
+  0.03%      50ms  mom_step_mom_
+  0.01%      10ms  | | ???
+  0.01%      10ms  | | free
+  0.03%      50ms  mom_thickness_diffuse_thickness_diffuse_
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  |   0.03%      50ms  _intercept_brk
+  __auto_alloc
+  0.03%      50ms  | syscall  0.01%      20ms  |     __libc_malloc
+
+  0.01%      20ms  |   __auto_alloc
+  0.03%      40ms  mom_tracer_advect_advect_tracer_
+  0.12%     190ms  progress_one_cuda_ipc_event
+  0.03%      40ms  mom_neutral_diffusion_absolute_position_  0.01%      20ms  |   0.12%     180ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+
+    __libc_malloc
+  0.12%     180ms  opal_cuda_memcpy
+  0.03%      40ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.01%      20ms  |       _int_malloc
+  0.12%     180ms  | __memmove_ssse3_back
+  0.03%      40ms  mom_meke_step_forward_meke_
+  0.12%     180ms  regrid_edge_values_bound_edge_values_
+  0.14%     210ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.03%      40ms  mom_diabatic_aux_tridiagts_
+  0.12%     180ms  mom_barotropic_find_uhbt_
+  0.03%      40ms  mom_sum_output_write_energy_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.11%     170ms  mom_thickness_diffuse_vert_fill_ts_
+  0.03%      40ms  mom_horizontal_regridding_horiz_interp_and_extrap_tracer_record_
+  0.11%     170ms  mca_btl_sm_component_progress
+  0.01%      10ms    0.01%      10ms  | __c_mzero8
+|   __auto_alloc
+  0.10%     160ms  mom_continuity_ppm_zonal_face_thickness_
+  0.02%      30ms  mom_neutral_diffusion_neutral_diffusion_init_
+  0.14%     210ms  mom_neutral_diffusion_plm_diff_
+  0.10%     160ms  mom_diabatic_aux_find_uv_at_h_
+  0.01%      10ms  | pgf90_alloc04_chka
+  0.10%     160ms  __c_mcopy8
+  0.01%      10ms  |   pgf90_alloc04  0.13%     200ms  mom_file_parser_get_variable_line_
+
+  0.10%     150ms  mom_wave_speed_wave_speed_
+  0.01%      10ms  |     pgf90_alloc04a
+  0.07%     100ms    0.09%     140ms  mom_set_diffusivity_find_n2_
+| pgf90_trima
+  0.01%      10ms  |       __alloc04
+  0.09%     140ms  regrid_solvers_solve_linear_system_
+  0.01%      10ms  |     0.04%      60ms      __fort_gmalloc_without_abort
+  | pgf90_lentrima
+  0.09%     130ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.01%      10ms  |           __fort_malloc_without_abort
+  0.08%     120ms  mom_file_parser_get_variable_line_
+  0.01%      20ms  | pgf90_str_copy_klen
+  0.01%      10ms  |             __libc_malloc
+  0.03%      50ms  | pgf90_str_copy_klen
+  0.01%      10ms  |   0.01%      10ms  |       __c_mset1
+        _int_malloc
+  0.01%      20ms  | pgf90_str_index_klen
+  0.01%      10ms  |                 sysmalloc  0.01%      20ms  | pgf90_dealloc03a
+
+  0.01%      10ms  | pgf90_ptr_alloc04a
+  0.02%      30ms  mom_thickness_diffuse_streamfn_solver_
+  0.01%      10ms  | | __fort_dealloc03
+  0.01%      10ms  |   __alloc04
+  0.02%      30ms  mom_set_diffusivity_set_bbl_tke_
+  0.01%      10ms  | pgf90_lentrima
+  0.02%      30ms  mom_regridding_build_zstar_grid_
+  0.01%      10ms  | pgf90_str_malloc_klen
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%      10ms  | pgf90_dealloc03a  0.01%      10ms  |   _mp_malloc
+
+  0.01%      10ms  |     0.01%      10ms  |     0.01%      10ms  |     __libc_malloc__fort_dealloc03
+    __fort_malloc_without_abort
+
+  0.01%      10ms  |     0.08%     120ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  __fort_gfree
+  0.01%      10ms  |         __libc_malloc
+  0.05%      70ms  | __fsd_exp_fma3
+  0.01%      10ms  |       __fort_free
+  0.08%     120ms  ppm_functions_ppm_limiter_standard_
+  0.01%      10ms  |         _int_free
+  0.13%     200ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.08%     120ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.02%      30ms  mom_diabatic_aux_make_frazil_
+  0.12%     190ms  progress_one_cuda_ipc_event
+  0.08%     120ms  mom_neutral_diffusion_absolute_position_
+  0.02%      30ms  mom_diag_mediator_diag_masks_set_
+  0.08%     120ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.02%      30ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.12%     190ms  mom_diabatic_aux_find_uv_at_h_
+  0.07%     100ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.02%      30ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.12%     190ms  opal_cuda_memcpy
+  0.07%     100ms  mom_coriolisadv_gradke_
+  0.02%      30ms  mom_set_diffusivity_find_tke_to_kd_
+  0.07%     100ms  mom_continuity_ppm_continuity_ppm_
+  0.02%      30ms  mom_barotropic_set_local_bt_cont_types_
+  0.12%     190ms  | __memmove_ssse3_back
+  0.02%      30ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.07%     100ms  mom_horizontal_regridding_fill_miss_2d_
+  0.12%     180ms    0.07%     100ms  mom_set_visc_set_u_at_v_
+  0.02%      30ms  mom_shortwave_abs_sumswoverbands_
+mom_thickness_diffuse_vert_fill_ts_
+  0.02%      30ms  mom_geothermal_geothermal_
+  0.07%     100ms  mom_continuity_ppm_merid_face_thickness_
+
+========   0.11%     170ms  CPU profiling result (top down):
+Time(%)      Time  Name
+mom_continuity_ppm_set_merid_bt_cont_
+  0.06%      90ms  mom_regridding_calc_h_new_by_dz_
+  0.02%      30ms  polynomial_functions_evaluation_polynomial_
+  0.06%      90ms  mca_btl_vader_component_progress
+  0.01%      20ms  | __mth_i_dpowi
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  | ???  0.06%      90ms  mom_thickness_diffuse_streamfn_solver_
+
+  0.01%      10ms  |   _int_free
+  0.01%      20ms  __fsd_cos_avx2
+  0.06%      90ms  mom_set_diffusivity_set_diffusivity_
+  0.01%      20ms  mom_meke_meke_lengthscales_0d_
+  0.06%      90ms  mom_regridding_build_zstar_grid_
+  0.11%     170ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.02%      30ms  | pgf90_alloc04a  0.01%      20ms  | __fsd_pow_fma3
+
+  0.11%     170ms    0.01%      20ms  mca_btl_smcuda_send
+  0.01%      20ms  | | __alloc04mom_barotropic_find_vhbt_
+
+ 33.33%  50.9698s  epoll_dispatch
+  0.01%      20ms  ideal_age_example_ideal_age_tracer_column_physics_
+  0.01%      20ms  | |   __fort_gmalloc_without_abort
+  0.11%     170ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.01%      20ms  mom_initialize_mom_
+  0.01%      20ms  | |      33.33%  50.9698s__fort_malloc_without_abort
+  | epoll_wait
+  0.01%      20ms  evthread_posix_lock
+  0.01%      20ms  0.01%      10ms  | pgf90_auto_alloc04  | |       __libc_malloc
+
+ 33.33%  50.9598s  poll_dispatch
+  0.01%      20ms  | __pthread_mutex_lock
+  0.01%      10ms  | |         _int_malloc
+  0.01%      10ms  | | __auto_alloc
+  0.01%      10ms  |   _L_lock_941
+  0.01%      10ms  | pgf90_dealloc03a
+ 33.33%  50.9598s  | __poll
+  0.01%      10ms  |     __lll_lock_wait
+  0.05%      80ms  mom_coms_increment_ints_faster_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      20ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_  2.63%  4.01998s  mom_neutral_diffusion_neutral_diffusion_
+
+  0.05%      80ms  mom_remapping_remapping_core_h_
+  0.01%      10ms  |   0.01%      10ms  |   _int_free
+__c_mset8
+  0.02%      30ms  | pgf90_auto_alloc04
+  0.31%     480ms  | pgf90_alloc04a
+  0.01%      20ms  opal_convertor_pack
+  0.02%      30ms  | | __auto_alloc
+  0.10%     160ms  mom_wave_speed_wave_speed_
+  0.01%      20ms  mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+  0.26%     400ms  | | __alloc04  0.01%      20ms  | | 
+  __libc_malloc
+  0.01%      20ms  mom_tidal_forcing_calc_tidal_forcing_
+  0.10%     160ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+  0.01%      10ms  | |     _int_malloc
+  0.18%     270ms  | | | __fort_gmalloc_without_abort
+  0.01%      20ms  mca_btl_smcuda_sendi
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.10%     150ms  regrid_solvers_solve_linear_system_
+  0.01%      20ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.01%      20ms  | | _int_free
+  0.16%     250ms  | | |   __fort_malloc_without_abort
+  0.01%      20ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.09%     140ms  progress_one_cuda_htod_event
+  0.01%      10ms  | pgf90_set_intrin_type
+  0.01%      20ms  mom_eos_calculate_specific_vol_derivs_
+  0.16%     240ms  | | |     __libc_malloc
+  0.05%      80ms  _intercept_brk
+  0.09%     140ms  mom_continuity_ppm_zonal_face_thickness_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.05%      80ms  | syscall
+  0.09%     130ms  | | |       0.01%      10ms  | | _int_free  _int_malloc
+
+  0.09%     140ms  0.05%      70ms  mom_set_visc_set_v_at_u_
+  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.05%      70ms  mom_shortwave_abs_absorbremainingsw_
+  0.01%      10ms  | | save_alloc
+  0.02%      30ms  | __fsd_exp_fma3  0.01%      10ms  | 
+  __auto_alloc
+  0.01%      10ms  | __fd_exp_1
+  0.01%      10ms  |     0.01%      10ms    __libc_malloc
+| | use_alloc
+  0.01%      10ms  | __fsd_exp_fma3
+  0.01%      10ms  | __fd_exp_1
+  0.01%      10ms  mpp_domains_mod_mpp_update_domain2d_r8_3d_
+  0.05%      70ms  mom_sum_output_write_energy_
+  0.12%     190ms  | pgf90_dealloc03a
+  0.01%      10ms  | pgf90_auto_alloc04
+======== CPU profiling result (top down):
+  0.01%      10ms  | pgf90_set_intrin_type
+
+  0.05%      70ms  Time(%)      Time  Name
+mom_isopycnal_slopes_vert_fill_ts_
+  0.01%      10ms  mca_pml_ob1_rdma_pipeline_btls_count
+  0.11%     170ms  |   0.05%      70ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  __fort_dealloc03
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  mom_lateral_mixing_coeffs_varmix_init_
+  0.05%      70ms  mom_kappa_shear_calculate_projected_state_
+  0.09%     130ms  |     __fort_gfree
+  0.09%     130ms    0.01%      10ms  mom_sum_output_create_depth_list_
+mom_horizontal_regridding_fill_miss_2d_
+  0.04%      60ms  mom_meke_step_forward_meke_
+  0.01%      10ms  mpp_mod_mpp_init_
+  0.04%      60ms  mom_calculate_surface_state_
+  0.09%     130ms    0.09%     130ms  |       __fort_free
+mom_neutral_diffusion_absolute_position_
+  0.01%      10ms  | _dl_runtime_resolve_xsave
+  0.03%      50ms  ompi_request_default_wait
+  0.01%      10ms  |   _dl_fixup
+  0.07%     110ms    0.09%     130ms  ppm_functions_ppm_limiter_standard_
+  0.02%      30ms  | ???
+|         _int_free
+  0.01%      10ms  |     _dl_lookup_symbol_x
+  0.03%      50ms  mom_barotropic_set_dtbt_
+  0.08%     120ms  mom_continuity_ppm_merid_face_thickness_
+  0.01%      10ms  |      33.34%    50.98s    0.01%      10ms  |       do_lookup_x
+    ???
+epoll_dispatch
+  0.03%      50ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.01%      10ms  regrid_solvers_solve_tridiagonal_system_
+  0.08%     120ms  mom_set_visc_set_u_at_v_
+  1.40%  2.13999s   33.34%    50.98s    0.03%      50ms  mom_tracer_diabatic_tracer_vertdiff_
+mom_barotropic_btstep_
+| epoll_wait
+  0.01%      10ms  mca_pml_ob1_recv_request_ack_send_btl
+  0.03%      50ms  mom_geothermal_geothermal_
+ 33.34%    50.98s  poll_dispatch
+  0.08%     120ms  mom_set_diffusivity_find_n2_
+  0.01%      10ms  mom_set_visc_set_visc_register_restarts_
+  0.01%      10ms  | __fsd_pow_fma3
+  0.03%      50ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.01%      10ms  mom_interface_heights_find_eta_3d_
+  0.08%     120ms  mom_remapping_remapping_core_h_
+  1.31%  1.99999s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.03%      40ms  mom_interface_heights_find_eta_3d_
+  0.01%      10ms  H5FL_reg_malloc
+ 33.34%    50.98s  | __poll
+  0.03%      40ms  mom_diabatic_aux_make_frazil_
+  0.06%      90ms  | pgf90_auto_alloc04
+  0.01%      10ms  PMIx_Put
+  0.15%     230ms  | pgf90_alloc04a
+  0.03%      40ms  mom_thickness_diffuse_thickness_diffuse_
+  2.33%     3.56s  ompi_coll_libnbc_progress
+  0.01%      10ms  | usleep
+  0.06%      90ms  | | __auto_alloc
+  0.03%      40ms  polynomial_functions_evaluation_polynomial_
+  0.12%     190ms  | | __alloc04
+  0.01%      10ms  |     2.24%     3.42s  mca_btl_smcuda_component_progress
+nanosleep
+  0.02%      30ms  | __fd_powi_1
+  0.01%      10ms  mca_pml_ob1_recv_req_start
+  1.88%     2.88s  opal_timer_linux_get_cycles_sys_timer
+  0.05%      80ms  | |   __libc_malloc
+  0.09%     130ms  | | | __fort_gmalloc_without_abort
+  0.03%      40ms  mom_step_mom_
+  1.32%     2.02s  mom_barotropic_btstep_  0.01%      10ms  mom_domains_create_vector_group_pass_2d_
+
+  0.02%      30ms  ppm_functions_ppm_reconstruction_
+  0.03%      50ms  | |     _int_malloc
+  0.09%     130ms  | |   0.01%      10ms  H5F_incr_nopen_objs
+  1.31%        2s  mom_neutral_diffusion_neutral_diffusion_
+|   __fort_malloc_without_abort
+  0.02%      30ms  mom_diabatic_aux_tridiagts_
+  0.01%      10ms  ompi_mpi_init  0.12%     180ms  
+| pgf90_dealloc03a
+  0.02%      30ms  | pgf90_auto_dealloc
+  0.09%     130ms  |   0.02%      30ms  mca_btl_vader_progress_endpoints
+| |     __libc_malloc
+  0.01%      10ms  | usleep
+  0.10%     160ms  | | __fort_dealloc03
+  0.02%      30ms  __fsd_cos_avx2
+  0.01%      10ms  |     0.02%      30ms  | nanosleep
+  0.09%     140ms  | |   __fort_gfree
+  _int_free
+  0.05%      80ms  | | |       _int_malloc
+  0.02%      30ms  mom_barotropic_bt_mass_source_
+  0.01%      10ms  mom_coms_reproducing_sum_3d_
+  0.09%     140ms  | |     __fort_free
+  0.01%      20ms  mom_initialize_mom_
+  0.08%     120ms  mom_barotropic_find_uhbt_
+  0.01%      10ms  mom_dyn_horgrid_create_dyn_horgrid_  0.01%      10ms  | | 
+save_alloc
+  0.01%      20ms  mom_neutral_diffusion_neutral_diffusion_init_
+  0.08%     120ms  |   0.01%      10ms  mom_remapping_build_reconstructions_1d_
+|       _int_free
+  0.07%     110ms  mom_barotropic_set_dtbt_
+  0.01%      10ms  | | use_alloc
+  0.01%      20ms  mom_remapping_build_reconstructions_1d_
+  0.01%      10ms  mca_btl_self_get
+  0.01%      10ms  | |       ???
+  0.01%      20ms  ompi_request_default_wait_all
+  0.07%     110ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.01%      10ms  | __memmove_ssse3_back
+  0.09%     130ms  | pgf90_alloc04a  0.08%     120ms  | 
+pgf90_dealloc03a
+  0.01%      10ms  | ???
+  0.01%      10ms  mom_grid_allocate_metrics_
+  0.08%     120ms  |   __alloc04
+  0.07%     110ms  mom_coms_increment_ints_faster_
+  0.01%      20ms  mom_regridding_adjust_interface_motion_
+  0.05%      80ms  |   __fort_dealloc03  0.01%      10ms  H5SL_search
+
+  0.05%      80ms  |     __fort_gmalloc_without_abort
+  0.01%      20ms  regrid_edge_values_edge_values_implicit_h4_
+  0.01%      10ms  pack_val
+  0.07%     100ms  mom_regridding_calc_h_new_by_dz_
+  0.03%      50ms  |     0.05%      80ms  |       __fort_malloc_without_abort
+| __fort_gfree
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.07%     100ms  mom_continuity_ppm_continuity_ppm_
+  0.01%      10ms  |   __auto_alloc  0.05%      70ms  |         0.01%      10ms  mca_btl_smcuda_prepare_src
+
+  __libc_malloc
+  0.03%      50ms  |   |   __fort_free
+  0.01%      10ms  |     0.03%      50ms  |     0.01%      10ms  mca_pml_ob1_recv_request_progress_rndv
+  __libc_malloc
+  0.07%     100ms          _int_malloc
+mca_btl_sm_component_progress
+  0.03%      40ms    0.01%      10ms  0.01%      20ms  mom_shortwave_abs_sumswoverbands_|   |     _int_free
+  mom_state_initialization_mom_initialize_state_
+
+  1.06%     1.62s  mom_eos_wright_calculate_density_array_wright_
+  0.06%      90ms  mom_coriolisadv_gradke_
+  0.01%      10ms  coord_zlike_build_zstar_column_  0.01%      20ms  mom_tracer_advect_advect_tracer_
+
+  0.94%     1.44s  opal_progress
+  0.01%      10ms  |   |     free
+  0.01%      20ms  mca_pml_ob1_recv_frag_callback_match
+  0.01%      10ms  mca_pml_ob1_recv_frag_callback_match
+  0.89%     1.36s  mom_hor_visc_horizontal_viscosity_
+  0.06%      90ms  mom_calculate_surface_state_
+  0.01%      20ms  mom_set_diffusivity_set_bbl_tke_
+  0.01%      10ms  evthread_notify_base_eventfd
+  0.88%     1.34s  mom_eos_int_density_dz_generic_plm_
+  0.01%      20ms  |   reuse_alloc
+  0.05%      80ms    0.01%      10ms  |   0.01%      20ms  mom_barotropic_set_local_bt_cont_types_
+mom_tracer_diabatic_applytracerboundaryfluxesinout_
+write
+  0.76%     1.16s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  1.09%  1.65999s    0.01%      20ms    0.01%      10ms  mom_set_visc_set_visc_init_mom_eos_wright_calculate_density_array_wright_
+
+mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+  0.12%     190ms  | pgf90_alloc04a
+  0.05%      80ms  mom_shortwave_abs_sumswoverbands_
+  0.01%      10ms  H5FD_sec2_read
+  0.01%      20ms  mom_set_diffusivity_find_tke_to_kd_
+  0.98%  1.49999s  mom_remapping_remap_via_sub_cells_
+  0.12%     180ms  | | __alloc04
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   0.01%      10ms  | __read
+pgf90_auto_alloc04
+  0.10%     150ms  | | | __fort_gmalloc_without_abort
+  0.09%     140ms  | | |   __fort_malloc_without_abort
+  0.09%     140ms  | | |     __libc_malloc
+  0.08%     120ms  | | |       _int_malloc
+  0.01%      10ms  | | use_alloc
+  0.05%      70ms  | pgf90_dealloc03a
+  0.03%      40ms  |   __fort_dealloc03
+  0.03%      40ms  |     __fort_gfree
+  0.03%      40ms  |       __fort_free
+  0.02%      30ms  |         _int_free
+  0.01%      10ms  |         free
+  0.62%     950ms  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.01%      20ms  | __fsd_pow_fma3
+  0.01%      20ms  | pgf90_sect3
+  0.01%      10ms  |   __fort_set_single
+  0.62%     950ms  mom_continuity_ppm_zonal_flux_layer_
+  0.59%     900ms  mom_continuity_ppm_merid_flux_layer_
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      20ms  mom_diag_mediator_diag_masks_set_
+  0.01%      20ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.01%      20ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.01%      20ms  append_frag_to_list
+  0.01%      20ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.01%      10ms  mom_forcing_type_extractfluxes1d_
+  0.01%      10ms  mom_eos_calculate_density_array_
+  0.01%      10ms  H5D_build_extfile_prefix
+  0.01%      10ms  | ???
+  0.01%      10ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.01%      10ms  mom_horizontal_regridding_horiz_interp_and_extrap_tracer_record_
+  0.01%      10ms  mca_btl_smcuda_sendi
+  0.01%      10ms  mom_set_visc_set_visc_register_restarts_
+  0.01%      10ms  __c_mset8
+  0.01%      10ms  var_get_env
+  0.01%      10ms  MPI_Request_f2c
+  0.01%      10ms  horiz_interp_bilinear_mod_find_neighbor_
+  0.01%      10ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.01%      10ms  mom_io_num_timelevels_
+  0.01%      10ms  | pgf90_trima
+  0.01%      10ms  pmpi_irecv__
+  0.01%      10ms  mom_ale_ale_remap_scalar_
+  0.01%      10ms  PMPI_Comm_f2c
+  0.01%      10ms  mom_opacity_opacity_init_
+  0.01%      10ms  | pgf90_alloc04a
+  0.01%      10ms  |   __alloc04
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%      10ms  |       __fort_malloc_without_abort
+  0.01%      10ms  |         __libc_malloc
+  0.01%      10ms  |           _int_malloc
+  0.01%      10ms  ompi_mpi_finalize
+  0.01%      10ms  | usleep
+  0.01%      10ms  |   nanosleep
+  0.19%     290ms  | pgf90_auto_alloc04
+  0.15%     230ms  | | __auto_alloc
+  0.12%     190ms  | |   __libc_malloc
+  0.09%     140ms  | |     _int_malloc
+  0.13%     200ms  | pgf90_auto_dealloc
+  0.08%     120ms  | | _int_free
+  0.02%      30ms  | | free
+  0.01%      20ms  | | ???
+  0.01%      20ms  | pgf90_set_intrin_type
+  0.92%  1.40999s  mom_hor_visc_horizontal_viscosity_
+  0.01%      10ms  | pgf90_auto_alloc04
+
+======== CPU profiling result (top down):
+Time(%)      Time  Name
+ 33.34%  50.9801s  epoll_dispatch
+ 33.34%  50.9801s  | epoll_wait
+ 33.34%  50.9801s  poll_dispatch
+ 33.34%  50.9801s  | __poll
+  1.78%     2.72s  mca_btl_smcuda_component_progress
+  1.67%     2.56s  ompi_coll_libnbc_progress
+  1.56%     2.38s  mom_neutral_diffusion_neutral_diffusion_
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.05%      80ms  mom_step_mom_
+  0.05%      80ms  mom_isopycnal_slopes_vert_fill_ts_
+  0.05%      70ms  mom_shortwave_abs_absorbremainingsw_
+  0.01%      10ms  | __fsd_exp_fma3
+  0.05%      70ms  mom_regridding_build_zstar_grid_
+  0.01%      20ms  | pgf90_dealloc03a
+  0.01%      10ms  | | __fort_dealloc03
+  0.01%      10ms  | |   __fort_gfree
+  0.01%      10ms  | |     __fort_free
+  0.01%      10ms  |   __auto_alloc  0.01%      10ms  |   0.01%      10ms  | | 
+      _int_free
+  0.01%      10ms  H5get_libversion
+getenv
+  0.10%     160ms  | pgf90_alloc04a
+  0.55%     840ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.01%      10ms  ompi_coll_base_allreduce_intra_recursivedoubling
+  0.01%      10ms  | ???
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  | pgf90_alloc04a
+  0.10%     160ms  |   0.01%      10ms  mpp_mod_mpp_sum_real8_
+  0.01%      10ms  mom_file_parser_strip_quotes_| __alloc04
+  0.01%      20ms  | pgf90_alloc04a
+
+  0.90%  1.36999s  mom_continuity_ppm_zonal_flux_layer_
+  0.01%      10ms    0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms| pgf90_str_index_klen
+  |   __alloc04
+  0.01%      20ms  | | __alloc04
+  0.01%      10ms  |     0.08%     120ms    0.01%      10ms  opal_pointer_array_add
+__auto_alloc
+| |   __fort_gmalloc_without_abort
+  0.87%  1.32999s  mom_continuity_ppm_merid_flux_layer_
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%      10ms  |     __libc_malloc  0.01%      10ms  mca_pml_ob1_send_request_copy_in_out
+
+  0.01%      20ms  | |   __fort_gmalloc_without_abort
+  0.08%     120ms  |   0.01%      10ms  mom_dyn_horgrid_create_dyn_horgrid_
+  0.86%  1.31999s  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.01%      10ms  mom_barotropic_find_face_areas_
+|     __fort_malloc_without_abort
+  0.01%      20ms  | |     __fort_malloc_without_abort
+  0.01%      10ms  |     0.01%      10ms  mom_transcribe_grid_copy_dyngrid_to_mom_grid_
+    __fort_malloc_without_abort
+  0.04%      60ms  | __fsd_pow_fma3
+  0.08%     120ms  | |     0.01%      10ms  regrid_consts_coordinatemode_
+    __libc_malloc
+  0.01%      20ms  | |       __libc_malloc
+  0.01%      10ms  |         __libc_malloc
+  0.01%      10ms  | pgf90_alloc04a
+  0.01%      20ms  | pgf90_sect3
+  0.01%      10ms  | |         _int_malloc
+  0.01%      10ms  |   __alloc04
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%      10ms  |       __fort_malloc_without_abort
+  0.01%      10ms  |         __libc_malloc
+  0.01%      10ms  |           _int_malloc
+  0.01%      10ms  mom_meke_meke_lengthscales_
+  0.01%      10ms  H5G_name_copy
+  0.01%      10ms  mpp_mod_mpp_init_
+  0.01%      10ms  | pgf90io_nmlr
+  0.01%      10ms  |   _f90io_nml_read
+  0.01%      10ms  |     find_group
+  0.01%      10ms  |       read_record
+  0.01%      10ms  |         __io_feof
+  0.01%      10ms  |           _dl_runtime_resolve_xsave
+  0.01%      10ms  |             _dl_fixup
+  0.01%      10ms  |               _dl_lookup_symbol_x
+  0.01%      10ms  |                 do_lookup_x
+  0.01%      10ms  |                   _dl_name_match_p
+  0.01%      10ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_
+  0.01%      10ms  mca_pml_ob1_recv_req_start
+  0.01%      10ms  pgf90_dealloc03a
+  0.01%      10ms  mom_grid_initialize_set_grid_metrics_from_mosaic_
+  0.01%      10ms  ???
+  0.01%      10ms  | pgf90_alloc04a
+  0.01%      10ms  mom_set_visc_set_visc_init_
+  0.01%      10ms  H5SL_search
+  0.01%      10ms  | __strcmp_sse42
+  0.01%      10ms  mom_meke_meke_lengthscales_0d_
+  0.01%      10ms  | __fsd_pow_fma3
+  0.01%      10ms  mom_barotropic_register_barotropic_restarts_
+  0.01%      10ms  fms_io_mod_get_field_id_
+  0.01%      10ms  opal_thread_join
+  0.01%      10ms  | pthread_join
+  0.01%      10ms  H5_hash_string
+
+======== Data collected at 100Hz frequency
+  0.05%      70ms  | |         _int_malloc
+  0.10%     150ms  | pgf90_dealloc03a
+  0.10%     150ms  | | __fort_dealloc03
+  0.08%     120ms  | |   __fort_gfree
+  0.07%     100ms  | |     __fort_free
+  0.06%      90ms  | |     | _int_free
+  0.01%      10ms  | |     | free
+  0.01%      10ms  | |     ???
+  0.01%      10ms  | __fort_dealloc03
+  1.43%     2.18s  opal_timer_linux_get_cycles_sys_timer
+  1.38%     2.11s  mom_barotropic_btstep_
+  0.01%      20ms  | __fsd_pow_fma3
+  0.01%      10ms  | pgf90_allocated
+  1.24%     1.89s  mom_eos_wright_calculate_density_array_wright_
+  0.92%     1.41s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.10%     150ms  | pgf90_alloc04a
+  0.09%     140ms  | | __alloc04
+  0.07%     110ms  | |   __fort_gmalloc_without_abort
+  0.07%     100ms  | |     __fort_malloc_without_abort
+  0.07%     100ms  | |       __libc_malloc
+  0.03%      40ms  | |         _int_malloc
+  0.07%     110ms  | pgf90_dealloc03a
+  0.01%      10ms  |           _int_malloc
+  0.05%      70ms  mom_set_visc_set_v_at_u_
+  0.05%      70ms  mom_set_diffusivity_set_diffusivity_
+  0.05%      70ms  mom_barotropic_bt_mass_source_
+  0.05%      70ms  mom_thickness_diffuse_streamfn_solver_
+  0.04%      60ms  mom_horizontal_regridding_horiz_interp_and_extrap_tracer_record_
+  0.01%      20ms  | __c_mzero8
+  0.04%      60ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.04%      60ms  mom_diabatic_aux_tridiagts_
+  0.03%      50ms  mom_barotropic_set_local_bt_cont_types_
+  0.03%      50ms  mom_meke_step_forward_meke_
+  0.03%      50ms  mom_diabatic_aux_make_frazil_
+  0.01%      10ms  | pgf90_copy_f90_argl
+  0.03%      50ms  mom_kappa_shear_calculate_projected_state_
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  | | __auto_alloc
+  0.01%      10ms  | |   __libc_malloc
+  0.01%      10ms  | |     _int_malloc
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.03%      50ms  ppm_functions_ppm_reconstruction_
+  0.03%      40ms  mom_regridding_adjust_interface_motion_
+  0.01%      10ms  | ???
+  0.01%      10ms  | __gsd_pow
+  0.83%  1.26999s  mom_neutral_diffusion_neutral_surface_flux_
+  0.27%     420ms  | pgf90_auto_alloc04
+  0.26%     400ms  | | __auto_alloc
+  0.20%     310ms  | |   __libc_malloc
+  0.14%     210ms  | |   | _int_malloc
+  0.02%      30ms  | |   malloc@@GLIBC_2.2.5
+  0.11%     170ms  | pgf90_auto_dealloc
+  0.09%     140ms  | | _int_free
+  0.06%      90ms  | pgf90_set_intrin_type
+  0.78%  1.19999s  mom_vert_friction_vertvisc_coef_
+  0.78%  1.19999s  mom_eos_int_density_dz_generic_plm_
+  0.67%     1.03s  mom_vert_friction_find_coupling_coef_
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.58%     890ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.05%      80ms  | pgf90_alloc04a
+  0.04%      60ms  | | __alloc04
+  0.04%      60ms  | | | __fort_gmalloc_without_abort
+  0.04%      60ms  | | |   __fort_malloc_without_abort
+  0.04%      60ms  | | |     __libc_malloc
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  |         sysmalloc
+  0.52%     800ms  mca_pml_ob1_progress
+  0.52%     790ms  mom_vert_friction_find_coupling_coef_
+  0.50%     770ms  mom_neutral_diffusion_ppm_edge_
+  0.49%     750ms  mom_set_visc_set_viscous_bbl_
+  0.06%      90ms  | __fsd_pow_fma3
+  0.01%      20ms  | __fsd_acos_fma3
+  0.01%      10ms  | ???
+  0.48%     730ms  mom_vert_friction_vertvisc_coef_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.44%     670ms  mom_coriolisadv_coradcalc_
+  0.44%     670ms  mpp_domains_mod_mpp_do_group_update_r8_
+  0.43%     650ms  mom_vert_friction_vertvisc_remnant_
+  0.43%     650ms  mom_remapping_remap_via_sub_cells_
+  0.05%      70ms  | pgf90_auto_dealloc
+  0.04%      60ms  | | _int_free
+  0.01%      10ms  | | free
+  0.04%      60ms  | pgf90_auto_alloc04
+  0.04%      60ms  |   __auto_alloc
+  0.04%      60ms  |     __libc_malloc
+  0.02%      30ms  |       _int_malloc
+  0.37%     560ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  0.35%     540ms  __c_mzero8
+  0.33%     510ms  mom_ale_pressure_gradient_plm_
+  0.02%      30ms  | __c_mzero8
+  0.01%      10ms  | pgf90_mzero8
+  0.01%      10ms  mca_btl_smcuda_frag2_constructor
+  0.07%     110ms  | | __fort_dealloc03  0.03%      40ms  mca_btl_vader_component_progress
+  0.01%      10ms  |   ???
+
+  0.03%      40ms  | |   0.01%      10ms  gettime
+|       _int_malloc
+  0.33%     510ms  mom_neutral_diffusion_neutral_surface_flux_
+  0.01%      10ms  | ???  0.07%     110ms    0.03%      40ms  mom_sum_output_write_energy_
+
+| |   __fort_gfree
+  0.01%      10ms  | | save_alloc
+  0.01%      10ms  ideal_age_example_register_ideal_age_tracer_
+  0.09%     130ms  | pgf90_auto_alloc04
+  0.03%      40ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.09%     130ms  | |   0.01%      10ms  opal_cuda_check_bufs
+__auto_alloc
+  0.07%     100ms  | |     __fort_free
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  MPI_Get_count
+  0.08%     120ms  | |     0.03%      40ms__libc_malloc
+  mom_thickness_diffuse_thickness_diffuse_
+  0.01%      10ms  |   0.06%    0.01%      10ms  mom_remapping_dzfromh1h2_
+  __fort_dealloc03
+    90ms  | |       0.03%      40ms  | _int_free| |     _int_malloc
+
+  0.03%      40ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.01%      10ms  mom_eos_calculate_specific_vol_derivs_
+  0.04%      60ms  | pgf90_auto_dealloc
+  0.04%      60ms  |   _int_free
+  0.32%     490ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+  0.31%     470ms  mom_vert_friction_vertvisc_
+  0.31%     470ms  mom_kappa_shear_find_kappa_tke_
+  0.03%      50ms  | pgf90_auto_alloc04
+  0.03%      50ms  | | __auto_alloc
+  0.03%      50ms  | |   __libc_malloc
+  0.03%      50ms  | pgf90_auto_dealloc
+  0.02%      30ms  |   _int_free
+  0.01%      20ms  |   free
+  0.30%     460ms  plm_functions_plm_reconstruction_
+  0.02%      30ms  | pgf90_auto_dealloc
+  0.02%      30ms  | | _int_free
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.03%      40ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.03%      40ms  ompi_request_default_wait
+  0.02%      30ms  | ???
+  0.02%      30ms  mom_ale_ale_remap_scalar_
+  0.02%      30ms  __fsd_cos_avx2
+  0.02%      30ms  polynomial_functions_evaluation_polynomial_
+  0.01%      10ms  | __mth_i_dpowi
+  0.01%      10ms  | __fd_powi_1
+  0.02%      30ms  mom_meke_meke_lengthscales_0d_
+  0.01%      10ms  | __fsd_pow_fma3
+  0.01%      10ms  | |     ???
+  0.01%      10ms  | ???
+  0.90%     1.37s  mom_hor_visc_horizontal_viscosity_
+  0.82%     1.26s  mom_eos_int_density_dz_generic_plm_
+  0.80%     1.22s  mom_continuity_ppm_zonal_flux_layer_
+  0.72%      1.1s  mom_continuity_ppm_merid_flux_layer_
+  0.65%        1s  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.01%      10ms  | ???
+  0.01%      10ms  | __fsd_pow_fma3
+  0.01%      10ms  | __gsd_pow
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.01%      10ms  |         _int_free
+  0.52%     790ms  mom_kappa_shear_find_kappa_tke_
+  0.07%     100ms  | pgf90_auto_alloc04
+  0.05%      80ms  | | __auto_alloc
+  0.05%      80ms  | |   __libc_malloc
+  0.03%      40ms  | |     _int_malloc
+  0.05%      80ms  | pgf90_auto_dealloc
+  0.05%      80ms  |   _int_free
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.01%      10ms  fms_io_mod_get_file_unit_
+  0.01%      10ms  evthread_posix_lock
+  0.01%      10ms  | __pthread_mutex_lock
+  0.01%      10ms  ompi_mpi_init
+  0.01%      10ms  | usleep
+  0.01%      10ms  |   nanosleep
+  0.01%      10ms  mpp_mod_stdlog_
+  0.01%      10ms  | pgf90io_inquire2003a
+  0.01%      10ms  |   inquire
+  0.01%      10ms  |     __fortio_errinit03
+  0.01%      10ms  mom_eos_calculate_density_derivs_array_
+  0.01%      10ms  ncx_howmany
+  0.01%      10ms  mom_diag_mediator_attach_cell_methods_
+  0.01%      20ms  |   __auto_alloc  0.01%      10ms  | pgf90_adjustla
+
+  0.50%     770ms  mom_neutral_diffusion_ppm_edge_
+  0.02%      30ms  mom_neutral_diffusion_neutral_diffusion_init_  0.65%     990ms
+  0.01%      20ms  |     0.01%      10ms  mom_sum_output_create_depth_list_
+  opal_progress
+  __libc_malloc
+  0.50%     770ms  mom_neutral_diffusion_fv_diff_
+  0.02%      30ms  plm_functions_plm_boundary_extrapolation_
+  0.01%      10ms  mpp_domains_mod_compute_overlaps_
+  0.29%     440ms  regrid_edge_values_edge_values_explicit_h4_
+  0.48%     740ms  mom_coriolisadv_coradcalc_
+  0.02%      30ms  | pgf90_auto_alloc04
+  0.02%      30ms  |   __auto_alloc
+  0.02%      30ms  |     __libc_malloc
+  0.02%      30ms  |       _int_malloc
+  0.48%     740ms  mom_set_visc_set_viscous_bbl_
+  0.03%      50ms  | __fsd_pow_fma3
+  0.01%      20ms  | __fsd_acos_fma3
+  0.01%      10ms  | __fd_acos_1
+  0.57%     870ms  mom_vert_friction_find_coupling_coef_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.56%     850ms  mom_remapping_remap_via_sub_cells_
+  0.07%     100ms  | pgf90_auto_alloc04
+  0.07%     100ms  | | __auto_alloc
+  0.01%      10ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.01%      10ms  time_interp_external_mod_load_record_
+  0.01%      10ms  mca_btl_smcuda_send
+  0.01%      10ms  ncx_getn_double_double
+  0.01%      10ms  mom_coms_reproducing_sum_3d_
+  0.01%      10ms  clone
+  0.02%      30ms  regrid_edge_values_edge_values_implicit_h4_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      20ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.01%      20ms  mom_remapping_build_reconstructions_1d_
+  0.01%      20ms  mca_btl_vader_progress_endpoints
+  0.01%      20ms  mca_pml_ob1_recv_req_start
+  0.27%     420ms  mom_neutral_diffusion_fv_diff_
+  0.27%     410ms  mom_energetic_pbl_energetic_pbl_
+  0.04%      60ms  | __fsd_exp_fma3
+  0.04%      60ms  | __fsd_pow_fma3
+  0.26%     390ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.25%     380ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.01%      10ms  | ???
+  0.24%     370ms  mom_continuity_ppm_zonal_mass_flux_
+  0.23%     350ms  mom_tracer_advect_advect_y_
+  0.44%     670ms  mom_vert_friction_vertvisc_remnant_
+  0.01%      20ms  mom_surface_forcing_buoyancy_forcing_from_files_
+  0.41%     630ms  plm_functions_plm_reconstruction_
+  0.03%      40ms  | pgf90_auto_alloc04
+  0.03%      40ms  |   __auto_alloc
+  0.03%      40ms  |     __libc_malloc
+  0.02%      30ms  |       _int_malloc
+  0.41%     620ms  ompi_coll_libnbc_progress
+  0.39%     590ms  mca_btl_smcuda_component_progress
+  0.39%     590ms  mom_neutral_diffusion_signum_
+  0.38%     580ms  mom_ale_remap_all_state_vars_
+  0.10%     150ms  | pgf90_alloc04a
+  0.09%     130ms  | | __alloc04
+  0.08%     120ms  | | | __fort_gmalloc_without_abort
+  0.07%     100ms  | | |   __fort_malloc_without_abort
+  0.07%     100ms  | | |     __libc_malloc
+  0.05%      70ms  | | |       _int_malloc
+  0.01%      10ms  | | save_alloc
+  0.02%      30ms  | pgf90_dealloc03a
+  0.01%      20ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.37%     570ms  mom_energetic_pbl_energetic_pbl_
+  0.04%      60ms  | __fsd_exp_fma3
+  0.22%     340ms  mom_continuity_ppm_ppm_reconstruction_x_
+  0.22%     330ms  mom_tracer_advect_advect_x_
+  0.21%     320ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.20%     310ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.03%      40ms  | __fsd_exp_fma3
+  0.20%     310ms  mom_continuity_ppm_ppm_limit_pos_
+  0.19%     290ms  progress_one_cuda_htod_event
+  0.19%     290ms  mom_diag_mediator_diag_update_remap_grids_
+  0.19%     290ms  mom_kappa_shear_calculate_kappa_shear_
+  0.19%     290ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.18%     280ms  mom_continuity_ppm_meridional_mass_flux_
+  0.18%     270ms  mom_opacity_opacity_from_chl_
+  0.15%     230ms  | __fsd_pow_fma3
+  0.18%     270ms  progress_one_cuda_ipc_event
+  0.18%     270ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.06%      90ms  | |   __libc_malloc
+  0.02%      30ms  | |     _int_malloc
+  0.06%      90ms  | pgf90_auto_dealloc
+  0.06%      90ms  |   _int_free
+  0.54%     830ms  mom_vert_friction_vertvisc_coef_
+  0.50%     770ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.03%      50ms  | pgf90_alloc04a
+  0.03%      50ms  | | __alloc04
+  0.03%      50ms  | |   __fort_gmalloc_without_abort
+  0.03%      40ms  | |     __fort_malloc_without_abort
+  0.03%      40ms  | |     | __libc_malloc
+  0.03%      40ms  | |     |   _int_malloc
+  0.01%      10ms  | |     ???
+  0.01%      10ms  | pgf90_dealloc03a
+
+======== Data collected at 100Hz frequency
+  0.01%      20ms  mom_initialize_mom_
+  0.01%      20ms  mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+  0.01%      20ms  mom_set_diffusivity_find_tke_to_kd_
+  0.01%      20ms  mom_diag_mediator_diag_masks_set_
+  0.01%      20ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.01%      20ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.01%      20ms  _intercept_brk
+  0.01%      20ms  | syscall
+  0.01%      10ms  mpp_io_mod_mpp_read_meta_
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.01%      10ms  |         free
+  0.01%      10ms  mom_lateral_mixing_coeffs_varmix_init_
+  0.01%      10ms  mom_regridding_filtered_grid_motion_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  gettime
+  0.01%      10ms  | clock_gettime
+  0.02%      30ms  | __fsd_pow_fma3
+  0.01%      10ms  |   ???
+  0.01%      10ms  | ???
+  0.33%     510ms  mom_remapping_average_value_ppoly_
+  0.33%     510ms  mpp_domains_mod_mpp_do_group_update_r8_
+  0.33%     500ms  mom_vert_friction_vertvisc_
+  0.31%     480ms  mom_neutral_diffusion_plm_diff_
+  0.30%     460ms  mom_kappa_shear_calculate_kappa_shear_
+  0.30%     460ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.29%     450ms  mom_ale_pressure_gradient_plm_
+  0.02%      30ms  | __c_mzero8
+  0.29%     440ms  opal_timer_linux_get_cycles_sys_timer
+  0.17%     260ms  mom_continuity_ppm_set_merid_bt_cont_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.17%     260ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.17%     260ms  mom_neutral_diffusion_signum_
+  0.16%     240ms  mom_diabatic_driver_diabatic_
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.01%      10ms  |         _int_free
+  0.50%     760ms  mom_neutral_diffusion_ppm_edge_
+  0.48%     740ms  mom_set_visc_set_viscous_bbl_
+  0.01%      10ms  ???
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  mca_pml_ob1_send_request_copy_in_out
+  0.01%      10ms  mom_sum_output_create_depth_list_
+  0.01%      10ms  mom_set_visc_set_visc_register_restarts_
+  0.01%      10ms  mom_tracer_advect_advect_tracer_
+  0.01%      10ms  mca_pml_ob1_send_request_schedule_once
+  0.01%      10ms  H5P_get_fill_value
+  0.01%      10ms  | ???
+  0.01%      10ms  opal_pointer_array_destruct
+  0.01%      10ms  | _int_free
+  0.29%     440ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  0.06%      90ms  | __fsd_pow_fma3
+  0.46%     700ms  mom_coriolisadv_coradcalc_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.45%     690ms  mom_neutral_diffusion_neutral_surface_flux_
+  0.01%      10ms  mca_btl_smcuda_sendi
+  0.01%      10ms  mom_tracer_hor_diff_tracer_hordiff_
+  0.01%      10ms  pgf90_trima
+  0.01%      10ms  mom_lateral_mixing_coeffs_calc_slope_functions_
+  0.01%      10ms  mca_base_var_generate_full_name4
+  0.01%      10ms  | __strncat_sse2_unaligned
+  0.01%      10ms  pgf90_copy_f90_argl
+  0.01%      10ms  match_one
+  0.01%      10ms  mom_dyn_horgrid_create_dyn_horgrid_
+  0.01%      10ms  mom_eos_calculate_specific_vol_derivs_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  |         sysmalloc
+  0.14%     220ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.14%     210ms  mom_barotropic_find_uhbt_
+  0.14%     210ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.14%     210ms  mca_btl_sm_component_progress
+  0.13%     200ms  mom_barotropic_btcalc_
+  0.13%     200ms  __c_mcopy8
+  0.12%     190ms  mom_thickness_diffuse_vert_fill_ts_
+  0.12%     190ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.12%    0.28%     430ms  regrid_edge_values_edge_values_explicit_h4_
+  0.01%      10ms  | pgf90_set_intrin_type
+  0.28%     430ms  mom_neutral_diffusion_ppm_ave_
+  0.27%     420ms  mom_continuity_ppm_ppm_limit_pos_
+  0.27%     410ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+  0.27%     410ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.27%     410ms  mom_tracer_advect_advect_x_
+  0.26%     400ms  mom_opacity_opacity_from_chl_
+  0.24%     360ms  | __fsd_pow_fma3
+  0.01%      10ms  | __gsd_pow
+  0.26%     400ms  mom_continuity_ppm_meridional_mass_flux_
+   190ms  mom_ale_remap_all_state_vars_
+  0.01%      10ms  |   __auto_alloc
+  0.26%     390ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.12%     180ms  | pgf90_auto_alloc04
+  0.01%      10ms  |     __libc_malloc
+  0.03%      40ms  | pgf90_alloc04a
+  0.26%     390ms  __c_mzero8
+  0.12%     180ms  | | __auto_alloc
+  0.10%     160ms  | |   __libc_malloc
+  0.02%      30ms  | |     _int_malloc
+  0.06%      90ms  | pgf90_auto_dealloc
+  0.05%      80ms  | | _int_free
+  0.01%      10ms  | | free
+  0.02%      30ms  | | __alloc04
+  0.01%      20ms  | | | __fort_gmalloc_without_abort
+  0.01%      20ms  | | |   __fort_malloc_without_abort
+  0.01%      20ms  | | |     __libc_malloc
+  0.01%      20ms  | | |       _int_malloc
+  0.01%      10ms  | | save_alloc
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_new_2d_
+  0.01%      10ms  mom_interface_heights_find_eta_3d_
+  0.01%      10ms  group_find
+  0.01%      10ms  | _int_free
+  0.01%      10ms  H5P__set_plist_cb
+  0.01%      10ms  mca_pml_ob1_isend
+  0.01%      10ms  pgf90_sect3
+  0.01%      10ms  mom_diag_mediator_attach_cell_methods_
+  0.01%      10ms  MPI_Wtime
+  0.01%      10ms  opal_value_unload
+  0.25%     380ms  mom_tracer_advect_advect_y_
+  0.24%     370ms  mom_continuity_ppm_ppm_reconstruction_x_
+  0.24%     370ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.22%     340ms  mom_neutral_diffusion_interface_scalar_
+  0.07%     100ms  | pgf90_auto_alloc04
+  0.07%     100ms  | | __auto_alloc
+  0.05%      80ms  | |   __libc_malloc
+  0.03%      40ms  | |     _int_malloc
+  0.05%      70ms  | pgf90_auto_dealloc
+  0.03%      40ms  |   _int_free
+  0.01%      10ms  |   0.01%      10ms  |   0.01%      10ms  |       __fort_free
+__GI_memcpy
+__auto_alloc
+  0.01%      20ms  |   free
+  0.01%      10ms  mom_remapping_remapping_core_w_
+  0.01%      10ms  |         _int_free
+  0.43%     650ms  mom_vert_friction_vertvisc_remnant_
+  0.01%      10ms  |   ???
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.20%     300ms  mom_diag_mediator_diag_update_remap_grids_
+  0.12%     180ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.01%      10ms  |   _int_free
+  0.42%     640ms  mom_kappa_shear_find_kappa_tke_
+  0.20%     300ms  mom_continuity_ppm_zonal_mass_flux_
+  0.12%     180ms  mom_barotropic_find_vhbt_
+  0.01%      10ms  regrid_solvers_solve_tridiagonal_system_
+  0.19%     290ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.12%     180ms  ompi_request_default_wait
+  0.01%      10ms  mpp_domains_mod_deallocate_overlap_type_
+  0.05%      70ms  | pgf90_auto_alloc04
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.05%      70ms  | ???  0.01%      10ms  
+| pgf90_dealloc03a
+  0.01%      10ms  | | __auto_alloc
+  0.12%     180ms  mom_file_parser_get_variable_line_
+  0.05%      70ms  | |   0.01%      10ms  |   __fort_dealloc03
+__auto_alloc
+  0.01%      10ms  | |   __libc_malloc
+  0.03%      50ms  | pgf90_str_copy_klen
+
+  0.01%      10ms  mom_set_visc_set_visc_init_
+======== CPU profiling result (top down):
+Time(%)      Time  Name
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      20ms    0.05%      70ms    0.01%      10ms  H5FL_fac_free
+| | __builtin_va_gparg1
+| |   __libc_malloc
+  0.01%      10ms  |   _int_free
+  0.01%      10ms  H5FD_sec2_read
+  0.03%      40ms  | pgf90_lentrima
+  0.02%      30ms  | |     _int_malloc
+  0.18%     270ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.01%      10ms  | __read
+  0.02%      30ms  | pgf90_trima
+  0.18%     270ms  mom_vert_friction_vertvisc_limit_vel_
+  0.01%      10ms  PMPI_Get_count_f08
+  0.02%      30ms  | pgf90_ptr_alloc04a
+  0.17%     260ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.16%     250ms  regrid_solvers_solve_linear_system_
+  0.16%     250ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.04%      60ms  | __fsd_exp_fma3
+  0.16%     240ms  mom_barotropic_find_vhbt_
+  0.15%     230ms  regrid_edge_values_bound_edge_values_
+  0.15%     230ms  mom_barotropic_find_uhbt_
+  0.14%     220ms  opal_progress
+  0.14%     210ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.05%      80ms  | __fsd_exp_fma3
+  0.01%      10ms  | ???
+  0.01%      10ms  | __fd_exp_1
+  0.14%     210ms  mom_thickness_diffuse_vert_fill_ts_
+  0.14%     210ms  mom_neutral_diffusion_absolute_position_
+  0.13%     200ms  mom_wave_speed_wave_speed_
+  0.13%     200ms  ppm_functions_ppm_limiter_standard_
+  0.01%      10ms  | ???
+  0.13%     200ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.13%     200ms  mom_diabatic_driver_diabatic_
+  0.13%     200ms  mom_continuity_ppm_set_merid_bt_cont_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.12%     190ms  mom_barotropic_btcalc_
+  0.12%     180ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.01%      10ms  | ???
+  0.12%     180ms  __c_mcopy8
+  0.12%     180ms  mom_file_parser_get_variable_line_
+  0.03%      50ms  | pgf90_trima
+  0.03%      50ms  | pgf90_lentrima
+  0.03%      40ms  | pgf90_str_copy_klen
+  0.01%      10ms  | | __builtin_va_gparg1
+  0.02%      30ms  | pgf90_str_index_klen
+  0.01%      10ms  | pgf90_ptr_alloc04a
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.01%      20ms  |   _int_free
+  0.39%     590ms  mom_ale_pressure_gradient_plm_
+  0.02%      30ms  | __c_mzero8
+  0.38%     580ms  mpp_domains_mod_mpp_do_group_update_r8_
+  0.37%     570ms  regrid_edge_values_edge_values_explicit_h4_
+  0.35%     540ms  mom_neutral_diffusion_fv_diff_
+  0.35%     540ms  mca_pml_ob1_progress
+  0.35%     540ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  0.31%     480ms  mom_vert_friction_vertvisc_
+  0.30%     460ms  __c_mzero8
+  0.28%     430ms  mom_continuity_ppm_meridional_mass_flux_
+  0.27%     420ms  mom_energetic_pbl_energetic_pbl_
+  0.07%     100ms  | __fsd_pow_fma3
+  0.03%      40ms  | __fsd_exp_fma3
+  0.27%     420ms  plm_functions_plm_reconstruction_
+  0.05%      70ms  | pgf90_auto_alloc04
+  0.05%      70ms  | | __auto_alloc
+  0.05%      70ms  | |   __libc_malloc
+  0.03%      50ms  | |     _int_malloc
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.01%      10ms  mom_set_diffusivity_set_bbl_tke_
+  0.01%      10ms  mom_geothermal_geothermal_
+  0.01%      10ms  mom_transcribe_grid_copy_dyngrid_to_mom_grid_
+  0.01%      10ms  coord_zlike_build_zstar_column_
+
+======== Data collected at 100Hz frequency
+ 33.39%  51.0667s  epoll_dispatch
+ 33.39%  51.0667s  | epoll_wait
+ 33.39%  51.0567s  poll_dispatch
+ 33.39%  51.0567s  | __poll
+  1.76%  2.69458s  mom_neutral_diffusion_neutral_diffusion_
+  0.15%  230.39ms  | pgf90_alloc04a
+  0.11%  170.29ms  | | __alloc04
+  0.10%  160.27ms  | | | __fort_gmalloc_without_abort
+  0.10%  160.27ms  | | |   __fort_malloc_without_abort
+  0.10%  150.26ms  | | |     __libc_malloc
+  0.05%  80.136ms  | | |       _int_malloc
+  0.01%  10.017ms  | | use_alloc
+  0.10%  160.27ms  | pgf90_dealloc03a
+  0.09%  140.24ms  | | __fort_dealloc03
+  0.09%  140.24ms  | | | __fort_gfree
+  0.09%  140.24ms  | | |   __fort_free
+  0.09%  130.22ms  | | |     _int_free
+  0.01%  10.017ms  | | reuse_alloc
+  0.01%  20.034ms  | pgf90_auto_alloc04
+  0.01%  20.034ms  |   __auto_alloc
+  0.01%  20.034ms  |     __libc_malloc
+  0.01%  20.034ms  |       _int_malloc
+  0.01%  20.034ms  |         sysmalloc
+  1.41%  2.15366s  mom_barotropic_btstep_
+  1.17%  1.79304s  mom_eos_wright_calculate_density_array_wright_
+  1.14%  1.74296s  ompi_coll_libnbc_progress
+  1.00%  1.52259s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.12%  180.31ms  | pgf90_alloc04a
+  0.10%  150.26ms  | | __alloc04
+  0.09%  130.22ms  | | | __fort_gmalloc_without_abort
+  0.08%   120.2ms  | | |   __fort_malloc_without_abort
+  0.02%      30ms  | | __alloc04
+  0.01%      10ms  | |   __fort_gmalloc_without_abort
+  0.01%      10ms  | |     __fort_malloc_without_abort
+  0.01%      10ms  | |       __libc_malloc
+  0.01%      10ms  | pgf90_str_free
+  0.01%      10ms  | | _mp_free
+  0.01%      10ms  | |   _int_free
+  0.01%      10ms  | pgf90_str_malloc_klen
+  0.01%      10ms  | | _mp_malloc
+  0.01%      10ms  | |   __libc_malloc
+  0.01%      10ms  | pgf90_str_index_klen
+  0.12%     180ms  opal_cuda_memcpy
+  0.12%     180ms  | __memmove_ssse3_back
+  0.12%     180ms  mom_neutral_diffusion_ppm_ave_
+  0.12%     180ms  mom_vert_friction_vertvisc_limit_vel_
+  0.11%     170ms  mom_neutral_diffusion_interface_scalar_
+  0.02%      30ms  | pgf90_auto_dealloc
+  0.02%      30ms  | | _int_free
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  |   __auto_alloc
+  0.01%      20ms  |     __libc_malloc
+  0.01%      20ms  |       _int_malloc
+  0.11%     170ms  mom_remapping_average_value_ppoly_
+  0.10%     160ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.03%      50ms  | __fsd_exp_fma3
+  0.10%     160ms  regrid_solvers_solve_linear_system_
+  0.10%     150ms  regrid_edge_values_bound_edge_values_
+  0.10%     150ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.09%     140ms  mom_continuity_ppm_zonal_face_thickness_
+  0.09%     140ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.08%     120ms  mom_wave_speed_wave_speed_
+  0.08%     120ms  mom_set_diffusivity_find_n2_
+  0.08%   120.2ms  | |   0.27%     420ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+|   | __libc_malloc
+  0.01%      10ms  |   __alloc04
+  0.07%     110ms  mom_neutral_diffusion_plm_diff_
+  0.03%  40.068ms  | | |   |   _int_malloc
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.07%     110ms  mom_continuity_ppm_merid_face_thickness_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.07%     110ms  mom_horizontal_regridding_fill_miss_2d_
+  0.01%      10ms  |       __fort_malloc_without_abort
+  0.01%  10.017ms  | | |     0.01%      10ms  |   free
+???
+  0.01%      10ms  |           0.07%     110ms  ppm_functions_ppm_limiter_standard_
+__libc_malloc
+  0.01%  20.034ms  | | save_alloc  0.27%     420ms  mom_continuity_ppm_ppm_limit_pos_
+
+  0.01%      10ms  |       0.07%     110ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+      _int_malloc
+  0.07%  100.17ms  | pgf90_dealloc03a
+  0.07%     110ms  mom_diabatic_aux_find_uv_at_h_
+  0.10%     160ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+  0.26%     400ms  mom_tracer_advect_advect_y_
+  0.07%     100ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.10%     160ms  mom_continuity_ppm_continuity_ppm_
+  0.06%  90.153ms  |   __fort_dealloc03
+  0.24%     370ms  mom_continuity_ppm_ppm_reconstruction_x_
+  0.07%     100ms    0.10%     160ms  mom_diabatic_aux_find_uv_at_h_
+mom_set_visc_set_u_at_v_
+  0.06%  90.153ms  |   0.06%      90ms    0.10%     150ms  mom_pressureforce_mont_set_pbce_bouss_
+    __fort_gfree
+mom_neutral_diffusion_absolute_position_
+  0.24%     360ms  mom_tracer_advect_advect_x_
+  0.09%     140ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.06%      90ms  mom_calculate_surface_state_
+  0.06%  90.153ms  |       __fort_free
+  0.22%     330ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.06%      90ms  mom_regridding_build_zstar_grid_
+  0.09%     140ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.05%  80.136ms  |         _int_free
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      20ms  | pgf90_alloc04a
+  0.01%  10.017ms  |         free
+  0.22%     330ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.01%      10ms  |   free
+  0.01%      10ms  | | __alloc04
+  0.09%     140ms  opal_cuda_memcpy
+  0.01%      20ms  | ???
+  0.01%    0.93%  1.42242s  mom_hor_visc_horizontal_viscosity_
+    10ms  | | | __fort_gmalloc_without_abort
+  0.09%     140ms  | __memmove_ssse3_back
+  0.89%  1.36231s  mca_btl_smcuda_component_progress
+  0.01%      10ms  | | |   __fort_malloc_without_abort
+  0.09%     130ms  mom_shortwave_abs_absorbremainingsw_
+  0.85%  1.30221s  mom_continuity_ppm_merid_flux_layer_
+  0.21%     320ms  0.01%      10ms    mom_opacity_opacity_from_chl_
+| | |     __libc_malloc
+  0.03%      40ms  | __fsd_exp_fma3
+  0.83%  1.27216s  mom_eos_int_density_dz_generic_plm_
+  0.01%      10ms  | | |       _int_malloc
+  0.09%     130ms  mom_continuity_ppm_zonal_face_thickness_
+  0.13%     200ms  | __fsd_pow_fma3
+  0.79%  1.20204s  opal_timer_linux_get_cycles_sys_timer
+  0.08%     120ms  mom_remapping_remapping_core_h_
+  0.01%      10ms  | | save_alloc
+  0.77%  1.18201s  mom_continuity_ppm_zonal_flux_layer_
+  0.05%      80ms  | pgf90_auto_alloc04
+  0.05%      80ms  | | __auto_alloc
+  0.05%      70ms  | |   __libc_malloc
+  0.03%      40ms  | |     _int_malloc
+  0.02%      30ms  | pgf90_auto_dealloc
+  0.01%      20ms  |   _int_free
+  0.08%     120ms  mom_set_diffusivity_set_diffusivity_
+  0.08%     120ms  mom_horizontal_regridding_fill_miss_2d_
+  0.07%     110ms  mom_thickness_diffuse_streamfn_solver_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     malloc@@GLIBC_2.2.5
+  0.07%     110ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.07%     110ms  mom_kappa_shear_calculate_projected_state_
+  0.03%      40ms  | pgf90_auto_alloc04
+  0.01%      20ms  | pgf90_dealloc03a
+  0.01%      20ms  |   __fort_dealloc03
+  0.01%      20ms  |     __fort_gfree
+  0.01%      20ms  |       __fort_free
+  0.01%      20ms  |         _int_free
+  0.06%      90ms  mom_barotropic_bt_mass_source_
+  0.06%      90ms  mom_coms_increment_ints_faster_
+  0.05%      80ms  mom_coriolisadv_gradke_
+  0.05%      80ms  mom_diabatic_aux_make_frazil_
+  0.05%      80ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.05%      80ms  mom_remapping_remapping_core_h_
+  0.03%      40ms  | pgf90_auto_dealloc
+  0.02%      30ms  | | _int_free
+  0.01%      10ms  | | free
+  0.01%      10ms  | ???
+  0.21%     320ms  mom_neutral_diffusion_signum_
+  0.20%     310ms  mom_kappa_shear_calculate_kappa_shear_
+  0.20%     310ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.20%     300ms  mom_continuity_ppm_zonal_mass_flux_
+  0.19%     290ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.18%     280ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.18%     280ms  mom_neutral_diffusion_interface_scalar_
+  0.06%      90ms  | pgf90_auto_alloc04
+  0.06%      90ms  | | __auto_alloc
+  0.75%  1.14194s  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.03%  40.068ms  | __gsd_pow
+  0.01%  20.034ms  | ???
+  0.01%  20.034ms  | pgf90_sect3
+  0.01%  10.017ms  | __fsd_pow_fma3
+  0.73%  1.11189s  mom_remapping_remap_via_sub_cells_
+  0.12%  180.31ms  | pgf90_auto_alloc04
+  0.11%  170.29ms  | | __auto_alloc
+  0.10%  160.27ms  | |   __libc_malloc
+  0.04%  60.102ms  | |     _int_malloc
+  0.11%  170.29ms  | pgf90_auto_dealloc
+  0.10%  160.27ms  |   _int_free
+  0.01%  10.017ms  |   free
+  0.63%  961.63ms  mom_vert_friction_find_coupling_coef_
+  0.02%  30.051ms  | pgf90_auto_alloc04
+  0.05%      70ms  | |     0.03%      40ms  0.01%      20ms  | | __auto_alloc
+__libc_malloc
+  | pgf90_auto_alloc04
+  0.02%  30.051ms  | | __auto_alloc
+  0.01%      10ms  | |   __libc_malloc
+  0.03%      40ms  |     0.02%      30ms  | |   __auto_alloc
+  _int_malloc
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.02%  30.051ms  | |   __libc_malloc
+  0.03%      40ms  |     __libc_malloc
+  0.03%      40ms  | pgf90_auto_dealloc
+  0.03%      40ms  |   _int_free
+  0.18%     270ms  mom_diabatic_driver_diabatic_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  |         sysmalloc
+  0.18%     270ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.01%      10ms  | __fsd_exp_fma3
+  0.01%      10ms  | __fd_exp_1
+  0.17%     260ms  mom_diag_mediator_diag_update_remap_grids_
+  0.16%     250ms  mom_neutral_diffusion_ppm_ave_
+  0.01%  10.017ms  | |     _int_malloc
+  0.01%  10.017ms  | pgf90_auto_dealloc
+  0.01%  10.017ms  | | _int_free
+  0.01%  10.017ms  | ???
+  0.62%   941.6ms  mom_neutral_diffusion_ppm_edge_
+  0.55%  841.43ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.01%  10.017ms  | pgf90_dealloc03a
+  0.01%  10.017ms  | | __fort_dealloc03
+  0.01%  10.017ms  | |   __fort_gfree
+  0.01%  10.017ms  | |     __fort_free
+  0.01%  10.017ms  | |       _int_free
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%  10.017ms  |   __auto_alloc
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%  10.017ms  |       _int_malloc
+  0.01%  10.017ms  |         sysmalloc
+  0.52%  801.36ms  mom_vert_friction_vertvisc_coef_
+  0.01%  10.017ms  | pgf90_allocated
+  0.51%  781.33ms  mom_set_visc_set_viscous_bbl_
+  0.01%      10ms  |   _int_free
+  0.07%     110ms  _intercept_brk
+  0.07%     100ms  | syscall
+  0.07%     110ms  mca_pml_ob1_progress
+  0.07%     100ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.07%     100ms  mom_remapping_build_reconstructions_1d_
+  0.01%      20ms  | ???
+  0.01%      10ms  | pgf90_set_intrin_type
+  0.07%     100ms  mom_set_visc_set_v_at_u_
+  0.07%     100ms  mom_continuity_ppm_merid_face_thickness_
+  0.06%      90ms  mom_regridding_calc_h_new_by_dz_
+  0.06%      90ms  mom_regridding_build_zstar_grid_
+  0.01%      10ms  | pgf90_alloc04a
+  0.01%      10ms  | | __alloc04
+  0.01%      10ms  | ???
+  0.06%      90ms  mom_set_visc_set_u_at_v_
+  0.05%      80ms  mom_coriolisadv_gradke_
+  0.05%      80ms  mom_calculate_surface_state_
+  0.05%      80ms  mom_diabatic_aux_make_frazil_
+  0.03%      40ms  |       _int_malloc
+  0.05%      80ms  mom_isopycnal_slopes_vert_fill_ts_
+  0.05%      80ms  mom_set_diffusivity_set_diffusivity_
+  0.05%      80ms  mom_continuity_ppm_continuity_ppm_
+  0.05%      80ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.05%      80ms  mca_btl_vader_component_progress
+  0.05%      70ms  mom_shortwave_abs_absorbremainingsw_
+  0.02%      30ms  | __fsd_exp_fma3
+  0.05%      70ms  ppm_functions_ppm_reconstruction_
+  0.05%      70ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.04%      60ms  mom_regridding_calc_h_new_by_dz_
+  0.04%      60ms  mom_thickness_diffuse_streamfn_solver_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  | pgf90_sect3
+  0.01%      10ms  |   _int_free
+  0.04%      60ms  mom_barotropic_set_dtbt_
+  0.04%      60ms  mom_set_diffusivity_find_tke_to_kd_
+  0.03%      50ms  mom_diabatic_aux_tridiagts_
+  0.03%      40ms  mom_ale_ale_main_
+  0.03%      40ms  mom_neutral_diffusion_neutral_diffusion_init_
+  0.03%      40ms  _intercept_brk
+  0.03%      40ms  | syscall
+  0.03%      40ms  mom_sum_output_write_energy_
+  0.03%      40ms  mom_meke_step_forward_meke_
+  0.16%     250ms  mom_remapping_average_value_ppoly_
+  0.16%     250ms  opal_cuda_memcpy
+  0.16%     250ms  | __memmove_ssse3_back
+  0.16%     250ms  regrid_edge_values_bound_edge_values_
+  0.16%     250ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.16%     240ms  mom_ale_remap_all_state_vars_
+  0.01%      20ms  | pgf90_dealloc03a
+  0.03%  40.068ms  | __fsd_pow_fma3
+  0.49%  751.28ms  opal_progress
+  0.49%  751.28ms  mom_neutral_diffusion_neutral_surface_flux_
+  0.11%  170.29ms  | pgf90_auto_alloc04
+  0.11%  170.29ms  | | __auto_alloc
+  0.09%  140.24ms  | |   __libc_malloc
+  0.01%  20.034ms  | |   | _int_malloc
+  0.01%  10.017ms  | |   malloc@@GLIBC_2.2.5
+  0.06%  90.153ms  | pgf90_auto_dealloc
+  0.05%  70.119ms  |   _int_free
+  0.48%  731.24ms    0.05%      80ms  mom_barotropic_set_dtbt_
+  0.05%      80ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.05%      80ms  progress_one_cuda_ipc_event
+  0.05%      80ms  mom_coms_increment_ints_faster_
+  0.05%      80ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.05%      70ms  mom_set_diffusivity_find_n2_
+  0.05%      70ms  mom_sum_output_write_energy_
+  0.05%      70ms  mom_interface_heights_find_eta_3d_
+  0.05%      70ms  progress_one_cuda_htod_event
+  0.05%      70ms  polynomial_functions_evaluation_polynomial_
+  0.02%      30ms  | __mth_i_dpowi
+mom_coriolisadv_coradcalc_
+  0.01%      10ms  | | __fort_dealloc03
+  0.01%      20ms  | __fd_powi_1
+  0.03%      40ms  mom_interface_heights_find_eta_3d_
+  0.04%      60ms    0.01%  10.017ms  | pgf90_auto_alloc04  0.01%      10ms  | | mom_shortwave_abs_sumswoverbands_
+
+  __fort_gfree
+  0.01%      10ms  | __fsd_exp_fma3
+  0.03%      40ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.01%    0.01%  10.017ms  |   __auto_alloc
+    10ms  | |     0.04%      60ms  __fort_free
+  mom_geothermal_geothermal_
+  0.02%      30ms  mom_initialize_mom_
+  0.03%      50ms  mom_barotropic_bt_mass_source_
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%      10ms  | |       _int_free
+  0.03%      50ms  mom_thickness_diffuse_thickness_diffuse_
+  0.02%      30ms  polynomial_functions_evaluation_polynomial_
+  0.01%  10.017ms  |       _int_malloc
+  0.03%      50ms  ppm_functions_ppm_reconstruction_
+  0.01%      20ms  | pgf90_alloc04a
+  0.01%      10ms  | __fd_powi_1
+  0.03%      50ms  mom_isopycnal_slopes_vert_fill_ts_
+  0.45%  691.17ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  0.03%      50ms  mom_step_mom_
+  0.01%      20ms    0.01%      10ms  | __mth_i_dpowi
+|   __alloc04
+  0.03%      40ms  mom_meke_step_forward_meke_
+  0.41%  631.07ms  mom_vert_friction_vertvisc_remnant_
+  0.03%      40ms  mom_eos_calculate_density_array_
+  0.01%      10ms    0.01%  | ???
+    10ms  |     __fort_gmalloc_without_abort
+  0.40%  611.04ms  mom_kappa_shear_find_kappa_tke_
+  0.03%      40ms  __fsd_cos_avx2
+  0.02%      30ms  ideal_age_example_ideal_age_tracer_column_physics_
+  0.01%    0.03%      40ms  regrid_edge_values_check_discontinuous_edge_values_
+    10ms  |       0.05%  70.119ms  | pgf90_auto_dealloc  __fort_malloc_without_abort
+
+  0.02%      30ms  mom_ale_ale_remap_scalar_
+  0.02%      30ms  mom_tracer_advect_advect_tracer_
+  0.03%  50.085ms  | | _int_free
+  0.01%      10ms  |         __libc_malloc  0.02%      30ms  mom_set_diffusivity_set_bbl_tke_
+
+  0.02%      30ms  mom_eos_calculate_specific_vol_derivs_
+  0.02%      30ms  mom_tracer_advect_advect_tracer_
+  0.01%  10.017ms  | | free
+  0.01%      10ms    0.02%      30ms  mom_neutral_diffusion_neutral_diffusion_init_
+|           _int_malloc
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.03%  50.085ms  | pgf90_auto_alloc04
+  0.02%      30ms  mom_regridding_adjust_interface_motion_
+  0.16%     240ms  mom_vert_friction_vertvisc_limit_vel_
+  0.01%      20ms  |   _int_free
+  0.02%      30ms  mom_diabatic_aux_tridiagts_
+  0.03%  50.085ms  |   __auto_alloc
+  0.02%      30ms  mom_meke_meke_lengthscales_0d_
+  0.02%      30ms    0.15%     230ms  mom_shortwave_abs_sumswoverbands_
+mom_barotropic_btcalc_
+  0.01%      20ms  | __fsd_pow_fma3
+  0.03%  40.068ms  |     __libc_malloc
+  0.02%      30ms  mom_set_visc_set_v_at_u_
+  0.14%     220ms    0.01%      20ms  mom_set_diffusivity_find_tke_to_kd_
+mom_continuity_ppm_meridional_flux_adjust_
+  0.01%  10.017ms    0.01%      20ms  mom_dynamics_split_rk2_initialize_dyn_split_rk2_|       
+_int_malloc
+  0.02%      30ms  mom_set_diffusivity_set_bbl_tke_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      20ms  plm_functions_plm_boundary_extrapolation_
+  0.39%  601.02ms  mom_neutral_diffusion_fv_diff_
+  0.01%      20ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.02%      30ms  mom_kappa_shear_calculate_projected_state_
+  0.01%      10ms  |   __auto_alloc
+  0.39%  601.02ms  mpp_domains_mod_mpp_do_group_update_r8_
+  0.01%      20ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      20ms  mom_initialize_mom_
+  0.01%      10ms  |     __libc_malloc
+  0.38%  580.99ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+  0.01%      10ms  |   __auto_alloc
+  0.01%      20ms  pgf90_auto_dealloc
+  0.01%      20ms  mpp_mod_mpp_sum_real8_
+  0.14%     210ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.01%  20.034ms  | pgf90_auto_alloc04
+  0.01%      10ms  |     __libc_malloc
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%  20.034ms  |   __auto_alloc
+  0.06%      90ms  | __fsd_exp_fma3
+  0.01%      10ms  |   __auto_alloc
+  0.02%      30ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |   0.01%  10.017ms  |     __libc_malloc
+  0.01%      10ms  | __c_mset8
+pgf90_auto_dealloc
+  0.01%      10ms  |       _int_malloc
+  0.01%  10.017ms  |       _int_malloc
+  0.01%      20ms  mom_step_mom_
+  0.01%      20ms  regrid_edge_values_edge_values_implicit_h4_
+  0.01%      10ms  | | _int_free
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      20ms  mom_set_visc_set_viscous_ml_
+  0.01%  10.017ms  |         sysmalloc
+  0.01%      10ms    0.01%      10ms  |   _int_free
+| __fd_exp_1
+  0.01%      20ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.36%  550.94ms  regrid_edge_values_edge_values_explicit_h4_
+  0.14%     210ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.01%      20ms  mom_regridding_filtered_grid_motion_
+  0.01%      20ms  |   __auto_alloc
+  0.01%      10ms  |   0.35%   530.9ms  pgf90_auto_dealloc
+__c_mzero8
+  0.14%     210ms  mom_barotropic_find_uhbt_
+  0.01%      10ms  |   _int_free
+  0.01%      20ms  |     __libc_malloc
+  0.34%  520.88ms  plm_functions_plm_reconstruction_
+  0.01%      20ms  mom_diag_mediator_diag_masks_set_
+  0.13%     200ms  __c_mcopy8
+  0.01%      20ms  MPI_Status_f2c
+  0.01%      10ms  |       _int_malloc
+  0.02%  30.051ms  | pgf90_auto_alloc04
+  0.13%     200ms  0.01%      10ms  mom_sum_output_create_depth_list_
+  mca_btl_sm_component_progress
+  0.01%      20ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.02%  30.051ms  | | __auto_alloc
+  0.01%      10ms  mpp_domains_mod_mpp_update_domain2d_r8_3d_
+  0.12%     190ms  mom_neutral_diffusion_plm_diff_
+  0.01%      10ms  | __get_size_of
+  0.01%      20ms  mca_btl_smcuda_send
+  0.02%  30.051ms  | |   __libc_malloc
+  0.01%      10ms  mpp_io_mod_read_record_core_
+  0.12%     180ms  progress_one_cuda_htod_event
+  0.01%      20ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.01%  20.034ms  | |     _int_malloc
+  0.01%      10ms  | nf_get_vara_double_
+  0.01%      10ms  |   _dl_runtime_resolve_xsave  0.01%      20ms    0.12%     180ms  mom_continuity_ppm_set_merid_bt_cont_
+
+mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.02%  30.051ms  | pgf90_auto_dealloc
+  0.01%      10ms  |     _dl_fixup
+  0.01%      20ms  mom_meke_meke_lengthscales_0d_
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.01%      10ms  |       _dl_lookup_symbol_x
+  0.01%  20.034ms  |   free
+  0.01%      10ms  |         do_lookup_x  0.01%      10ms  | __fsd_pow_fma3
+
+  0.01%      20ms  |   _int_free  0.01%  10.017ms  
+|   _int_free
+  0.01%      10ms  MPI_Get_count
+  0.01%      20ms  H5FD_sec2_read
+  0.12%     180ms  mom_neutral_diffusion_ppm_left_right_edge_values_  0.01%      10ms  mom_eos_calculate_density_derivs_array_
+  0.34%  520.88ms  mom_continuity_ppm_ppm_limit_pos_
+
+  0.01%      10ms  mom_horizontal_regridding_horiz_interp_and_extrap_tracer_record_
+  0.01%      20ms  | __read
+  0.33%  500.85ms  mom_energetic_pbl_energetic_pbl_
+  0.12%     180ms  mom_barotropic_find_vhbt_  0.01%      10ms  mom_set_visc_set_visc_register_restarts_
+
+  0.01%      20ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.01%      10ms  mca_btl_vader_component_progress
+  0.11%    0.05%  70.119ms   170ms  mom_thickness_diffuse_vert_fill_ts_  | __fsd_pow_fma3
+
+  0.01%      10ms  mca_btl_vader_check_single_copy
+  0.01%      20ms  mom_ale_ale_remap_scalar_
+  0.01%      10ms  | open
+  0.03%  50.085ms  | __fsd_exp_fma3
+  0.11%     170ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.01%      20ms  | pgf90_alloc04a
+  0.01%      10ms  H5SL_insert_common
+  0.01%  10.017ms  |   0.01%      10ms  ompi_coll_base_allreduce_intra_recursivedoubling
+__gsd_pow
+  0.01%      10ms  | pgf90_sect3
+  0.01%      20ms  |   __alloc04
+  0.01%      10ms  | __libc_malloc
+  0.32%  490.83ms  mom_tracer_advect_advect_y_
+  0.11%     170ms  mom_diabatic_aux_find_uv_at_h_
+  0.01%      10ms  mom_forcing_type_extractfluxes1d_
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%      10ms  mca_btl_sm_component_progress
+  0.31%  480.82ms  mom_vert_friction_vertvisc_
+  0.10%     160ms  mom_file_parser_get_variable_line_
+  0.01%      10ms  |       __fort_malloc_without_abort
+  0.01%      10ms  evthread_posix_lock
+  0.30%  460.78ms  mom_ale_pressure_gradient_plm_
+  0.01%      10ms  | __pthread_mutex_lock
+  0.03%      40ms    0.01%      10ms  | | pgf90_str_index_klen
+        __libc_malloc
+  0.01%      10ms  regrid_consts_coordinatemode_
+  0.04%  60.102ms  | __c_mzero8
+  0.01%      10ms  |       0.01%      10ms  | pgf90_dealloc03a
+      _int_malloc
+  0.03%      40ms  | pgf90_lentrima
+  0.28%  420.71ms  mom_diag_mediator_diag_update_remap_grids_
+  0.01%      10ms  ompi_request_default_wait
+  0.01%      20ms  mom_barotropic_set_local_bt_cont_types_
+  0.01%      20ms  0.01%      10ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_
+  | pgf90_trima
+  0.28%  420.71ms  mom_neutral_diffusion_signum_
+  0.01%      10ms  ncx_getn_float_float
+  0.01%      20ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.01%      20ms  | pgf90_str_copy_klen
+  0.01%      10ms  opal_thread_join
+  0.27%   410.7ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.01%      20ms  mom_forcing_type_extractfluxes1d_
+  0.01%      10ms  | pthread_join
+  0.01%      10ms  | |   0.27%   410.7ms  mom_remapping_average_value_ppoly___builtin_va_gparg1
+
+  0.01%      10ms  mom_file_parser_get_param_int_array_
+  0.01%      20ms  mom_diag_mediator_diag_masks_set_
+  0.01%      10ms  | _dl_runtime_resolve_xsave
+  0.25%    0.01%      20ms  380.65ms  mca_pml_ob1_progress
+| pgf90_dealloc03a
+  0.01%      20ms  mom_geothermal_geothermal_
+  0.01%      10ms  |   _dl_fixup
+  0.25%  380.65ms  px_pgout
+  0.01%      10ms  0.01%      20ms  |     _dl_lookup_symbol_x
+  | | __fort_dealloc03
+  0.01%      20ms  __fsd_cos_avx2
+  0.01%      10ms  |       do_lookup_x
+  0.24%  370.63ms  | write
+  0.01%      10ms  | |   0.01%      10ms  mom_sum_output_create_depth_list_
+  0.01%      10ms  H5FL_reg_malloc
+  __fort_gfree
+  0.01%  10.017ms  | lseek
+  0.01%      10ms  mca_btl_smcuda_sendi
+  0.01%      10ms  mom_regridding_get_zlike_cs_
+  0.01%      10ms  | |     __fort_free
+  0.01%      10ms  mom_dyn_horgrid_create_dyn_horgrid_
+  0.24%  360.61ms  mom_continuity_ppm_ppm_reconstruction_x_
+  0.01%      10ms  | pgf90_alloc04_chka  0.01%      10ms  coord_zlike_build_zstar_column_
+
+  0.01%      10ms  | |       _int_free
+  0.01%  10.017ms  | pgf90_auto_dealloc
+  0.01%      10ms  mpp_mod_mpp_init_
+  0.01%      10ms  |   pgf90_alloc04
+  0.01%      10ms  | pgf90io_nmlr
+  0.01%      10ms  | pgf90_ptr_alloc04a
+  0.01%  10.017ms  |   _int_free
+  0.01%      10ms  |   _f90io_nml_read
+  0.01%      10ms  |     pgf90_alloc04a
+  0.01%      10ms  | | __alloc04
+  0.01%      10ms  |     find_group
+  0.22%  340.58ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.01%      10ms  |   0.01%      10ms  |       __alloc04
+|   __fort_gmalloc_without_abort
+  0.01%      10ms  |       read_record
+  0.22%  340.58ms  mom_opacity_opacity_from_chl_
+  0.01%      10ms  | |     __fort_malloc_without_abort  0.01%      10ms  mom_barotropic_find_face_areas_
+
+  0.01%      10ms  |         __fort_gmalloc_without_abort
+  0.01%      10ms  | |       __libc_malloc
+  0.18%  280.48ms  | __fsd_pow_fma3
+  0.01%      10ms  mom_set_visc_set_visc_init_
+  0.01%      10ms  |           __fort_malloc_without_abort
+  0.01%      10ms  |             __libc_malloc
+  0.01%      10ms  |               _int_malloc
+  0.01%      10ms  mca_btl_smcuda_sendi
+  0.01%      10ms  ompi_request_default_wait_all
+  0.01%      10ms  | ???
+  0.01%      10ms  mom_ale_check_grid_
+  0.01%      10ms  H5SL_insert_common
+  0.01%      10ms  var_get_env
+  0.01%      10ms  | asprintf
+  0.01%      10ms  |   vasprintf
+  0.01%      10ms  |     _IO_vfprintf
+  0.01%      10ms  regrid_solvers_solve_tridiagonal_system_
+  0.01%      10ms  mpp_mod_mpp_sync_self_
+  0.01%      10ms  H5T_vlen_reclaim_recurse
+  0.01%      10ms  | free
+  0.01%      10ms  mom_shared_initialization_initialize_grid_rotation_angle_
+  0.01%      10ms  | |         _int_malloc
+  0.01%      10ms  | pgf90_indexa
+  0.10%     160ms  regrid_solvers_solve_linear_system_
+  0.10%     150ms  mom_horizontal_regridding_fill_miss_2d_
+  0.10%     150ms  mom_continuity_ppm_merid_face_thickness_
+  0.09%     140ms  mom_continuity_ppm_zonal_face_thickness_
+  0.09%     140ms  mom_continuity_ppm_continuity_ppm_
+  0.09%     140ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  |         sysmalloc
+  0.09%     130ms  mom_set_visc_set_u_at_v_
+  0.09%     130ms  mom_coriolisadv_gradke_
+  0.09%     130ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.08%     120ms  mom_shortwave_abs_absorbremainingsw_
+  0.01%      10ms  | __fsd_exp_fma3
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.08%     120ms  progress_one_cuda_ipc_event
+  0.08%     120ms  ppm_functions_ppm_limiter_standard_
+  0.07%     110ms  mom_thickness_diffuse_streamfn_solver_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%  10.017ms  | __gsd_pow
+  0.22%  330.56ms  ncx_putn_double_double
+  0.22%  330.56ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.21%  320.54ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.21%  320.54ms  mom_neutral_diffusion_plm_diff_
+  0.20%  300.51ms  mom_neutral_diffusion_interface_scalar_
+  0.04%  60.102ms  | pgf90_auto_alloc04
+  0.04%  60.102ms  | | __auto_alloc
+  0.03%  40.068ms  | |   __libc_malloc
+  0.01%  10.017ms  | |     _int_malloc
+  0.03%  40.068ms  | pgf90_auto_dealloc
+  0.03%  40.068ms  |   _int_free
+  0.20%  300.51ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.19%  290.49ms  mom_kappa_shear_calculate_kappa_shear_
+  0.19%  290.49ms  mom_diabatic_driver_diabatic_
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%      10ms  PMPI_Wtime_f08
+  0.01%      10ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.01%      10ms  H5C_get_logging_status
+  0.01%      10ms  ompi_request_wait_completion
+  0.01%      10ms  | ???
+  0.01%      10ms  opal_pointer_array_add
+  0.01%      10ms  mca_pml_ob1_send_request_copy_in_out
+  0.01%      10ms  mom_transcribe_grid_copy_dyngrid_to_mom_grid_
+  0.01%      10ms  mom_eos_calculate_specific_vol_derivs_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.01%      10ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.01%      10ms  ompi_mpi_init
+  0.01%      10ms  | usleep
+  0.01%      10ms  |   nanosleep
+  0.01%      10ms  mom_ale_check_grid_
+  0.01%      10ms  H5SL_search
+  0.01%      10ms  opal_hwloc1112_hwloc_obj_type_sscanf
+  0.01%      10ms  | __strncasecmp_avx
+  0.01%      10ms  mom_intrinsic_functions_invcosh_
+  0.01%      10ms  | __fsd_log_fma3
+  0.01%      10ms  mca_btl_smcuda_send
+  0.01%      10ms  mom_sum_output_accumulate_net_input_
+  0.01%      10ms  | | _int_free
+  0.01%  10.017ms  |   __auto_alloc
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  | __mth_i_datan2_avx2
+  0.01%      10ms  |   __auto_alloc
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%      10ms  mom_regridding_filtered_grid_motion_
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms    0.01%  10.017ms  |   | pgf90_auto_dealloc
+    _int_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms    0.01%  10.017ms  ompi_info_set
+|         sysmalloc
+  0.07%     110ms  mom_wave_speed_wave_speed_
+  0.01%      10ms  | _dl_runtime_resolve_xsave
+  0.18%  280.48ms
+======== Data collected at 100Hz frequency
+  mom_vert_friction_vertvisc_limit_vel_
+  0.07%     100ms  mom_set_diffusivity_set_diffusivity_
+  0.01%      10ms  |   _dl_fixup
+  0.18%  270.46ms  mom_tracer_advect_advect_x_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |     _dl_lookup_symbol_x
+  0.17%  260.44ms  mom_neutral_diffusion_ppm_ave_
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |       do_lookup_x  0.17%  260.44ms  mom_diabatic_aux_applyboundaryfluxesinout_
+
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  coord_zlike_build_zstar_column_  0.01%  10.017ms  | pgf90_sect3
+
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  mom_grid_adcroft_reciprocal_  0.17%  260.44ms  
+mom_continuity_ppm_zonal_mass_flux_
+  0.07%     100ms  ompi_request_default_wait
+  0.01%      10ms  mom_vert_friction_vertvisc_init_
+  0.17%  260.44ms  mom_continuity_ppm_meridional_mass_flux_
+  0.03%      50ms  | ???
+  0.01%      10ms  mom_domains_do_group_pass_
+  0.17%  260.44ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.07%     100ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.01%      10ms  pmpi_irecv__
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.07%     100ms  mom_coms_increment_ints_faster_
+  0.01%      10ms  mpp_mod_stdlog_
+  0.01%  10.017ms  |   __auto_alloc
+  0.07%     100ms  mom_neutral_diffusion_absolute_position_
+  0.01%      10ms  px_pgin
+  0.01%  10.017ms  |     __libc_malloc
+  0.06%      90ms  mom_set_visc_set_v_at_u_
+  0.01%      10ms  | __read
+  0.01%  10.017ms  |       _int_malloc
+  0.06%      90ms  mom_regridding_calc_h_new_by_dz_  0.01%      10ms  pgf90_auto_dealloc
+
+  0.17%  260.44ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.05%      80ms  mom_calculate_surface_state_  0.01%      10ms  
+mca_btl_smcuda_prepare_src
+  0.01%  20.034ms  | pgf90_auto_alloc04
+  0.05%      80ms  mom_set_diffusivity_find_n2_
+  0.01%      10ms  time_interp_external_mod_load_record_
+  0.01%  20.034ms  |   __auto_alloc
+  0.05%      80ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+  0.01%      10ms  ompi_mpi_init
+  0.01%  10.017ms  |     __libc_malloc
+  0.05%      70ms  mom_remapping_remapping_core_h_  0.01%      10ms
+  | usleep
+  0.16%  250.43ms  mom_ale_remap_all_state_vars_
+  0.03%      50ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   nanosleep
+  0.02%  30.051ms  | pgf90_alloc04a
+  0.03%      50ms  |   __auto_alloc
+  0.01%      10ms  mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+  0.01%  20.034ms  | | __alloc04
+  0.03%      50ms  |   0.01%      10ms  mom_tfreeze_calculate_tfreeze_linear_array_
+    __libc_malloc
+  0.01%  20.034ms  | |   __fort_gmalloc_without_abort
+  0.01%      10ms  H5SL_search  0.02%      30ms  |   
+    _int_malloc
+  0.01%  20.034ms  | |     __fort_malloc_without_abort
+  0.05%      70ms  _intercept_brk  0.01%      10ms  collect_proc_cpuset
+
+  0.01%  20.034ms  |   0.05%      70ms  | syscall
+|       __libc_malloc
+  0.01%      10ms  | _dl_runtime_resolve_xsave
+  0.05%      70ms  mom_isopycnal_slopes_vert_fill_ts_
+  0.01%  20.034ms  | |         _int_malloc
+  0.01%      10ms  |   _dl_fixup
+  0.05%      70ms  mom_step_mom_
+  0.01%  20.034ms    0.01%      10ms  | pgf90_dealloc03a
+|     _dl_lookup_symbol_x
+  0.05%      70ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.01%  10.017ms  |   0.01%      10ms  |   | __fort_dealloc03
+    do_lookup_x
+  0.04%      60ms  mom_thickness_diffuse_thickness_diffuse_
+  0.01%  10.017ms    0.01%      10ms  mca_btl_vader_progress_endpoints
+| |   __fort_gfree
+  0.04%      60ms  mom_barotropic_bt_mass_source_
+  0.01%      10ms  mom_thickness_diffuse_thickness_diffuse_  0.01%  10.017ms  | | 
+    __fort_free
+  0.04%      60ms  ppm_functions_ppm_reconstruction_
+  0.01%      10ms  PMPI_Comm_f2c
+  0.04%      60ms  mom_barotropic_set_dtbt_
+  0.01%  10.017ms  | reuse_alloc
+  0.01%      10ms  mca_btl_sm_frag1_constructor
+  0.16%  240.41ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.04%      60ms  mom_regridding_build_zstar_grid_
+  0.01%      10ms  mom_regridding_adjust_interface_motion_
+  0.16%  240.41ms  mom_barotropic_find_vhbt_
+  0.01%      10ms  | pgf90_alloc04a
+  0.01%      10ms  mom_remapping_build_reconstructions_1d_
+  0.15%  230.39ms  mom_continuity_ppm_set_merid_bt_cont_
+  0.01%      10ms  |   __alloc04
+  0.01%      10ms  mom_variables_alloc_bt_cont_type_
+  0.01%      10ms  |       0.01%  10.017ms  | pgf90_auto_dealloc
+__fort_gmalloc_without_abort
+  0.01%      10ms  mom_diag_remap_diag_remap_update_  0.01%      10ms  |       
+__fort_malloc_without_abort
+  0.01%  10.017ms  | | free
+  0.01%      10ms  | ???  0.01%      10ms  |       
+  __libc_malloc
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%      10ms  |     0.01%      10ms  evthread_posix_lock
+        _int_malloc
+  0.01%  10.017ms  |   __auto_alloc
+  0.04%      60ms  mom_meke_step_forward_meke_
+  0.01%      10ms  PMPI_Type_f2c
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%      10ms  |   0.01%      10ms  mpp_io_mod_mpp_read_meta_
+pgf90_auto_dealloc
+  0.01%  10.017ms  |       _int_malloc
+  0.01%      10ms  | nf_get_att_text_  0.01%      10ms  |   
+free
+  0.15%  230.39ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.06%  90.153ms  | __fsd_exp_fma3
+  0.01%      10ms  |   pgf90_repeat
+  0.04%      60ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.03%      50ms  mom_interface_heights_find_eta_3d_
+  0.01%      10ms  |     pgf90_repeata
+  0.01%      10ms  |       __strncpy_sse2_unaligned
+  0.01%      10ms  mca_btl_self_free
+  0.01%      10ms  plm_functions_plm_boundary_extrapolation_
+  0.14%  220.37ms  mom_barotropic_btcalc_
+  0.14%  220.37ms  regrid_edge_values_bound_edge_values_
+  0.14%  210.36ms  mom_file_parser_get_variable_line_
+  0.03%  50.085ms  | pgf90_str_copy_klen
+  0.03%  50.085ms  | pgf90_trima
+  0.03%  40.068ms  | pgf90_lentrima
+  0.02%  30.051ms  | pgf90_str_index_klen  0.03%      40ms  __fsd_cos_avx2
+  0.03%      40ms  ompi_request_default_wait_all
+  0.02%      30ms  | ???
+  0.03%      40ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.03%      40ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.03%      40ms  mom_shortwave_abs_sumswoverbands_
+  0.01%      10ms  | __fsd_exp_fma3
+  0.03%      40ms  mca_btl_vader_component_progress
+  0.03%      40ms  mca_btl_smcuda_sendi
+  0.03%      40ms  mom_diabatic_aux_make_frazil_
+  0.02%      30ms  mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+
+  0.01%  20.034ms  | pgf90_ptr_alloc04a
+  0.01%  20.034ms  | | __alloc04
+  0.01%  20.034ms  | |   __fort_gmalloc_without_abort
+  0.01%  20.034ms  | |     __fort_malloc_without_abort
+  0.01%  20.034ms  | |       __libc_malloc
+  0.01%  20.034ms  | |         _int_malloc
+  0.01%    0.02%      30ms  mom_horizontal_regridding_horiz_interp_and_extrap_tracer_record_
+  0.02%      30ms  mom_tracer_advect_advect_tracer_
+  0.02%      30ms  mom_sum_output_write_energy_
+  0.02%      30ms  mom_neutral_diffusion_neutral_diffusion_init_
+  0.02%      30ms  mom_tfreeze_calculate_tfreeze_linear_array_
+  0.02%      30ms  mca_btl_vader_progress_endpoints
+  0.02%      30ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.02%      30ms  mom_ale_check_grid_
+  0.02%      30ms  mom_kappa_shear_calculate_projected_state_
+  0.02%      30ms  mca_btl_smcuda_send
+10.017ms  | pgf90_str_cpy1
+  0.02%      30ms  mom_diabatic_aux_tridiagts_
+  0.01%  10.017ms  | | __memmove_ssse3_back
+  0.02%      30ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.01%  10.017ms  | pgf90_dealloc03a
+  0.02%      30ms  mom_eos_calculate_specific_vol_derivs_
+  0.01%  10.017ms  |   __fort_dealloc03
+  0.02%      30ms  | 
+======== Data collected at 100Hz frequency
+pgf90_auto_dealloc
+  0.01%  10.017ms  |     __fort_gfree
+  0.02%      30ms  |   _int_free
+  0.01%  10.017ms    0.01%      20ms  mom_geothermal_geothermal_|       
+__fort_free
+  0.01%      20ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.01%  10.017ms  |         _int_free
+  0.01%      20ms  mom_diag_mediator_diag_masks_set_
+  0.13%  200.34ms  opal_cuda_memcpy
+  0.01%      20ms  mom_barotropic_set_local_bt_cont_types_
+  0.13%  200.34ms  | __memmove_ssse3_back
+  0.01%      20ms  mom_meke_meke_lengthscales_0d_
+  0.12%  190.32ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.01%  10.017ms  | __fsd_exp_fma3
+  0.01%      20ms  | __fsd_pow_fma3
+  0.12%  180.31ms  mom_thickness_diffuse_vert_fill_ts_
+  0.01%      20ms  mom_regridding_filtered_grid_motion_
+  0.11%  170.29ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+  0.01%      20ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.11%  170.29ms  __c_mcopy8
+  0.11%  170.29ms  mom_continuity_ppm_zonal_face_thickness_
+  0.01%      20ms  mom_set_diffusivity_set_bbl_tke_
+  0.11%  170.29ms  mom_wave_speed_wave_speed_
+  0.01%      20ms  mom_regridding_adjust_interface_motion_
+  0.11%  170.29ms  regrid_solvers_solve_linear_system_
+  0.01%      20ms  ideal_age_example_ideal_age_tracer_column_physics_
+  0.11%  170.29ms  progress_one_cuda_htod_event
+  0.10%  160.27ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.01%      20ms  mom_initialize_mom_
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%      20ms  mom_set_diffusivity_find_tke_to_kd_
+  0.01%  10.017ms  |   __auto_alloc
+  0.01%      20ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%      20ms  coord_zlike_build_zstar_column_
+  0.01%  10.017ms  |       _int_malloc
+  0.01%  10.017ms  |         sysmalloc
+  0.01%      20ms  mom_forcing_type_set_net_mass_forcing_
+  0.10%  160.27ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.01%      10ms  fms_io_mod_get_file_unit_
+  0.09%  140.24ms  mom_barotropic_find_uhbt_
+  0.01%      10ms  evthread_posix_unlock
+  0.09%  130.22ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.09%  130.22ms  mom_neutral_diffusion_absolute_position_
+  0.01%      10ms  | pthread_mutex_unlock
+  0.09%  130.22ms  mom_set_visc_set_u_at_v_
+  0.01%      10ms  regrid_solvers_solve_tridiagonal_system_
+  0.09%  130.22ms  mom_set_visc_set_v_at_u_
+  0.01%      10ms  mom_ale_ale_main_
+  0.09%  130.22ms  mom_diabatic_aux_find_uv_at_h_
+  0.08%   120.2ms  ppm_functions_ppm_limiter_standard_
+  0.01%      10ms  mpp_domains_mod_mpp_update_domain2d_r8_3d_
+  0.08%   120.2ms  mom_continuity_ppm_merid_face_thickness_
+  0.01%      10ms  | __c_mset8
+  0.07%  110.19ms  ompi_request_default_wait
+  0.01%      10ms  plm_functions_plm_boundary_extrapolation_
+  0.02%  30.051ms  | ???
+  0.01%      10ms  mca_pml_ob1_frag_completion
+  0.07%  100.17ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.01%      10ms  mpp_io_mod_mpp_read_meta_
+  0.07%  100.17ms  mom_continuity_ppm_continuity_ppm_
+  0.01%      10ms  |   0.07%  100.17ms  progress_one_cuda_ipc_eventpgf90_ptr_alloc04a
+
+  0.07%  100.17ms  px_pgin
+  0.01%      10ms  |   __alloc04
+  0.04%  60.102ms  | __read
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%  20.034ms  | __GI_memset
+  0.01%      10ms  |       0.01%  20.034ms  | lseek
+  __fort_malloc_without_abort
+  0.07%  100.17ms  mom_document_mesghasbeendocumented_
+  0.01%      10ms  |         __libc_malloc
+  0.04%  60.102ms  | pgf90_trima
+  0.01%      10ms  |     0.01%  10.017ms          _int_malloc
+| pgf90_ptr_alloc04a
+  0.01%  10.017ms  | | __alloc04
+  0.01%      10ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_new_2d_
+  0.01%  10.017ms  | __c_mcopy1
+  0.01%      10ms  regrid_edge_values_edge_values_implicit_h4_
+  0.01%  10.017ms  | pgf90_str_malloc_klen
+  0.01%  10.017ms  | | _mp_malloc
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%  10.017ms  | |   __libc_malloc
+  0.01%      10ms  |   __auto_alloc
+  0.01%  10.017ms  | pgf90_dealloc03a
+  0.01%      10ms  |     __libc_malloc
+  0.01%  10.017ms  |   __fort_dealloc03
+  0.01%  10.017ms  |       0.01%      10ms  | __fort_gfree
+      _int_malloc
+  0.01%  10.017ms  |       __fort_free
+  0.01%      10ms  mca_pml_ob1_recv_req_start
+  0.01%  10.017ms  |         free
+  0.01%      10ms  opal_convertor_unpack
+  0.06%  90.153ms  mom_set_diffusivity_find_n2_
+  0.06%  90.153ms  mom_horizontal_regridding_fill_miss_2d_
+  0.01%      10ms  mom_sum_output_create_depth_list_
+  0.06%  90.153ms  mom_calculate_surface_state_
+  0.01%      10ms  mom_eos_calculate_density_derivs_array_
+  0.05%  80.136ms  mom_barotropic_bt_mass_source_
+  0.01%      10ms  mom_ale_ale_remap_scalar_
+  0.05%  80.136ms  mca_btl_sm_component_progress
+  0.05%  80.136ms  mom_diabatic_aux_make_frazil_
+  0.01%      10ms  | pgf90_alloc04a
+  0.05%  80.136ms  _intercept_brk
+  0.01%      10ms  |   __alloc04
+  0.05%  80.136ms  | syscall
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.05%  80.136ms  mom_shortwave_abs_absorbremainingsw_
+  0.01%  10.017ms  | __fsd_exp_fma3
+  0.01%      10ms  |       __fort_malloc_without_abort
+  0.05%  70.119ms  mom_thickness_diffuse_streamfn_solver_
+  0.01%      10ms  |         __libc_malloc
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%  10.017ms  |   __auto_alloc
+  0.01%      10ms  mom_io_num_timelevels_
+  0.05%  70.119ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.01%      10ms  | pgf90_alloc04a
+  0.04%  60.102ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.01%      10ms  |     0.04%  60.102ms  mom_regridding_calc_h_new_by_dz_
+__alloc04
+  0.04%  60.102ms  mom_sum_output_write_energy_
+  0.01%      10ms  polynomial_functions_evaluation_polynomial_
+  0.04%  60.102ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.01%      10ms  | __fd_powi_1
+  0.04%  60.102ms  mom_regridding_adjust_interface_motion_
+  0.04%  60.102ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.01%      10ms  mom_grid_initialize_initialize_masks_
+  0.04%  60.102ms  mom_barotropic_set_dtbt_
+  0.01%      10ms  ideal_age_example_register_ideal_age_tracer_
+  0.04%  60.102ms  mom_interface_heights_find_eta_3d_
+  0.01%      10ms  mom_lateral_mixing_coeffs_varmix_init_
+  0.04%  60.102ms  mom_coms_increment_ints_faster_
+  0.01%      10ms  _intercept_munmap
+  0.04%  60.102ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.04%  60.102ms  mom_isopycnal_slopes_vert_fill_ts_
+  0.01%      10ms  | syscall
+  0.04%  60.102ms  mom_kappa_shear_calculate_projected_state_
+  0.01%      10ms  ompi_proc_init
+  0.01%  10.017ms  | pgf90_auto_dealloc
+  0.01%      10ms  | _dl_runtime_resolve_xsave
+  0.01%  10.017ms  |   _int_free
+  0.03%  50.085ms  mom_diabatic_aux_tridiagts_
+  0.01%      10ms  |   _dl_fixup
+  0.03%  50.085ms  mom_remapping_remapping_core_h_
+  0.01%      10ms  |     _dl_lookup_symbol_x
+  0.02%  30.051ms  | pgf90_auto_alloc04
+  0.01%      10ms  |       do_lookup_x
+  0.02%  30.051ms  | | __auto_alloc
+  0.02%  30.051ms  | |   __libc_malloc
+  0.01%      10ms  mom_set_visc_set_visc_register_restarts_
+  0.01%  20.034ms  | pgf90_auto_dealloc
+  0.01%      10ms  mom_set_visc_set_visc_init_
+  0.01%  20.034ms  |   _int_free
+  0.03%  50.085ms  mom_meke_step_forward_meke_
+  0.01%      10ms  | pgf90_alloc04a
+  0.03%  50.085ms  mom_regridding_build_zstar_grid_
+  0.01%      10ms  |   __alloc04
+  0.01%  10.017ms  | pgf90_dealloc03a
+  0.01%      10ms  |     __fort_gmalloc_without_abort
+  0.01%  10.017ms  | pgf90_alloc04a
+  0.01%      10ms  |     0.01%  10.017ms  |   __save_allocEND
+    __fort_malloc_without_abort
+  0.03%  50.085ms  mom_remapping_build_reconstructions_1d_
+  0.01%      10ms  |         __libc_malloc
+  0.01%  10.017ms  | pgf90_set_intrin_type
+  0.01%      10ms  |           _int_malloc
+  0.03%  50.085ms  mom_set_diffusivity_set_diffusivity_
+  0.03%  50.085ms  polynomial_functions_evaluation_polynomial_
+  0.01%      10ms  |             sysmalloc
+  0.01%  20.034ms  | __mth_i_dpowi
+  0.01%      10ms  ompi_mpi_init
+  0.03%  50.085ms  mom_shortwave_abs_sumswoverbands_
+  0.01%  10.017ms  | __fsd_exp_fma3  0.01%      10ms  | usleep
+
+  0.03%  40.068ms  mom_ale_ale_remap_scalar_
+  0.01%      10ms  |   nanosleep
+  0.01%  10.017ms  | pgf90_dealloc03a
+  0.01%      10ms  mom_meke_meke_equilibrium_
+  0.01%  10.017ms  | | __fort_dealloc03
+  0.01%      10ms  mom_intrinsic_functions_invcosh_
+  0.01%  10.017ms  | pgf90_alloc04a
+  0.01%  10.017ms  |   __alloc04
+  0.01%      10ms  px_pgin
+  0.03%  40.068ms  mom_coriolisadv_gradke_
+  0.01%      10ms  | __read
+  0.03%  40.068ms  mca_btl_vader_component_progress
+  0.01%      10ms  mom_dyn_horgrid_create_dyn_horgrid_
+  0.03%  40.068ms  mom_step_mom_
+  0.03%  40.068ms  mom_barotropic_set_local_bt_cont_types_
+  0.01%      10ms  mom_coms_reproducing_sum_2d_
+  0.02%  30.051ms  mom_set_diffusivity_set_bbl_tke_
+  0.01%      10ms  | pgf90_set_intrin_type
+  0.02%  30.051ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.01%      10ms  mom_remapping_build_reconstructions_1d_
+  0.02%  30.051ms  mom_neutral_diffusion_neutral_diffusion_init_
+  0.02%  30.051ms  ncio_px_close
+  0.01%      10ms  H5T__free
+  0.02%  30.051ms  | __close
+  0.01%      10ms  mca_pml_ob1_recv_frag_callback_match
+  0.02%  30.051ms  mom_thickness_diffuse_thickness_diffuse_
+  0.01%      10ms  orte_util_convert_string_to_jobid
+  0.02%  30.051ms  ppm_functions_ppm_reconstruction_
+  0.01%  20.034ms  mom_diag_mediator_diag_masks_set_
+  0.01%      10ms  | strtoull
+  0.01%  20.034ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.01%      10ms  mom_transcribe_grid_copy_dyngrid_to_mom_grid_
+  0.01%  20.034ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.01%      10ms  mom_file_parser_log_param_logical_
+  0.01%  20.034ms  ???
+  0.01%  20.034ms  | pgf90_auto_alloc04
+  0.01%      10ms  | pgf90io_encode_fmta
+  0.01%  20.034ms  mom_meke_meke_lengthscales_0d_
+  0.01%      10ms  |   _f90io_encode_fmt
+  0.01%  10.017ms  | __fsd_pow_fma3
+  0.01%  20.034ms  mom_set_diffusivity_find_tke_to_kd_
+  0.01%      10ms  |     ef_putstring
+  0.01%  20.034ms  H5SL_search
+  0.01%      10ms  |       ef_put
+  0.01%  20.034ms  __fsd_cos_avx2
+  0.01%      10ms  |     0.01%  20.034ms      ef_alloc
+  mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+  0.01%  20.034ms  posixio_create
+  0.01%      10ms  |           __libc_malloc
+  0.01%  20.034ms  | open
+  0.01%      10ms  |             _int_malloc
+  0.01%  20.034ms  mom_initialize_mom_
+  0.01%  20.034ms  ncx_get_float_double
+  0.01%      10ms  |               malloc_consolidate
+  0.01%  10.017ms  | __memcpy_ssse3_back
+  0.01%      10ms  ompi_comm_request_progress
+  0.01%  20.034ms  ideal_age_example_ideal_age_tracer_column_physics_
+  0.01%  20.034ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.01%      10ms  H5I__find_id
+  0.01%  20.034ms  mom_forcing_type_extractfluxes1d_
+  0.01%      10ms  __c_mset8
+  0.01%  10.017ms  horiz_interp_bilinear_mod_horiz_interp_bilinear_
+  0.01%      10ms  mpp_domains_mod_mpp_do_update_r8_3dv_
+  0.01%  10.017ms  ompi_request_default_wait_all
+  0.01%  10.017ms  mca_pml_ob1_irecv
+  0.01%      10ms  mca_pml_ob1_isend
+  0.01%  10.017ms  mom_opacity_set_opacity_
+  0.01%      10ms  mom_barotropic_register_barotropic_restarts_
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%  10.017ms  |     0.01%      10ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+__auto_alloc
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%      10ms  H5FD_sec2_read
+  0.01%  10.017ms  |       _int_malloc
+  0.01%      10ms  | __read
+  0.01%  10.017ms  |         sysmalloc
+  0.01%      10ms  mom_barotropic_find_face_areas_
+  0.01%  10.017ms  mom_grid_set_derived_metrics_
+  0.01%  10.017ms  H5FL_reg_calloc
+  0.01%  10.017ms  | ???
+  0.01%  10.017ms  mom_ale_ale_main_
+  0.01%  10.017ms  PMIx_Get
+  0.01%  10.017ms  | usleep
+  0.01%  10.017ms  |   nanosleep
+  0.01%  10.017ms  mom_tidal_forcing_tidal_forcing_init_
+  0.01%  10.017ms  mom_tracer_advect_advect_tracer_
+  0.01%  10.017ms  mom_coms_reproducing_sum_3d_
+  0.01%  10.017ms  mpp_domains_mod_set_group_update_
+  0.01%  10.017ms  mom_set_visc_set_visc_init_
+  0.01%  10.017ms  fms_io_mod_get_file_unit_
+  0.01%  10.017ms  | pgf90_trima
+  0.01%  10.017ms  mca_allocator_bucket_alloc_wrapper
+  0.01%  10.017ms  mom_vert_friction_vertvisc_init_
+  0.01%  10.017ms  NC_varoffset
+
+======== Data collected at 100Hz frequency
+  0.01%  10.017ms  mom_tracer_hor_diff_tracer_hordiff_
+  0.01%  10.017ms  ideal_age_example_register_ideal_age_tracer_
+  0.01%  10.017ms  mca_btl_smcuda_send
+  0.01%  10.017ms  MPI_Status_f2c
+  0.01%  10.017ms  segment_create
+  0.01%  10.017ms  | mmap
+  0.01%  10.017ms  mom_variables_alloc_bt_cont_type_
+  0.01%  10.017ms  mca_btl_vader_progress_endpoints
+  0.01%  10.017ms  ideal_age_example_ideal_age_stock_
+  0.01%  10.017ms  mom_ale_check_grid_
+  0.01%  10.017ms  mom_set_visc_set_visc_register_restarts_
+  0.01%  10.017ms  mom_regridding_filtered_grid_motion_
+  0.01%  10.017ms  | pgf90_auto_alloc04
+  0.01%  10.017ms  |   __auto_alloc
+  0.01%  10.017ms  |     __libc_malloc
+  0.01%  10.017ms  mca_btl_smcuda_frag2_constructor
+  0.01%  10.017ms  H5F_incr_nopen_objs
+  0.01%  10.017ms  coord_zlike_build_zstar_column_
+  0.01%  10.017ms  ompi_mpi_init
+  0.01%  10.017ms  | usleep
+  0.01%  10.017ms  |   nanosleep
+  0.01%  10.017ms  mom_file_parser_lastnoncommentindex_
+  0.01%  10.017ms  | pgf90_str_index_klen
+  0.01%  10.017ms  regrid_edge_values_edge_values_implicit_h4_
+  0.01%  10.017ms  | pgf90_auto_dealloc
+  0.01%  10.017ms  |   _int_free
+  0.01%  10.017ms  mom_horizontal_regridding_horiz_interp_and_extrap_tracer_record_
+  0.01%  10.017ms  orte_util_print_name_args
+  0.01%  10.017ms  | snprintf
+  0.01%  10.017ms  |   __vsnprintf
+  0.01%  10.017ms  |     _IO_str_init_static_internal
+  0.01%  10.017ms  opal_pointer_array_set_item
+  0.01%  10.017ms  v1h_get_NC_attrV
+  0.01%  10.017ms  | __memcpy_ssse3_back
+  0.01%  10.017ms  regrid_consts_coordinatemode_
+  0.01%  10.017ms  | pgf90_alloc04a
+  0.01%  10.017ms  mom_tidal_forcing_calc_tidal_forcing_
+  0.01%  10.017ms  mom_sum_output_create_depth_list_
+  0.01%  10.017ms  mca_common_cuda_is_gpu_buffer
+  0.01%  10.017ms  mca_btl_sm_add_procs
+  0.01%  10.017ms  | unlink
+  0.01%  10.017ms  mom_document_writemessageanddesc_
+  0.01%  10.017ms  | pgf90io_encode_fmta
+  0.01%  10.017ms  |   _f90io_encode_fmt
+  0.01%  10.017ms  |     ef_put
+  0.01%  10.017ms  |       ef_alloc
+  0.01%  10.017ms  |         __libc_malloc
+  0.01%  10.017ms  |           _int_malloc
+  0.01%  10.017ms  |             malloc_consolidate
+  0.01%  10.017ms  mom_string_functions_left_real_
+  0.01%  10.017ms  | pgf90_adjustla
+  0.01%  10.017ms  pgf90_auto_alloc04
+  0.01%  10.017ms  time_interp_external_mod_load_record_
+  0.01%  10.017ms  mpp_domains_mod_mpp_update_domain2d_r8_3d_
+  0.01%  10.017ms  | __c_mset8
+  0.01%  10.017ms  mom_geothermal_geothermal_
+
+======== Data collected at 100Hz frequency
+
+======== CPU profiling result (top down):
+Time(%)      Time  Name
+ 33.33%    50.96s  epoll_dispatch
+ 33.33%    50.96s  | epoll_wait
+ 33.33%    50.96s  poll_dispatch
+ 33.33%    50.96s  | __poll
+  1.87%     2.86s  mom_neutral_diffusion_neutral_diffusion_
+  0.21%     320ms  | pgf90_alloc04a
+  0.16%     250ms  | | __alloc04
+  0.12%     190ms  | | | __fort_gmalloc_without_abort
+  0.12%     190ms  | | |   __fort_malloc_without_abort
+  0.10%     150ms  | | |     __libc_malloc
+  0.03%      40ms  | | |       _int_malloc
+  0.02%      30ms  | | save_alloc
+  0.01%      10ms  | | use_alloc
+  0.11%     170ms  | pgf90_dealloc03a
+  0.09%     130ms  | | __fort_dealloc03
+  0.06%      90ms  | | | __fort_gfree
+  0.06%      90ms  | | |   __fort_free
+  0.05%      70ms  | | |     _int_free
+  0.01%      10ms  | | |     free
+  0.01%      20ms  | | reuse_alloc
+  0.01%      10ms  | __fort_dealloc03
+  0.01%      10ms  | save_alloc
+  0.01%      10ms  | __alloc04
+  1.44%      2.2s  ompi_coll_libnbc_progress
+  1.43%     2.19s  mom_barotropic_btstep_
+  0.02%      30ms  | __fsd_pow_fma3
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  1.39%     2.13s  mca_btl_smcuda_component_progress
+  1.09%     1.67s  mom_eos_wright_calculate_density_array_wright_
+  1.03%     1.58s  opal_timer_linux_get_cycles_sys_timer
+  0.98%      1.5s  mom_neutral_diffusion_neutral_diffusion_calc_coeffs_
+  0.11%     170ms  | pgf90_alloc04a
+  0.09%     130ms  | | __alloc04
+  0.05%      80ms  | | | __fort_gmalloc_without_abort
+  0.05%      70ms  | | |   __fort_malloc_without_abort
+  0.05%      70ms  | | |   | __libc_malloc
+  0.02%      30ms  | | |   |   _int_malloc
+  0.01%      10ms  | | |   ???
+  0.01%      10ms  | | save_alloc
+  0.07%     100ms  | pgf90_dealloc03a
+  0.06%      90ms  | | __fort_dealloc03
+  0.05%      70ms  | |   __fort_gfree
+  0.04%      60ms  | |     __fort_free
+  0.04%      60ms  | |     | _int_free
+  0.01%      10ms  | |     ???
+  0.01%      10ms  | __alloc04
+  0.91%     1.39s  mom_hor_visc_horizontal_viscosity_
+  0.84%     1.29s  mom_eos_int_density_dz_generic_plm_
+  0.79%     1.21s  mom_continuity_ppm_merid_flux_layer_
+  0.77%     1.17s  mom_continuity_ppm_zonal_flux_layer_
+  0.75%     1.15s  mom_mixed_layer_restrat_mixedlayer_restrat_general_
+  0.03%      40ms  | __fsd_pow_fma3
+  0.02%      30ms  | pgf90_sect3
+  0.01%      10ms  | | __fort_set_single
+  0.01%      10ms  | | ???
+  0.01%      10ms  | ???
+  0.72%      1.1s  mom_neutral_diffusion_neutral_surface_flux_
+  0.21%     320ms  | pgf90_auto_alloc04
+  0.21%     320ms  | | __auto_alloc
+  0.18%     270ms  | |   __libc_malloc
+  0.10%     150ms  | |   | _int_malloc
+  0.01%      10ms  | |   malloc@@GLIBC_2.2.5
+  0.08%     120ms  | pgf90_auto_dealloc
+  0.07%     110ms  | | _int_free
+  0.01%      10ms  | pgf90_set_intrin_type
+  0.69%     1.05s  mom_remapping_remap_via_sub_cells_
+  0.11%     170ms  | pgf90_auto_alloc04
+  0.11%     170ms  | | __auto_alloc
+  0.11%     170ms  | |   __libc_malloc
+  0.02%      30ms  | |     _int_malloc
+  0.09%     130ms  | pgf90_auto_dealloc
+  0.07%     100ms  |   _int_free
+  0.65%    1000ms  mom_vert_friction_vertvisc_coef_
+  0.01%      10ms  | pgf90_allocated
+  0.60%     910ms  mom_thickness_diffuse_thickness_diffuse_full_
+  0.01%      20ms  | pgf90_alloc04a
+  0.01%      20ms  | | __alloc04
+  0.01%      20ms  | |   __fort_gmalloc_without_abort
+  0.01%      20ms  | |     __fort_malloc_without_abort
+  0.01%      20ms  | |       __libc_malloc
+  0.01%      20ms  | |         _int_malloc
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |   __fort_dealloc03
+  0.59%     900ms  mom_vert_friction_find_coupling_coef_
+  0.02%      30ms  | pgf90_auto_alloc04
+  0.02%      30ms  |   __auto_alloc
+  0.02%      30ms  |     __libc_malloc
+  0.01%      20ms  |       _int_malloc
+  0.48%     740ms  opal_progress
+  0.45%     690ms  mom_neutral_diffusion_ppm_edge_
+  0.44%     680ms  mom_set_visc_set_viscous_bbl_
+  0.02%      30ms  | __fsd_pow_fma3
+  0.43%     650ms  mom_vert_friction_vertvisc_remnant_
+  0.42%     640ms  mom_neutral_diffusion_fv_diff_
+  0.42%     640ms  mom_coriolisadv_coradcalc_
+  0.02%      30ms  | pgf90_auto_alloc04
+  0.02%      30ms  |   __auto_alloc
+  0.02%      30ms  |     __libc_malloc
+  0.02%      30ms  |       _int_malloc
+  0.41%     630ms  mom_kappa_shear_find_kappa_tke_
+  0.08%     120ms  | pgf90_auto_alloc04
+  0.08%     120ms  | | __auto_alloc
+  0.06%      90ms  | |   __libc_malloc
+  0.02%      30ms  | |     _int_malloc
+  0.05%      70ms  | pgf90_auto_dealloc
+  0.03%      50ms  |   _int_free
+  0.35%     540ms  regrid_edge_values_edge_values_explicit_h4_
+  0.01%      10ms  | ???
+  0.35%     530ms  plm_functions_plm_reconstruction_
+  0.05%      70ms  | pgf90_auto_alloc04
+  0.05%      70ms  | | __auto_alloc
+  0.04%      60ms  | |   __libc_malloc
+  0.03%      50ms  | |     _int_malloc
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.33%     510ms  mom_dynamics_split_rk2_step_mom_dyn_split_rk2_
+  0.01%      10ms  | pgf90_copy_f77_argl
+  0.33%     500ms  mom_vert_friction_vertvisc_
+  0.32%     490ms  mom_remapping_average_value_ppoly_
+  0.31%     480ms  mom_energetic_pbl_energetic_pbl_
+  0.08%     120ms  | __fsd_exp_fma3
+  0.03%      50ms  | __fsd_pow_fma3
+  0.01%      10ms  | __fd_exp_1
+  0.31%     480ms  mom_eos_wright_calculate_density_derivs_array_wright_
+  0.31%     470ms  mpp_domains_mod_mpp_do_group_update_r8_
+  0.28%     430ms  mom_ale_pressure_gradient_plm_
+  0.03%      40ms  | __c_mzero8
+  0.01%      10ms  | pgf90_mzero8
+  0.27%     420ms  mom_neutral_diffusion_signum_
+  0.27%     410ms  mom_continuity_ppm_ppm_reconstruction_y_
+  0.26%     400ms  mca_pml_ob1_progress
+  0.26%     390ms  mom_neutral_diffusion_ppm_ave_
+  0.25%     380ms  mom_tracer_advect_advect_x_
+  0.25%     380ms  mom_set_diffusivity_add_lotw_bbl_diffusivity_
+  0.03%      50ms  | __fsd_exp_fma3
+  0.25%     380ms  mom_isopycnal_slopes_calc_isoneutral_slopes_
+  0.25%     380ms  mom_diag_mediator_diag_update_remap_grids_
+  0.24%     370ms  mom_continuity_ppm_meridional_mass_flux_
+  0.24%     370ms  mom_tracer_advect_advect_y_
+  0.24%     370ms  mom_neutral_diffusion_find_neutral_surface_positions_continuous_
+  0.24%     360ms  mom_continuity_ppm_zonal_mass_flux_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.22%     340ms  mom_continuity_ppm_ppm_limit_pos_
+  0.22%     340ms  mom_opacity_opacity_from_chl_
+  0.17%     260ms  | __fsd_pow_fma3
+  0.01%      10ms  | __gsd_pow
+  0.22%     340ms  mca_pml_ob1_process_pending_cuda_async_copies
+  0.03%      40ms  | ???
+  0.22%     340ms  mom_continuity_ppm_ppm_reconstruction_x_
+  0.20%     310ms  __c_mzero8
+  0.20%     300ms  regrid_edge_values_bound_edge_values_
+  0.19%     290ms  mom_continuity_ppm_set_merid_bt_cont_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.17%     260ms  mom_continuity_ppm_set_zonal_bt_cont_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  | | __auto_alloc
+  0.01%      10ms  | |   __libc_malloc
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.16%     250ms  mom_barotropic_btcalc_
+  0.16%     250ms  mom_diabatic_driver_diabatic_
+  0.16%     240ms  mom_lateral_mixing_coeffs_calc_visbeck_coeffs_
+  0.15%     230ms  mom_neutral_diffusion_plm_diff_
+  0.15%     230ms  __c_mcopy8
+  0.15%     230ms  progress_one_cuda_htod_event
+  0.15%     230ms  mom_ale_remap_all_state_vars_
+  0.03%      50ms  | pgf90_alloc04a
+  0.01%      20ms  | | __alloc04
+  0.01%      20ms  | | | __fort_gmalloc_without_abort
+  0.01%      20ms  | | |   __fort_malloc_without_abort
+  0.01%      20ms  | | |     __libc_malloc
+  0.01%      10ms  | | |       _int_malloc
+  0.01%      20ms  | | use_alloc
+  0.01%      10ms  | pgf90_dealloc03a
+  0.14%     220ms  mom_kappa_shear_calculate_kappa_shear_
+  0.14%     220ms  mom_pressureforce_afv_pressureforce_afv_bouss_
+  0.14%     210ms  mom_diabatic_aux_applyboundaryfluxesinout_
+  0.14%     210ms  mom_neutral_diffusion_interpolate_for_nondim_position_
+  0.13%     200ms  mom_neutral_diffusion_ppm_left_right_edge_values_
+  0.13%     200ms  regrid_solvers_solve_linear_system_
+  0.12%     190ms  mom_vert_friction_vertvisc_limit_vel_
+  0.12%     190ms  mom_neutral_diffusion_interface_scalar_
+  0.02%      30ms  | pgf90_auto_dealloc
+  0.02%      30ms  | | _int_free
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  |   __auto_alloc
+  0.01%      20ms  |     __libc_malloc
+  0.01%      20ms  |       _int_malloc
+  0.12%     180ms  mom_set_diffusivity_add_int_tide_diffusivity_
+  0.07%     110ms  | __fsd_exp_fma3
+  0.12%     180ms  mom_barotropic_find_uhbt_
+  0.12%     180ms  mom_file_parser_get_variable_line_
+  0.03%      50ms  | pgf90_trima
+  0.03%      50ms  | pgf90_str_copy_klen
+  0.03%      40ms  | pgf90_lentrima
+  0.01%      10ms  | pgf90_str_index_klen
+  0.01%      10ms  | pgf90_indexa
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.01%      10ms  |         _int_free
+  0.12%     180ms  mom_continuity_ppm_zonal_flux_adjust_
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  | | _int_free
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.11%     170ms  mom_continuity_ppm_meridional_flux_adjust_
+  0.10%     160ms  mom_thickness_diffuse_vert_fill_ts_
+  0.10%     160ms  mom_continuity_ppm_continuity_ppm_
+  0.10%     150ms  progress_one_cuda_ipc_event
+  0.10%     150ms  mom_continuity_ppm_zonal_face_thickness_
+  0.09%     140ms  mom_wave_speed_wave_speed_
+  0.09%     130ms  mom_neutral_diffusion_absolute_position_
+  0.09%     130ms  mom_diabatic_aux_find_uv_at_h_
+  0.08%     120ms  mom_set_diffusivity_find_n2_
+  0.07%     110ms  mom_continuity_ppm_merid_face_thickness_
+  0.07%     110ms  opal_cuda_memcpy
+  0.07%     110ms  | __memmove_ssse3_back
+  0.07%     110ms  mom_barotropic_find_vhbt_
+  0.07%     110ms  mom_coriolisadv_gradke_
+  0.07%     110ms  ompi_request_default_wait
+  0.05%      80ms  | ???
+  0.07%     110ms  mom_horizontal_regridding_fill_miss_2d_
+  0.07%     110ms  mom_pressureforce_mont_set_pbce_bouss_
+  0.07%     100ms  mom_set_visc_set_u_at_v_
+  0.07%     100ms  mom_regridding_build_zstar_grid_
+  0.01%      20ms  | pgf90_alloc04a
+  0.01%      20ms  | | __alloc04
+  0.01%      10ms  | |   __fort_gmalloc_without_abort
+  0.01%      10ms  | |     __fort_malloc_without_abort
+  0.01%      10ms  | |       __libc_malloc
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.01%      10ms  |         _int_free
+  0.06%      90ms  mom_calculate_surface_state_
+  0.06%      90ms  __fsd_cos_avx2
+  0.06%      90ms  mom_tracer_diabatic_applytracerboundaryfluxesinout_
+  0.06%      90ms  mom_coms_increment_ints_faster_
+  0.06%      90ms  _intercept_brk
+  0.06%      90ms  | syscall
+  0.06%      90ms  mom_diabatic_aux_make_frazil_
+  0.05%      80ms  ppm_functions_ppm_limiter_standard_
+  0.01%      10ms  | pgf90_set_intrin_type
+  0.05%      80ms  mom_shortwave_abs_absorbremainingsw_
+  0.01%      20ms  | __fsd_exp_fma3
+  0.05%      80ms  mom_remapping_remapping_core_h_
+  0.05%      70ms  | pgf90_auto_alloc04
+  0.05%      70ms  | | __auto_alloc
+  0.05%      70ms  | |   __libc_malloc
+  0.03%      40ms  | |     _int_malloc
+  0.01%      10ms  | pgf90_auto_dealloc
+  0.01%      10ms  |   _int_free
+  0.05%      70ms  mom_shortwave_abs_sumswoverbands_
+  0.01%      20ms  | __fsd_exp_fma3
+  0.05%      70ms  mom_thickness_diffuse_streamfn_solver_
+  0.05%      70ms  mom_regridding_calc_h_new_by_dz_
+  0.05%      70ms  mom_barotropic_bt_mass_source_
+  0.05%      70ms  mom_barotropic_set_dtbt_
+  0.05%      70ms  mom_set_visc_set_v_at_u_
+  0.05%      70ms  mca_btl_sm_component_progress
+  0.04%      60ms  mom_step_mom_
+  0.04%      60ms  mom_interface_heights_find_eta_3d_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  |         sysmalloc
+  0.04%      60ms  mom_isopycnal_slopes_vert_fill_ts_
+  0.04%      60ms  mom_thickness_diffuse_thickness_diffuse_
+  0.01%      10ms  | ???
+  0.04%      60ms  mom_eos_wright_calculate_specvol_derivs_wright_
+  0.04%      60ms  mom_geothermal_geothermal_
+  0.04%      60ms  mpp_domains_mod_mpp_do_update_r8_3d_
+  0.03%      50ms  mom_set_diffusivity_set_bbl_tke_
+  0.03%      50ms  mom_energetic_pbl_find_pe_chg_orig_
+  0.03%      50ms  mom_meke_step_forward_meke_
+  0.03%      50ms  mom_sum_output_write_energy_
+  0.03%      40ms  mom_eos_calculate_specific_vol_derivs_
+  0.01%      20ms  | pgf90_auto_alloc04
+  0.01%      20ms  | | __auto_alloc
+  0.01%      20ms  | |   __libc_malloc
+  0.01%      10ms  | |     _int_malloc
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.01%      20ms  |   _int_free
+  0.03%      40ms  mom_kappa_shear_calculate_projected_state_
+  0.03%      40ms  mom_diabatic_aux_tridiagts_
+  0.03%      40ms  mom_neutral_diffusion_neutral_diffusion_init_
+  0.01%      10ms  | pgf90_alloc04_chka
+  0.01%      10ms  |   pgf90_alloc04
+  0.01%      10ms  |     pgf90_alloc04a
+  0.01%      10ms  |       __alloc04
+  0.01%      10ms  |         __fort_gmalloc_without_abort
+  0.01%      10ms  |           __fort_malloc_without_abort
+  0.01%      10ms  |             __libc_malloc
+  0.01%      10ms  |               _int_malloc
+  0.03%      40ms  mca_btl_vader_progress_endpoints
+  0.03%      40ms  mca_btl_vader_component_progress
+  0.02%      30ms  ideal_age_example_ideal_age_tracer_column_physics_
+  0.02%      30ms  mom_regridding_adjust_interface_motion_
+  0.02%      30ms  mom_initialize_mom_
+  0.02%      30ms  mom_ale_ale_main_
+  0.02%      30ms  polynomial_functions_evaluation_polynomial_
+  0.01%      20ms  | __mth_i_dpowi
+  0.02%      30ms  mom_dynamics_split_rk2_register_restarts_dyn_split_rk2_
+  0.02%      30ms  mom_tracer_diabatic_tracer_vertdiff_
+  0.01%      20ms  mom_state_initialization_mom_temp_salt_initialize_from_z_
+  0.01%      20ms  mom_diag_mediator_diag_masks_set_
+  0.01%      20ms  mom_meke_meke_lengthscales_0d_
+  0.01%      10ms  | __fsd_pow_fma3
+  0.01%      20ms  ppm_functions_ppm_reconstruction_
+  0.01%      20ms  mpp_domains_mod_mpp_do_global_field2d_r8_3d_
+  0.01%      20ms  mca_coll_cuda_allreduce
+  0.01%      20ms  mom_ale_ale_remap_scalar_
+  0.01%      10ms  | pgf90_dealloc03a
+  0.01%      10ms  |   __fort_dealloc03
+  0.01%      10ms  |     __fort_gfree
+  0.01%      10ms  |       __fort_free
+  0.01%      10ms  |         free
+  0.01%      20ms  mom_tracer_advect_advect_tracer_
+  0.01%      20ms  mom_eos_calculate_density_derivs_array_
+  0.01%      20ms  ???
+  0.01%      20ms  | pgf90_auto_dealloc
+  0.01%      20ms  mom_set_diffusivity_set_diffusivity_
+  0.01%      10ms  PMPI_Irecv
+  0.01%      10ms  opal_pointer_array_add
+  0.01%      10ms  mom_remapping_build_reconstructions_1d_
+  0.01%      10ms  PMPI_Type_f2c
+  0.01%      10ms  mca_btl_smcuda_sendi
+  0.01%      10ms  | __memmove_ssse3_back
+  0.01%      10ms  mom_vert_friction_vertvisc_init_
+  0.01%      10ms  mom_eos_calculate_density_array_
+  0.01%      10ms  MPI_Isend_f
+  0.01%      10ms  PMPI_Comm_f2c
+  0.01%      10ms  mom_dynamics_split_rk2_initialize_dyn_split_rk2_
+  0.01%      10ms  gettime
+  0.01%      10ms  | clock_gettime
+  0.01%      10ms  |   ???
+  0.01%      10ms  mom_coms_reproducing_sum_3d_
+  0.01%      10ms  regrid_solvers_solve_tridiagonal_system_
+  0.01%      10ms  mom_set_visc_set_visc_register_restarts_
+  0.01%      10ms  mom_sum_output_create_depth_list_
+  0.01%      10ms  MPI_Request_f2c
+  0.01%      10ms  orte_session_dir_get_name
+  0.01%      10ms  | _dl_runtime_resolve_xsave
+  0.01%      10ms  |   _dl_fixup
+  0.01%      10ms  mca_pml_ob1_irecv
+  0.01%      10ms  mca_pml_ob1_send_request_schedule_once
+  0.01%      10ms  mom_lateral_mixing_coeffs_calc_resoln_function_
+  0.01%      10ms  mca_common_cuda_is_gpu_buffer
+  0.01%      10ms  | cuPointerGetAttributes
+  0.01%      10ms  mca_pml_ob1_recv_request_free
+  0.01%      10ms  mpp_mod_lowercase_
+  0.01%      10ms  | pgf90_lentrima
+  0.01%      10ms  mom_ale_check_grid_
+  0.01%      10ms  mca_btl_smcuda_frag1_constructor
+  0.01%      10ms  mom_horizontal_regridding_mystats_
+  0.01%      10ms  H5FL_fac_malloc
+  0.01%      10ms  mom_barotropic_set_local_bt_cont_types_
+  0.01%      10ms  plm_functions_plm_boundary_extrapolation_
+  0.01%      10ms  regrid_edge_values_check_discontinuous_edge_values_
+  0.01%      10ms  mpp_io_mod_mpp_write_2ddecomp_r3d_
+  0.01%      10ms  | pgf90_alloc04_chka
+  0.01%      10ms  |   pgf90_alloc04
+  0.01%      10ms  |     pgf90_alloc04a
+  0.01%      10ms  H5SL_iterate
+  0.01%      10ms  mpp_domains_mod_compute_overlaps_
+  0.01%      10ms  | pgf90_alloc04a
+  0.01%      10ms  mom_dyn_horgrid_set_derived_dyn_horgrid_
+  0.01%      10ms  mpp_domains_mod_mpp_update_domain2d_r8_3dv_
+  0.01%      10ms  | __c_mset8
+  0.01%      10ms  mom_regridding_get_zlike_cs_
+  0.01%      10ms  | pgf90_alloc04_chka
+  0.01%      10ms  |   pgf90_alloc04
+  0.01%      10ms  |     pgf90_alloc04a
+  0.01%      10ms  |       __alloc04
+  0.01%      10ms  mom_forcing_type_extractfluxes1d_
+  0.01%      10ms  pgf90_auto_alloc04
+  0.01%      10ms  mpp_io_mod_mpp_io_init_
+  0.01%      10ms  | pgf90io_nmlw
+  0.01%      10ms  |   _f90io_nml_write
+  0.01%      10ms  |     write_nml_val
+  0.01%      10ms  |       _dl_runtime_resolve_xsave
+  0.01%      10ms  mom_sum_output_accumulate_net_input_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  H5T__conv_vlen
+  0.01%      10ms  | __GI_memset
+  0.01%      10ms  pmpi_wait
+  0.01%      10ms  mom_regridding_filtered_grid_motion_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  mom_remapping_remapping_core_w_
+  0.01%      10ms  | pgf90_auto_alloc04
+  0.01%      10ms  |   __auto_alloc
+  0.01%      10ms  |     __libc_malloc
+  0.01%      10ms  |       _int_malloc
+  0.01%      10ms  pgf90_str_copy_klen
+  0.01%      10ms  mca_pml_ob1_recv_req_start
+  0.01%      10ms  H5P_copy_plist
+  0.01%      10ms  mpp_mod_mpp_transmit_real8_
+  0.01%      10ms  ompi_coll_tuned_allreduce_intra_check_forced_init
+  0.01%      10ms  __c_mset4
+  0.01%      10ms  PMPI_Isend
+  0.01%      10ms  H5Aiterate2
+  0.01%      10ms  mca_cuda_convertor_init
+  0.01%      10ms  PMIx_Init
+  0.01%      10ms  | usleep
+  0.01%      10ms  |   nanosleep
+  0.01%      10ms  opal_pointer_array_set_item
+  0.01%      10ms  mom_variables_alloc_bt_cont_type_
+  0.01%      10ms  __c_mset8
+  0.01%      10ms  regrid_edge_values_edge_values_implicit_h4_
+  0.01%      10ms  ideal_age_example_ideal_age_stock_
+
+======== Data collected at 100Hz frequency
