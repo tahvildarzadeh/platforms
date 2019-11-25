@@ -1,0 +1,1 @@
+source ../../builds/Orion/intel19.env ; srun -n 4 ../../builds/build/Orion-intel19/ocean_only/debug/MOM6
