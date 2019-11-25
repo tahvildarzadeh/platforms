@@ -3,10 +3,9 @@
 #SBATCH --job-name=mom6-solo # Job name
 #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=niki.zadeh@noaa.gov    # Where to send mail	
-#SBATCH --ntasks=8
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=96
-#SBATCH --time=16:00:00              # Time limit hrs:min:sec
+#SBATCH --time=1:00:00              # Time limit hrs:min:sec
 #SBATCH --output=mom6-solo_%j.log     # Standard output and error log
 
 # Sample run script to run the am4p0 experiment
@@ -15,24 +14,6 @@
 # Modify the settings in this section to match your system's environment
 # and the directory locations to the executable, input data, initial
 # conditions data and work directory.
-
-#module load gcc/8.2.0
-module load intel
-module load hdf5/1.8.16
-module load netcdf/4.6.2
-module load netcdf-fortran/4.4.4
-module load mpich
-#module load openmpi
-#module load intel
-#module load hdf5/1.8.16
-#module load netcdf/4.6.2
-#module load netcdf-fortran/4.4.4
-#module load mpich
-#module load zlib
-#module load fre-nctools
-#module load gcpre
-#LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/apps/spack/opt/spack/linux-centos7-x86_64/gcc-8.2.0/openmpi-3.1.3-hecilo4zkmvzu42mvcq5rmh5uwrnoqqw/lib
-#export $LD_LIBRARY_PATH
 
 ulimit -s unlimited
 
@@ -48,14 +29,17 @@ mpiexec_topt=-c
 workDir=/home/nzadeh/platforms/mom6/exps/mom6_solo_global_ALE_z
 
 # Location of executable (run with $mpiexec_prog)
-platform=googcp-intel19
+machine=googcp
+platform=intel19
 target=prod
-executable=/home/nzadeh/platforms/mom6/builds/build/${platform}/ocean_only/${target}/MOM6
+executable=/home/nzadeh/platforms/mom6/builds/build/${machine}-${platform}/ocean_only/${target}/MOM6
+
+source /home/nzadeh/platforms/mom6/builds/${machine}/${platform}.env
 
 ## Run parameters
 #total_npes is the number of cores to run on, omp_threads is the number of
 # openMP threads
-total_npes=64
+total_npes=80
 omp_threads=1
 
 # End of configuration section
@@ -167,8 +151,8 @@ then
   echo "ERROR: Output from run in \"${workDir}/fms.out\"." 1>&2
   exit 1
 fi
-mv  fms.out  stdout.${platform}.${target}.n${total_npes}
-mv ocean.stats ocean.stats.${platform}.${target}.n${total_npes}
+mv  fms.out  stdout.${machine}-${platform}.${target}.n${total_npes}
+mv ocean.stats ocean.stats.${machine}-${platform}.${target}.n${total_npes}
 ##Combine the restarts
 #cd ${workDir}/RESTART
 #restart_combine.py -w ${workDir}
