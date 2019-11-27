@@ -1,7 +1,7 @@
 ! Blank file in which we can put "overrides" for parameters
 !VERBOSITY = 9
 #override NIGLOBAL = 360                 !
-#override NJGLOBAL = 291                 !
+#override NJGLOBAL = 288                 !
 #override CHANNEL_CONFIG = "none"
 #override TOPO_EDITS_FILE = ""
 #override TIDEAMP_FILE = "tidal_amplitude.nc"

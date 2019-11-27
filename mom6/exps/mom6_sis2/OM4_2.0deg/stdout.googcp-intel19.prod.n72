@@ -1,0 +1,298 @@
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+ &MPP_IO_NML
+ HEADER_BUFFER_VAL       =       16384,
+ GLOBAL_FIELD_ON_ROOT_PE = T,
+ IO_CLOCKS_ON    = F,
+ SHUFFLE =           0,
+ DEFLATE_LEVEL   =          -1,
+ CF_COMPLIANCE   = F
+ /
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  5000000.
+
+FATAL from PE     4: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4
+
+FATAL from PE    35: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 35
+
+FATAL from PE    64: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 64
+
+FATAL from PE    65: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 65
+
+FATAL from PE    43: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 43
+
+FATAL from PE    27: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 27
+
+FATAL from PE    30: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 30
+
+FATAL from PE    22: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 22
+
+FATAL from PE    41: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 41
+
+FATAL from PE    20: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 20
+
+FATAL from PE    71: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 71
+
+FATAL from PE    10: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 10
+
+FATAL from PE    25: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 25
+
+FATAL from PE    48: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 48
+
+FATAL from PE     5: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+
+FATAL from PE    54: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 54
+
+FATAL from PE     9: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+
+FATAL from PE    57: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 57
+
+FATAL from PE    37: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 37
+
+FATAL from PE    39: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 39
+
+FATAL from PE     6: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 6
+
+FATAL from PE    14: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 14
+
+FATAL from PE    21: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 21
+
+FATAL from PE    44: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 44
+
+FATAL from PE    63: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 63
+
+FATAL from PE    49: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+
+FATAL from PE    36: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 36
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 49
+
+FATAL from PE    24: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 24
+
+FATAL from PE    50: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 50
+
+FATAL from PE     7: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 7
+
+FATAL from PE    18: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 18
+
+FATAL from PE    34: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+
+FATAL from PE    62: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 62
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 34
+
+FATAL from PE    42: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 42
+
+FATAL from PE    53: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 53
+
+FATAL from PE    55: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 55
+
+FATAL from PE    68: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 68
+
+FATAL from PE    17: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 17
+
+FATAL from PE    19: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 19
+
+FATAL from PE    69: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+
+FATAL from PE    45: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 45
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 69
+
+FATAL from PE    56: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 56
+
+FATAL from PE     3: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+
+FATAL from PE    12: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 12
+
+FATAL from PE    23: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 23
+
+FATAL from PE    40: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 40
+
+FATAL from PE    46: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 46
+
+FATAL from PE    29: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 29
+
+FATAL from PE    28: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+
+FATAL from PE    47: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 47
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 28
+
+FATAL from PE    33: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 33
+
+FATAL from PE    61: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 61
+
+FATAL from PE    67: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+
+FATAL from PE    26: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 26
+
+FATAL from PE    31: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 31
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 67
+
+FATAL from PE    11: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 11
+
+FATAL from PE    52: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 52
+
+FATAL from PE    58: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 58
+
+FATAL from PE    60: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 60
+
+FATAL from PE    66: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 66
+
+FATAL from PE    70: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 70
+
+FATAL from PE    59: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 59
+
+FATAL from PE    15: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 15
+
+FATAL from PE     8: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+
+FATAL from PE    38: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 38
+
+FATAL from PE    51: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 51
+
+FATAL from PE     2: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+
+FATAL from PE     1: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+
+FATAL from PE    13: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 13
+
+FATAL from PE    16: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 16
+
+FATAL from PE    32: check_nml_error in fms_mod:  Unknown namelist, or mistyped namelist variable in namelist coupler_nml, (IOSTAT =           19 )
+
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 32
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 518.0 ON gfdl-gcp-compute1 CANCELLED AT 2019-11-27T19:13:35 ***
+srun: error: gfdl-gcp-compute1: tasks 0-71: Killed
