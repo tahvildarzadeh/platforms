@@ -2,7 +2,7 @@
 #SBATCH --job-name=mom6-sis2 # Job name
 #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=niki.zadeh@noaa.gov    # Where to send mail	
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=36
 #SBATCH --time=1:00:00              # Time limit hrs:min:sec
 #SBATCH --output=mom6_sis2_%j.log     # Standard output and error log
@@ -46,7 +46,7 @@ source ${src_root}/platforms/mom6/builds/${machine}/${platform}.env
 ## Run parameters
 #total_npes is the number of cores to run on, omp_threads is the number of
 # openMP threads
-total_npes=36
+total_npes=72
 omp_threads=1
 
 # End of configuration section

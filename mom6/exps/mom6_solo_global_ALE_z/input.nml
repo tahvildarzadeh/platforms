@@ -14,6 +14,9 @@
             minutes = 0
             seconds = 0
             calendar = 'julian'
+            ocean_nthreads = 1
+            ncores_per_node=32
+            use_hyper_thread=.F.
 /
 
 &diag_manager_nml

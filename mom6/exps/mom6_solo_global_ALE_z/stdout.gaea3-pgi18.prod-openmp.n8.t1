@@ -1,0 +1,260 @@
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+ &MPP_IO_NML
+ HEADER_BUFFER_VAL =        16384,
+ GLOBAL_FIELD_ON_ROOT_PE =  T,
+ IO_CLOCKS_ON =  F,
+ SHUFFLE =            0,
+ DEFLATE_LEVEL =           -1,
+ CF_COMPLIANCE =  F
+ /
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  8100000.
+NOTE from PE     0: ======== Model being driven by MOM_driver ========
+NOTE from PE     0: callTree: o Program MOM_main, MOM_driver.F90
+ &OCEAN_SOLO_NML
+ DATE_INIT =            1,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+ CALENDAR = julian          ,
+ MONTHS =            0,
+ DAYS =            1,
+ HOURS =            0,
+ MINUTES =            0,
+ SECONDS =            0,
+ OCEAN_NTHREADS =            1,
+ NCORES_PER_NODE =           32,
+ USE_HYPER_THREAD =  F
+ /
+  ocean             0            0            0            0            1
+  ocean             1            1            0            0            1
+  ocean             2            2            0            0            1
+  ocean             3            3            0            0            1
+  ocean            19           19            0            0            1
+  ocean            16           16            0            0            1
+  ocean            17           17            0            0            1
+  ocean            18           18            0            0            1
+
+WARNING from PE     0: MOM_file_parser : COORD_FILE over-ridden.  Line: 'COORD_FILE = "Layer_coord50.nc"' in file INPUT/MOM_override.
+
+NOTE from PE     0: open_param_file: INPUT/MOM_input has been opened successfully.
+NOTE from PE     0: open_param_file: INPUT/MOM_override has been opened successfully.
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90  90  90
+  Y-AXIS =  105 105
+ MOMc domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   45  45  45  45
+  Y-AXIS =   53  52
+NOTE from PE     0: diag_manager_mod::diag_manager_init: prepend_date only supported when diag_manager_init is called with time_init present.
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90  90  90
+  Y-AXIS =  105 105
+ MOM_MOSAIC domain decomposition
+whalo =    9, ehalo =    9, shalo =    9, nhalo =    9
+  X-AXIS =  180 180 180 180
+  Y-AXIS =  210 210
+
+WARNING from PE     0: MOM_file_parser : COORD_FILE over-ridden.  Line: 'COORD_FILE = "Layer_coord50.nc"' in file INPUT/MOM_override.
+
+NOTE from PE     0: init_from_Z: min= -2.0999E+00 max=  3.0543E+01 Level=  1 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1001E+00 max=  3.0419E+01 Level=  2 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1002E+00 max=  3.0062E+01 Level=  3 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1004E+00 max=  2.9837E+01 Level=  4 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1008E+00 max=  2.9853E+01 Level=  5 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1012E+00 max=  2.9371E+01 Level=  6 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1016E+00 max=  2.9215E+01 Level=  7 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1021E+00 max=  2.8034E+01 Level=  8 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1026E+00 max=  2.6594E+01 Level=  9 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1036E+00 max=  2.2757E+01 Level= 10 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1048E+00 max=  2.1933E+01 Level= 11 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1060E+00 max=  2.1794E+01 Level= 12 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1084E+00 max=  2.1727E+01 Level= 13 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1110E+00 max=  2.1616E+01 Level= 14 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1138E+00 max=  2.1572E+01 Level= 15 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1166E+00 max=  2.1556E+01 Level= 16 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1197E+00 max=  2.1591E+01 Level= 17 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.0438E+00 max=  2.1650E+01 Level= 18 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -2.1138E+00 max=  2.1610E+01 Level= 19 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.5379E+00 max=  2.1548E+01 Level= 20 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.5099E+00 max=  2.1535E+01 Level= 21 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.3690E+00 max=  2.1540E+01 Level= 22 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.3985E+00 max=  2.1532E+01 Level= 23 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.4988E+00 max=  2.1521E+01 Level= 24 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.5594E+00 max=  2.1361E+01 Level= 25 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.1467E+00 max=  2.1265E+01 Level= 26 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.1917E+00 max=  1.3372E+01 Level= 27 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.2744E+00 max=  1.3345E+01 Level= 28 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -1.2318E+00 max=  1.3291E+01 Level= 29 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.7011E-01 max=  1.3265E+01 Level= 30 field from fill_miss_2d()
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+NOTE from PE     0: init_from_Z: min= -9.9362E-01 max=  9.8849E+00 Level= 31 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -9.5099E-01 max=  9.8020E+00 Level= 32 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min= -8.8077E-01 max=  3.8353E+00 Level= 33 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0715E+01 Level=  1 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0752E+01 Level=  2 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0793E+01 Level=  3 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0774E+01 Level=  4 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0948E+01 Level=  5 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0736E+01 Level=  6 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0401E+01 Level=  7 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0398E+01 Level=  8 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  5.0000E+00 max=  4.0398E+01 Level=  9 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.5130E+00 max=  4.0559E+01 Level= 10 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.5130E+00 max=  4.0549E+01 Level= 11 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  6.5130E+00 max=  4.0557E+01 Level= 12 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1573E+01 max=  4.0573E+01 Level= 13 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1607E+01 max=  4.0592E+01 Level= 14 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1591E+01 max=  4.0616E+01 Level= 15 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1660E+01 max=  4.0649E+01 Level= 16 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1713E+01 max=  4.0645E+01 Level= 17 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1892E+01 max=  4.0638E+01 Level= 18 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.1970E+01 max=  4.0656E+01 Level= 19 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2292E+01 max=  4.0631E+01 Level= 20 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2293E+01 max=  4.0579E+01 Level= 21 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2317E+01 max=  4.0588E+01 Level= 22 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2315E+01 max=  4.0584E+01 Level= 23 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2318E+01 max=  4.0580E+01 Level= 24 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2321E+01 max=  4.0611E+01 Level= 25 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  2.2331E+01 max=  4.0611E+01 Level= 26 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4067E+01 max=  3.8767E+01 Level= 27 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4069E+01 max=  3.8763E+01 Level= 28 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4070E+01 max=  3.8953E+01 Level= 29 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4471E+01 max=  3.8943E+01 Level= 30 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4465E+01 max=  3.4998E+01 Level= 31 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4461E+01 max=  3.5020E+01 Level= 32 field from fill_miss_2d()
+NOTE from PE     0: init_from_Z: min=  3.4595E+01 max=  3.4996E+01 Level= 33 field from fill_miss_2d()
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+
+WARNING from PE     0: MPP_OPEN: File ./CPU_stats opened WRONLY already exists!
+
+
+WARNING from PE     0: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
+
+                              20200108 225642.845: Memuse(MB) at Memory HiWaterMark=  7.003E+02  7.214E+02  6.650E+00  7.040E+02
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    0.000E+00
+ MOM domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   90  90  90  90
+  Y-AXIS =  105 105
+
+WARNING from PE     0: Previous msg:KD_SMOOTH = 1.0E-06             !   [m2 s-1] default = 1.0E-06
+
+
+WARNING from PE     0: New message :KD_SMOOTH = 1.0E-06             !   [not defined] default = 1.0E-06
+
+
+WARNING from PE     0: Encountered inconsistent documentation line for parameter KD_SMOOTH!
+
+NOTE from PE     0: Segment run length determined from ocean_solo_nml.
+
+WARNING from PE     0: MPP_OPEN: File ./CPU_stats opened WRONLY already exists!
+
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to    3780000.
+NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to    3855600.
+MOM Date      1/01/01 00:00:00      0: En 1.345953E-05, MaxCFL  0.00000, Mass 1.379529197472E+21, Salt  34.72018331557, Temp   3.61844474935
+    Total Energy: 43507DD4D6200B20  1.8567810825333888E+16
+    Total Mass:   1.3795291974716886E+21, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Salt:   4.7897506625402929E+19, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Heat:   1.9592619461096163E+25, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+      Total age:   0.0000000000000000E+00 yr kg
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    3.750E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    5.000E-01
+MOM Date      1/01/01 12:00:00     12: En 8.157200E-04, MaxCFL  0.06093, Mass 1.379529214387E+21, Salt  34.72018288985, Temp   3.61848852045
+    Total Energy: 43AF3BCE3F431D0A  1.1253096049529664E+18
+    Total Mass:   1.3795292143869999E+21, Change:   1.6915311487580117E+13 Error: -3.94233E+02 (-2.9E-19)
+    Total Salt:   4.7897506625402929E+19, Change:   5.7829375000000001E+00 Error:  5.78294E+00 ( 1.2E-19)
+    Total Heat:   1.9592856706614606E+25, Change:   2.3724551844211196E+20 Error:  3.69226E+07 ( 1.9E-18)
+      Total age:   1.8814498247642138E+18 yr kg
+MOM Date      1/01/02 00:00:00     24: En 1.035732E-03, MaxCFL  0.09705, Mass 1.379529243922E+21, Salt  34.72018214652, Temp   3.61849676001
+    Total Energy: 43B3D431FEF56B18  1.4288219528921805E+18
+    Total Mass:   1.3795292439215903E+21, Change:   2.9534589963641395E+13 Error:  3.90876E+02 ( 2.8E-19)
+    Total Salt:   4.7897506625402929E+19, Change:   3.6743015624999998E+01 Error:  3.67430E+01 ( 7.7E-19)
+    Total Heat:   1.9592901740434036E+25, Change:   4.5033819427863101E+19 Error:  2.12696E+07 ( 1.1E-18)
+      Total age:   3.7575068024160865E+18 yr kg
+
+WARNING from PE     0: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
+
+ MPP_DOMAINS_STACK high water mark=       979300
+
+Tabulating mpp_clock statistics across      8 PEs...
+
+                                          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+Total runtime                        58.923092     58.923094     58.923094      0.000001  1.000     0     0     7
+Initialization                        1.853303      1.855401      1.853923      0.000619  0.031     0     0     7
+Main loop                            55.966054     55.967174     55.967022      0.000366  0.950     0     0     7
+Termination                           0.959776      1.031109      0.972266      0.022406  0.017     0     0     7
+Ocean Initialization                  2.966043      2.966796      2.966230      0.000221  0.050    11     0     7
+Ocean                                54.676705     54.677373     54.677101      0.000188  0.928     1     0     7
+Ocean dynamics                       27.621409     28.695173     27.900467      0.451411  0.474    11     0     7
+Ocean thermodynamics and tracers     16.621735     25.856446     21.336326      2.505392  0.362    11     0     7
+Ocean Other                           0.515869      4.002868      2.219293      1.699318  0.038    11     0     7
+(Ocean tracer advection)              7.355276     15.679957     11.363183      2.327087  0.193    21     0     7
+(Ocean diabatic driver)               9.266431     10.262641      9.973115      0.400848  0.169    21     0     7
+(Ocean continuity equation *)         0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean set BBL viscosity)             1.006722      1.243108      1.152767      0.072677  0.020    31     0     7
+(Ocean message passing *)             0.109101      8.036583      4.341226      2.343229  0.074    31     0     7
+(Ocean MOM_initialize_state)          0.551806      0.553186      0.552598      0.000513  0.009    31     0     7
+(Ocean thickness diffusion *)         2.172094      2.458873      2.315461      0.079006  0.039    31     0     7
+(Ocean mixed layer restrat)           1.060977      1.632922      1.373350      0.158875  0.023    31     0     7
+(Ocean collective diagnostics)        0.009825      0.012797      0.010760      0.000830  0.000    31     0     7
+(Ocean Z-space diagnostics)           0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean ALE)                           1.815220      4.354284      3.051497      0.706069  0.052    31     0     7
+(Ocean diagnostics framework)         0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean tides)                         0.001163      0.001267      0.001220      0.000034  0.000    31     0     7
+(Ocean Coriolis & mom advection)      0.793743      0.853837      0.824041      0.017588  0.014    31     0     7
+(Ocean continuity equation)           5.449225      6.778365      6.167170      0.379674  0.105    31     0     7
+(Ocean pressure force)                5.139374      5.262631      5.186009      0.036443  0.088    31     0     7
+(Ocean vertical viscosity)            3.076481      4.289392      3.685617      0.327329  0.063    31     0     7
+(Ocean horizontal viscosity)          1.449183      1.527462      1.493599      0.022692  0.025    31     0     7
+(Ocean momentum increments)           0.153743      0.159914      0.157608      0.002343  0.003    31     0     7
+(Ocean message passing)               0.493247      2.741819      1.623157      0.631618  0.028    31     0     7
+(Ocean barotropic mode calc)          0.056244      0.062417      0.059505      0.001894  0.001    31     0     7
+(Ocean barotropic mode stepping)      2.900615      3.501156      3.138351      0.175106  0.053    31     0     7
+(Ocean barotropic forcing calc)       0.160666      0.169419      0.164667      0.002323  0.003    31     0     7
+(Ocean kappa_shear)                   0.716786      1.708899      1.170626      0.271702  0.020    31     0     7
+(Ocean diabatic entrain)              0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean vert remap)                    1.637266      2.608314      2.161761      0.308732  0.037    31     0     7
+(Ocean set_diffusivity)               1.816928      2.751808      2.232024      0.260667  0.038    31     0     7
+(Ocean KPP)                           0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean tracer_columns)                0.251955      0.308043      0.283381      0.015381  0.005    26     0     7
+(Ocean advect tracer)                 1.071955      1.071992      1.071979      0.000012  0.018    31     0     7
+(Ocean diffuse tracer)                6.268337     14.593137     10.276223      2.327102  0.174    31     0     7
+(Ocean epipycnal diffuse tracer)      0.000000      0.000000      0.000000      0.000000  0.000    31     0     7
+(Ocean surface forcing)               0.118532      0.121228      0.119914      0.000749  0.002    31     0     7
+ MPP_STACK high water mark=            0
