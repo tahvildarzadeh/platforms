@@ -1,0 +1,8 @@
+./linux-build.bash -m gaea -p intel16 -t prod -f mom6sis2
+./linux-build.bash -m gaea -p intel16 -t prod-openmp -f mom6sis2
+./linux-build.bash -m gaea -p intel19 -t prod -f mom6sis2
+./linux-build.bash -m gaea -p intel19 -t prod-openmp -f mom6sis2
+./linux-build.bash -m gaea -p pgi18 -t prod -f mom6sis2
+./linux-build.bash -m gaea -p pgi18 -t prod-openmp -f mom6sis2
+./linux-build.bash -m gaea -p gnu7 -t prod -f mom6sis2
+./linux-build.bash -m gaea -p gnu7 -t prod-openmp -f mom6sis2

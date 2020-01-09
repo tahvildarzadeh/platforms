@@ -1,0 +1,11 @@
+#srun -n 16 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-intel16/ocean_ice/prod/MOM6SIS2 |& tee stdout.gaea3-intel16.prod.n16 ; mv ocean.stats ocean.stats.gaea3-intel16.prod.n16
+srun -n 16 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-pgi18/ocean_ice/prod/MOM6SIS2   |& tee stdout.gaea3-pgi18.prod-openmp.n16 ; mv ocean.stats ocean.stats.gaea3-pgi18.prod.n16
+srun -n 16 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-gnu7/ocean_ice/prod/MOM6SIS2    |& tee stdout.gaea3-gnu7.prod.n16 ; mv ocean.stats ocean.stats.gaea3-gnu7.prod.n16
+
+#srun -n 16 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-intel16/ocean_ice/prod-openmp/MOM6SIS2 |& tee stdout.gaea3-intel16.prod-openmp.n16.t1 ; mv ocean.stats ocean.stats.gaea3-intel16.prod-openmp.n16.t1
+srun -n 16 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-pgi18/ocean_ice/prod-openmp/MOM6SIS2   |& tee stdout.gaea3-pgi18.prod-openmp.n16.t1 ; mv ocean.stats ocean.stats.gaea3-pgi18.prod-openmp.n16.t1
+srun -n 16 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-gnu7/ocean_ice/prod-openmp/MOM6SIS2    |& tee stdout.gaea3-gnu7.prod-openmp.n16.t1 ; mv ocean.stats ocean.stats.gaea3-gnu7.prod-openmp.n16.t1
+
+#srun -n 16 --cpus-per-task=2 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-intel16/ocean_ice/prod-openmp/MOM6SIS2 |& tee stdout.gaea3-intel16.prod-openmp.n16.t2 ; mv ocean.stats ocean.stats.gaea3-intel16.prod-openmp.n16.t2
+#srun -n 16 --cpus-per-task=2 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-pgi18/ocean_ice/prod-openmp/MOM6SIS2   |& tee stdout.gaea3-pgi18.prod-openmp.n16.t2 ; mv ocean.stats ocean.stats.gaea3-pgi18.prod-openmp.n16.t2
+#srun -n 16 --cpus-per-task=2 /lustre/f2/dev/Niki.Zadeh/platforms/mom6/builds/build/gaea-gnu7/ocean_ice/prod-openmp/MOM6SIS2    |& tee stdout.gaea3-gnu7.prod-openmp.n16.t2 ; mv ocean.stats ocean.stats.gaea3-gnu7.prod-openmp.n16.t2
